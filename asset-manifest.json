@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/yahoumma/react_portfolio.git/static/css/main.c7c1ff28.css",
-    "main.js": "/yahoumma/react_portfolio.git/static/js/main.d415c280.js",
+    "main.js": "/yahoumma/react_portfolio.git/static/js/main.b59b94d8.js",
     "index.html": "/yahoumma/react_portfolio.git/index.html",
     "main.c7c1ff28.css.map": "/yahoumma/react_portfolio.git/static/css/main.c7c1ff28.css.map",
-    "main.d415c280.js.map": "/yahoumma/react_portfolio.git/static/js/main.d415c280.js.map"
+    "main.b59b94d8.js.map": "/yahoumma/react_portfolio.git/static/js/main.b59b94d8.js.map"
   },
   "entrypoints": [
     "static/css/main.c7c1ff28.css",
-    "static/js/main.d415c280.js"
+    "static/js/main.b59b94d8.js"
   ]
 }
