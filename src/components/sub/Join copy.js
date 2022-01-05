@@ -1,11 +1,11 @@
 import { NavLink } from "react-router-dom";
 
-function Join(){
+function Login(){
     return(
-        <section className="content join">
+        <section className="content login">
         <div className="subTitle">
             <div className="inner">
-              <h1><NavLink to="/join">Join</NavLink></h1>
+              <h1><NavLink to="/login">Login</NavLink></h1>
             </div>
         </div>
         <div className="inner">
@@ -15,4 +15,4 @@ function Join(){
     )
 }
 
-export default Join;
+export default Login;
