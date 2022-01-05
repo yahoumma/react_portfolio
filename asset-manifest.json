@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/yahoumma/react_portfolio.git/static/css/main.e2549f13.css",
-    "main.js": "/yahoumma/react_portfolio.git/static/js/main.8d6d7f35.js",
+    "main.css": "/yahoumma/react_portfolio.git/static/css/main.e8d260ea.css",
+    "main.js": "/yahoumma/react_portfolio.git/static/js/main.2d3eec14.js",
+    "static/media/visual1.jpg": "/yahoumma/react_portfolio.git/static/media/visual1.0d62819d1d8aa178f099.jpg",
+    "static/media/aboutBg.jpg": "/yahoumma/react_portfolio.git/static/media/aboutBg.51f663a14e35c490c943.jpg",
     "index.html": "/yahoumma/react_portfolio.git/index.html",
-    "main.e2549f13.css.map": "/yahoumma/react_portfolio.git/static/css/main.e2549f13.css.map",
-    "main.8d6d7f35.js.map": "/yahoumma/react_portfolio.git/static/js/main.8d6d7f35.js.map"
+    "main.e8d260ea.css.map": "/yahoumma/react_portfolio.git/static/css/main.e8d260ea.css.map",
+    "main.2d3eec14.js.map": "/yahoumma/react_portfolio.git/static/js/main.2d3eec14.js.map"
   },
   "entrypoints": [
-    "static/css/main.e2549f13.css",
-    "static/js/main.8d6d7f35.js"
+    "static/css/main.e8d260ea.css",
+    "static/js/main.2d3eec14.js"
   ]
 }
