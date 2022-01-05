@@ -1,15 +1,19 @@
 header{
     width:100%; 
-    background: #ffd803;
+    background: #00df70;
     .top{
         position: relative;
         top: 0;
         width: 100%;
-        height: 38px;
+        height: 28px;
         margin: 0 auto;
         background: #fefefc;
         display: flex;
         align-items: center;
+        >.inner{
+           width: 100%;
+           padding: 5%;
+        }
         .sns{
             margin-right: auto;
             display:flex;
@@ -18,8 +22,8 @@ header{
             li{
                 margin-right: 12px;
                 a{
-                    font: 12px/38px 'Open Sans';
-                    color: #203850;
+                    font: 12px/28px 'Open Sans';
+                    color: #393834;
                 }
             }
         }
@@ -38,9 +42,8 @@ header{
         }
     }
     .inner{
-       width:980px; 
-       height:100px; 
-       margin: 0 left;
+       width:100%; 
+       height:80px; 
        position:relative; 
        display: flex;
        align-items: center;
@@ -53,8 +56,8 @@ header{
           a{
              display: block;
              text-align: center;
-             font:bold 30px/100px 'Open Sans'; 
-             color:#ffd803; 
+             font:bold 30px/80px 'Open Sans'; 
+             color:#00df70; 
           }
        }
        .menuWeb{
@@ -62,7 +65,7 @@ header{
           
           #gnb{
              width: 100%;
-             height: 100px;
+             height: 80px;
              display: flex;
              align-items: center;
              justify-content: space-between;
@@ -294,5 +297,16 @@ header{
           }
           
        }
+    }
+ }
+
+ @media screen and (min-width:1179px){
+    header{
+       .inner{
+         padding-right:20%;
+       }
+    }
+    .visual .imgBox{
+      margin-left:-20%;
     }
  }

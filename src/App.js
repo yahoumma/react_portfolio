@@ -13,7 +13,7 @@ import Count from './components/main/Count.js';
 import Contact from './components/main/Contact.js';
 
 //import sub component
-import Department from './components/sub/Department.js';
+import AboutUs from './components/sub/AboutUs.js';
 import Project from './components/sub/Project.js';
 import Gallery from './components/sub/Gallery.js';
 import Youtube from './components/sub/Youtube.js';
@@ -33,7 +33,7 @@ function App() {
         <Contact />
       </Route>      
 
-      <Route path="/department" component={Department}></Route>
+      <Route path="/aboutUs" component={AboutUs}></Route>
       <Route path="/project" component={Project}></Route>
       <Route path="/gallery" component={Gallery}></Route>
       <Route path="/youtube" component={Youtube}></Route>

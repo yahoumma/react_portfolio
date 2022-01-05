@@ -6,22 +6,24 @@ function Header(){
   return (
     <header>
       <div className="top">
-        <ul className="sns">
-          <li><a href="#"><i className="fab fa-github"></i></a></li>
-          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-          <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-        </ul>
-        <ul className="util">
-          <li><NavLink activeStyle={active} to="/join">JOIN</NavLink></li>
-          <li><NavLink activeStyle={active} to="/login">LOGIN</NavLink></li>
-        </ul>
+        <div className="inner">
+          <ul className="sns">
+            <li><a href="#"><i className="fab fa-github"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+          </ul>
+          <ul className="util">
+            <li><NavLink activeStyle={active} to="/join">JOIN</NavLink></li>
+            <li><NavLink activeStyle={active} to="/login">LOGIN</NavLink></li>
+          </ul>
+        </div>
       </div>
       <div className="inner">
         <h1><NavLink activeStyle={active} exact to="/">PF</NavLink></h1>
 
         <nav className="menuWeb">
           <ul id="gnb">
-            <li><NavLink activeStyle={active} to="/department">DEPARTMENT</NavLink></li>
+            <li><NavLink activeStyle={active} to="/aboutUs">ABOUT</NavLink></li>
             <li><NavLink activeStyle={active} to="/project">PROJECT</NavLink></li>
             <li><NavLink activeStyle={active} to="/gallery">GALLERY</NavLink></li>
             <li><NavLink activeStyle={active} to="/youtube">YOUTUBE</NavLink></li>
