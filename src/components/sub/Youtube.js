@@ -1,20 +1,16 @@
-import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 function Youtube(){
-
-    useEffect(()=>{
-
-    })
-
-    let [list, setList] = useState([]);
     return(
         <section className="content youtube">
+        <div className="subTitle">
             <div className="inner">
-                <h1>
-                    <a href="/youtube">Youtube</a>
-                </h1>
+              <h1><NavLink to="/youtube">Youtube</NavLink></h1>
             </div>
-            
+        </div>
+        <div className="inner">
+       
+        </div>
         </section>
     )
 }

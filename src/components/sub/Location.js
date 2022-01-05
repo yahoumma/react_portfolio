@@ -1,12 +1,17 @@
+import { NavLink } from "react-router-dom";
+
 function Location(){
     return(
-        <main>
+        <section className="content aboutUs">
+        <div className="subTitle">
             <div className="inner">
-                <h1>
-                    <a exact to="/location">Location</a>
-                </h1>
+              <h1><NavLink to="/location">Location</NavLink></h1>
             </div>
-        </main>
+        </div>
+        <div className="inner">
+       
+        </div>
+        </section>
     )
 }
 
