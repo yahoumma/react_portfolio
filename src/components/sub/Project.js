@@ -6,7 +6,7 @@ function Project(){
     let len = posts.lenth;
     useEffect(()=>{
         axios
-        .get("./public/dbs/project.json")
+        .get("./dbs/project.json")
         .then(data=>{
             setPosts(data.data.data);
         })

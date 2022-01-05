@@ -1,0 +1,57 @@
+.our{
+    width:100%; 
+    padding:100px 0; 
+    .inner{
+       width:1180px; 
+       margin:0 auto; 
+       display:flex;
+       align-items: center;
+       justify-content: space-between;
+       article{
+          position: relative;
+          width: 300px;
+          text-align: center;
+          padding:10px;
+          transition: 1s;
+ 
+          &:hover{
+             box-shadow: 10px 10px 15px rgba(0,0,0,0.03);
+             cursor: pointer;
+             transition: 1s;
+          }
+          &:nth-of-type(1){
+             box-shadow: none;
+             text-align: left;
+             padding: none;
+             >p{
+                font:16px/1.2 'Open Sans'; 
+                color:#bfbfbf; 
+                margin: 20px 0 40px;
+             }
+          }
+          h2{
+             font:bold 24px/1 'Open Sans'; 
+             color:#777777;
+             @include txtBg();
+          }
+          h3{
+             font:bold 16px/1 'Open Sans'; 
+             color:#777777;
+          }
+          >i{
+            @include icon();
+          }
+          p{ 
+             font:12px/1.4 'Open Sans'; 
+             color:#bfbfbf; 
+             margin: 20px 0 40px;
+          }  
+          .btnMore{
+             @include btnMore();
+             
+          
+          }
+       }
+    }   
+ }
+ 

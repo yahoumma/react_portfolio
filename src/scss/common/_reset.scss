@@ -2,3 +2,34 @@
 ol,ul,li{list-style: none;}
 a{text-decoration: none;}
 
+@mixin btnMore($wd:180px,$ht:60px, $fontSize:14px, $fontFamily:'Open Sans', $color:#fffffe, $alignC:center, $bg:#ffd803 ){
+    display: block;
+    width: $wd;
+    height: $ht;
+    text-align: $alignC;
+    font-size: $fontSize;
+    line-height: $ht;
+    font-family: $fontFamily;
+    color: $color;
+    background: $bg;
+    transition: 1s;
+    &:hover{
+       transition: 1s;
+       box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+    }
+ }
+ @mixin txtBg(){
+    background: linear-gradient(to top, rgba(255, 216, 3, 0.5) 15px,transparent 10px);
+    display:inline;
+    font:bold 22px/1.7 'Open Sans';
+    color:#666;
+ }
+ @mixin icon(){
+    font-size: 30px;
+    color: #ffd803;
+    margin: 20px 0;
+ }
+
+ @mixin inner(){
+    width: 1180px;
+ }

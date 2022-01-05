@@ -1,0 +1,36 @@
+.count{
+    width:100%; 
+    padding:100px 0; 
+    .inner{
+       width:1180px; 
+       margin:0 auto; 
+       display:flex;
+       align-items: center;
+       justify-content: space-between;
+       article{
+          position: relative;
+          width: 300px;
+          text-align: center;
+          padding:10px;
+          transition: 1s;
+          text-align: center;
+          &:hover{
+             cursor: pointer;
+             transition: 1s;
+          }
+          i{
+             @include icon();
+             display: block;
+          }
+          span{
+             display: block;
+             @include txtBg();   
+          }
+          h2{
+             font:14px/1 'Open Sans'; 
+             color:#777;
+             margin-top: 10px;
+          }
+       }
+    }   
+ }

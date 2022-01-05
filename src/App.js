@@ -7,7 +7,10 @@ import Footer from './components/common/Footer.js';
 
 //import main component
 import Visual from './components/main/Visual.js';
-import Info from './components/main/Info.js';
+import Our from './components/main/Our.js';
+import About from './components/main/About.js';
+import Count from './components/main/Count.js';
+import Contact from './components/main/Contact.js';
 
 //import sub component
 import Department from './components/sub/Department.js';
@@ -24,7 +27,10 @@ function App() {
 
       <Route exact path="/">
         <Visual />
-        <Info />
+        <Our />
+        <About />
+        <Count />
+        <Contact />
       </Route>      
 
       <Route path="/department" component={Department}></Route>

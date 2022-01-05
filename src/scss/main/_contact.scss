@@ -1,0 +1,103 @@
+.contact{
+    width:100%; 
+    padding:100px 0; 
+    .inner{
+       width:1180px; 
+       margin:0 auto; 
+ 
+       h1{
+          @include txtBg();
+          
+       }
+       .wrap{
+          width: 100%;
+          display:flex;
+          align-items: top;
+          justify-content: space-between;
+          margin-top: 40px;
+          article{
+             width: 20vw;
+             transition: 1s;
+             ul{
+                li{
+                   margin-bottom: 40px;
+                   line-height: 0;
+                   a{
+                      font:14px/1 'Open Sans'; 
+                      color:#777;
+                   }
+                }
+             }
+             &:nth-of-type(1){
+                ul{
+                   width: 100%;
+                   li{
+                      margin-bottom: 40px;
+                      font:14px/1 'Open Sans'; 
+                      color:#777;
+                      &:last-child{
+                         margin-bottom: 0;
+                         .sns{
+                            width: 100%;
+                            ul{
+                               display: flex;
+                               justify-content:left;
+                               li{
+                                  margin-right: 20px;
+                                  margin-bottom: 0;
+                                  a{
+                                     display: block;
+                                     width: 30px;
+                                     height: 30px;
+                                     border-radius: 50%;
+                                     background: #ffd803;
+                                     text-align: center;
+                                     i{
+                                        font-size: 16px;
+                                        line-height: 30px;
+                                        color: #fff;
+                                        
+                                     }
+                                  }
+                               }
+                            }
+                         }
+                      }
+                   }
+                }
+                
+             }
+             &:last-child{
+                span{
+                   display: block;
+                   margin-bottom: 20px;
+                   font:14px/1 'Open Sans'; 
+                   color:#777;
+                   text-align: right;
+                }
+                address{
+                   margin-bottom: 40px;
+                   font:14px/1 'Open Sans'; 
+                   color:#777;
+                   text-align: right;
+                }
+                .btns{
+                   display: flex;
+                   justify-content: right;
+                   align-items: center;
+                   .btnMore{
+                      @include btnMore();
+                   }
+                   .btnUp{
+                      @include btnMore($wd:60px);
+                      margin-left: 20px;
+                   }
+                }
+             }
+             
+          }
+       }   
+       }
+       
+ }
+ 

@@ -1,42 +1,6 @@
 header{
     width:100%; 
     background: #ffd803;
-    .top{
-        position: relative;
-        top: 0;
-        width: 100%;
-        height: 38px;
-        margin: 0 auto;
-        background: #fefefc;
-        display: flex;
-        align-items: center;
-        .sns{
-            margin-right: auto;
-            display:flex;
-            justify-content: right;
-            align-items: center;
-            li{
-                margin-right: 12px;
-                a{
-                    font: 12px/38px 'Open Sans';
-                    color: #203850;
-                }
-            }
-        }
-        .util{
-            margin-left: auto;
-            display:flex;
-            justify-content: right;
-            align-items: center;
-            li{
-                margin-left: 20px;
-                a{
-                    font: 10px/38px 'Open Sans';
-                    color: #203850;
-                }
-            }
-        }
-    }
     .inner{
        width:980px; 
        height:100px; 
@@ -72,6 +36,16 @@ header{
                    font:bold 14px/80px 'Open Sans'; 
                    color:#fffffe; 
                 }
+                &:hover{
+                   a{
+                   color:#272343;}
+                }
+                &.on{
+                   &::after{
+                      opacity: 1;
+                   }
+                   a{color:#272343;}
+                 }
              }
           }
        }

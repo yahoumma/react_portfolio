@@ -1,0 +1,102 @@
+.visual{
+    width:100%; 
+    height:calc(100vh - 100px); 
+    position:relative; 
+    overflow:hidden; 
+    background: #ffd803;
+    .imgBox{
+       width: 980px;
+       height: 100%;
+       background: url(../img/visual1.jpg) no-repeat top/cover;
+       position: absolute;
+       left :0;
+       z-index: 1;
+       filter: grayscale(70%);
+    }
+    .imgBtns{
+       .btns{
+          position: absolute;
+          display: block;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          top: 50%;
+          left: 10%;
+          background: #ffd803;
+          box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+          text-align: center;
+          color:#fffffe;
+          line-height: 40px;
+          cursor: pointer;
+          z-index: 5;
+          &.btnMinus{
+             top: calc(50% - 60px);
+          }
+       }
+    }
+    .floatingBox{
+       position: absolute;
+       top: 50%;
+       right:100px;
+       transform: translateY(-50%);
+       width: 500px;
+       height: 280px;
+       background-color: rgba(255, 217, 3, 0.7);
+       box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+       z-index:3;
+       .btnMore{
+          @include btnMore();
+          position: absolute;
+          bottom: -30px;
+          left: 50%;
+          transform: translateX(-50%);
+       }
+       .txtBox{
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 400px;
+          height: 100%;
+          background: #fffffe;
+          .txt{
+             width: 80%;
+             position: absolute;
+             top: 45%;
+             left: 50%;
+ 
+             transform: translateY(-50%) translateX(-50%);
+             h1{
+                @include txtBg(); 
+             }
+             p{
+                font: 14px/1.4 'Open Sans';
+                color:#ccc;
+                margin-top: 30px;
+             }
+          }
+ 
+       }
+       
+          
+ 
+    }
+    .sns{
+       position: absolute;
+       bottom: 5%;
+       right: 5%;
+       ul{
+          width: 120px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          li{
+             a{
+                color: #fffffe;
+                font-size: 20px;
+             }
+          }
+       }
+       
+    }
+ 
+ }
