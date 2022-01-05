@@ -1,5 +1,5 @@
 import './css/style.css';
-import {Route} from 'react-router-dom';
+import {NavLink, Link, Route} from 'react-router-dom';
 
 //import common component
 import Header from './components/common/Header.js';
@@ -11,7 +11,7 @@ import Info from './components/main/Info.js';
 
 //import sub component
 import Department from './components/sub/Department.js';
-import Community from './components/sub/Community.js';
+import Project from './components/sub/Project.js';
 import Gallery from './components/sub/Gallery.js';
 import Youtube from './components/sub/Youtube.js';
 import Location from './components/sub/Location.js';
@@ -28,7 +28,7 @@ function App() {
       </Route>      
 
       <Route path="/department" component={Department}></Route>
-      <Route path="/community" component={Community}></Route>
+      <Route path="/project" component={Project}></Route>
       <Route path="/gallery" component={Gallery}></Route>
       <Route path="/youtube" component={Youtube}></Route>
       <Route path="/location" component={Location}></Route>

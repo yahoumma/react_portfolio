@@ -2,6 +2,8 @@
 
 //common style
 @import "common/reset";
+@import "common/header";
+@import "common/footer";
 @import "common/layout";
 
 //main style
@@ -10,7 +12,7 @@
 
 //sub page style
 @import "sub/department";
-@import "sub/community";
+@import "sub/project";
 @import "sub/gallery";
 @import "sub/youtube";
 @import "sub/location";
@@ -19,4 +21,4 @@
 // 'Open Sans'
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&display=swap');
 
-body{ background:#f9f6e5 ; font-family: 'Open Sans';}
+body{ background:#faf6f7 ;}

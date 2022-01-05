@@ -1,13 +1,52 @@
+import axios from "axios";
+import { useEffect, useRef, useState } from "react";
+
 function Gallery(){
-    return(
-        <main>
-            <div className="inner">
-                <h1>
-                    <a href="/gallery">Gallery</a>
-                </h1>
-            </div>
-        </main>
-    )
+  const baseURL = "https://www.flickr.com/services/rest/?";
+  const method1 = "flickr.interestingness.getList";
+  const key= "a7b1037e058bdadbabc8162a4faf09d7";
+  const count = 5;
+  const url = `${baseURL}method=${method1}&api_key=${key}&per_page=${count}&format=json&nojsoncallback=1`;
+
+  let [items, setItems] = useState([]);
+  let list = useRef(null);  
+
+  useEffect( getFlickr,[]);
+
+
+  async function getFlickr(){
+    await axios
+    .get(url)
+    .then(json=> setItems(json.data.photos.photo))
+    
+    list.current.classList.add("on");
+    console.log("test");
+  }  
+
+  return (
+    <section className="content gallery">
+      <div className="inner">
+        <h1>Gallery</h1>
+
+        <ul className="list" ref={list}>
+          {
+            items.map((item, index)=>{
+              const imgSrc = `https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_m.jpg`;
+              return (
+                <li key={index}>
+                  <div className="pic">
+                    <img src={imgSrc} />
+                  </div>
+
+                  <p>{item.title}</p>
+                </li>
+              )
+            })
+          }
+        </ul>
+      </div>
+    </section>
+  )
 }
 
 export default Gallery;

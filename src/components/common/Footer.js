@@ -5,7 +5,6 @@ function Footer(){
 
   return (
     <footer>
-      <div className="inner">
         <h1><NavLink activeStyle={active} exact to="/">LOGO</NavLink></h1>
 
         <ul id="gnb">
@@ -16,7 +15,7 @@ function Footer(){
           <li><NavLink activeStyle={active} exact to="/location">Location</NavLink></li>
           <li><NavLink activeStyle={active} exact to="/join">Join</NavLink></li>
         </ul>
-      </div>
+
     </footer>
   )
 }
