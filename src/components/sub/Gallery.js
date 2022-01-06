@@ -32,23 +32,32 @@ function Gallery() {
             <h1><NavLink to="/gallery">Gallery</NavLink></h1>
           </div>
         </div>
-        <div className="inner">
-          <ul className="list" ref={list}>
-            {
-              items.map((item, index) => {
-                const imgSrc = `https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_m.jpg`;
-                return (
-                  <li key={index}>
-                    <div className="pic">
-                      <img src={imgSrc} />
-                    </div>
-
-                    <p>{item.title}</p>
-                  </li>
-                )
-              })
-            }
+        <div className="conInner">
+          <ul className="galleryTab">
+            <li className="on"><a href="#">ALL ITEMS</a></li>
+            <li><a href="#">WEB DESIGN</a></li>
+            <li><a href="#">UI/UX</a></li>
+            <li><a href="#">BRANDING</a></li>
           </ul>
+
+          <div className="listBox">
+            <ul className="list" ref={list}>
+              {
+                items.map((item, index) => {
+                  const imgSrc = `https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_m.jpg`;
+                  return (
+                    <li key={index}>
+                      <div className="pic">
+                        <img src={imgSrc} />
+                      </div>
+            
+                      <p>{item.title}</p>
+                    </li>
+                  )
+                })
+              }
+            </ul>
+          </div>
         </div>
       </div>
     </section>

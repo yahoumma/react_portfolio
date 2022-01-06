@@ -265,7 +265,7 @@ footer {
       color: #777; }
 
 .content {
-  min-height: 500px; }
+  min-height: 800px; }
   .content .subTitle {
     width: 100%;
     height: 200px;
@@ -436,105 +436,71 @@ footer {
           transition: 1s;
           box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); }
 
-.aboutUs {
-  width: 100%; }
-  .aboutUs > .inner {
+.about {
+  width: 100%;
+  height: 80vh;
+  position: relative; }
+  .about .imgBox {
+    width: 60vw;
+    height: 100%;
+    background: url(../img/aboutBg.jpg) no-repeat center/cover;
+    filter: grayscale(70%);
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .about .inner {
     width: 1180px;
     margin: 0 auto;
-    text-align: center; }
-    .aboutUs > .inner h1 {
-      font: bold 26px/1 "Open Sans";
-      color: #6b6b6b;
-      margin-bottom: 20px; }
-    .aboutUs > .inner h2 {
-      font: 14px/1.7 "Open Sans";
-      color: #6b6b6b;
-      margin-bottom: 40px; }
-    .aboutUs > .inner h3 {
-      font: 18px/1.4 "Open Sans";
-      color: #6b6b6b;
-      letter-spacing: -1px; }
-    .aboutUs > .inner h4 {
-      font: 16px/1.4 "Open Sans";
-      color: #6b6b6b;
-      margin-bottom: 10px; }
-    .aboutUs > .inner p {
-      font: 12px/1.7 "Open Sans";
-      color: #6b6b6b; }
-    .aboutUs > .inner span {
-      font: 10px/1.7 "Open Sans";
-      color: #6b6b6b; }
-    .aboutUs > .inner .aboutBox {
-      width: 100%;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      margin-bottom: 100px; }
-      .aboutUs > .inner .aboutBox .about1 {
-        width: 50%;
-        background: url("../img/project4.jpg") no-repeat center/cover;
-        backdrop-filter: grayscale(100%);
-        height: 400px;
-        position: relative;
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); }
-        .aboutUs > .inner .aboutBox .about1 .txtBox {
-          background: #fffffe;
-          width: 70%;
-          height: 100%;
-          padding: 40px;
-          position: absolute;
-          right: 0; }
-          .aboutUs > .inner .aboutBox .about1 .txtBox::before {
-            display: block;
-            content: "";
-            width: 40px;
-            height: 100%;
-            background: #00df70;
-            opacity: 0.3;
-            position: absolute;
-            top: 0;
-            left: -40px; }
-      .aboutUs > .inner .aboutBox .box {
+    position: relative; }
+    .about .inner .floatingBox {
+      position: absolute;
+      top: 20vh;
+      right: 0;
+      width: 30vw;
+      height: 40vh;
+      background-color: rgba(0, 223, 112, 0.3);
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+      z-index: 3; }
+      .about .inner .floatingBox .txtBox {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 80%;
+        height: 100%;
         background: #fffffe;
-        width: 240px;
-        height: 240px;
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-        display: flex;
-        justify-content: center;
-        flex-direction: column; }
-        .aboutUs > .inner .aboutBox .box i {
-          font-size: 40px;
-          color: #00df70;
+        padding: 40px 60px;
+        vertical-align: middle; }
+        .about .inner .floatingBox .txtBox h1 {
+          font: bold 30px/1.4 'Open Sans';
+          margin-bottom: 10px;
+          color: #272343;
+          background: linear-gradient(to top, rgba(0, 223, 112, 0.3) 15px, transparent 10px);
+          display: inline;
+          font: bold 22px/1.7 "Open Sans";
+          color: #666; }
+        .about .inner .floatingBox .txtBox h2 {
+          font: bold 14px/1.2 'Open Sans';
+          color: #ccc;
+          margin: 10px 0; }
+        .about .inner .floatingBox .txtBox p {
+          font: 14px/1.4 'Open Sans';
+          color: #ccc;
+          flex-wrap: wrap;
           margin-bottom: 20px; }
-      .aboutUs > .inner .aboutBox .member {
-        text-align: left; }
-        .aboutUs > .inner .aboutBox .member .photo {
-          width: 240px;
-          height: 240px;
-          position: relative;
-          margin-bottom: 20px; }
-        .aboutUs > .inner .aboutBox .member:nth-of-type(1) .photo {
-          background: url("../img/team2.jpg") no-repeat top/cover; }
-        .aboutUs > .inner .aboutBox .member:nth-of-type(2) .photo {
-          background: url("../img/team1.jpg") no-repeat top/cover; }
-        .aboutUs > .inner .aboutBox .member:nth-of-type(3) .photo {
-          background: url("../img/team3.jpg") no-repeat top/cover; }
-        .aboutUs > .inner .aboutBox .member .sns {
-          width: 40px;
-          height: 100%;
+        .about .inner .floatingBox .txtBox .btnMore {
+          display: block;
+          width: 180px;
+          height: 60px;
+          text-align: center;
+          font-size: 14px;
+          line-height: 60px;
+          font-family: "Open Sans";
+          color: #fffffe;
           background: #00df70;
-          position: absolute;
-          right: -40px;
-          text-align: center; }
-          .aboutUs > .inner .aboutBox .member .sns ul {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: space-around;
-            flex-direction: column; }
-            .aboutUs > .inner .aboutBox .member .sns ul li a i {
-              color: #fffffe; }
+          transition: 1s; }
+          .about .inner .floatingBox .txtBox .btnMore:hover {
+            transition: 1s;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); }
 
 .contact {
   width: 100%;
@@ -669,6 +635,106 @@ footer {
         color: #777;
         margin-top: 10px; }
 
+.aboutUs {
+  width: 100%; }
+  .aboutUs > .inner {
+    width: 1180px;
+    margin: 0 auto;
+    text-align: center; }
+    .aboutUs > .inner h1 {
+      font: bold 26px/1 "Open Sans";
+      color: #6b6b6b;
+      margin-bottom: 20px; }
+    .aboutUs > .inner h2 {
+      font: 14px/1.7 "Open Sans";
+      color: #6b6b6b;
+      margin-bottom: 40px; }
+    .aboutUs > .inner h3 {
+      font: 18px/1.4 "Open Sans";
+      color: #6b6b6b;
+      letter-spacing: -1px; }
+    .aboutUs > .inner h4 {
+      font: 16px/1.4 "Open Sans";
+      color: #6b6b6b;
+      margin-bottom: 10px; }
+    .aboutUs > .inner p {
+      font: 12px/1.7 "Open Sans";
+      color: #6b6b6b; }
+    .aboutUs > .inner span {
+      font: 10px/1.7 "Open Sans";
+      color: #6b6b6b; }
+    .aboutUs > .inner .aboutBox {
+      width: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin-bottom: 100px; }
+      .aboutUs > .inner .aboutBox .about1 {
+        width: 50%;
+        background: url("../img/project4.jpg") no-repeat center/cover;
+        backdrop-filter: grayscale(100%);
+        height: 400px;
+        position: relative;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); }
+        .aboutUs > .inner .aboutBox .about1 .txtBox {
+          background: #fffffe;
+          width: 70%;
+          height: 100%;
+          padding: 40px;
+          position: absolute;
+          right: 0; }
+          .aboutUs > .inner .aboutBox .about1 .txtBox::before {
+            display: block;
+            content: "";
+            width: 40px;
+            height: 100%;
+            background: #00df70;
+            opacity: 0.3;
+            position: absolute;
+            top: 0;
+            left: -40px; }
+      .aboutUs > .inner .aboutBox .box {
+        background: #fffffe;
+        width: 240px;
+        height: 240px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: center;
+        flex-direction: column; }
+        .aboutUs > .inner .aboutBox .box i {
+          font-size: 40px;
+          color: #00df70;
+          margin-bottom: 20px; }
+      .aboutUs > .inner .aboutBox .member {
+        text-align: left; }
+        .aboutUs > .inner .aboutBox .member .photo {
+          width: 240px;
+          height: 240px;
+          position: relative;
+          margin-bottom: 20px; }
+        .aboutUs > .inner .aboutBox .member:nth-of-type(1) .photo {
+          background: url("../img/team2.jpg") no-repeat top/cover; }
+        .aboutUs > .inner .aboutBox .member:nth-of-type(2) .photo {
+          background: url("../img/team1.jpg") no-repeat top/cover; }
+        .aboutUs > .inner .aboutBox .member:nth-of-type(3) .photo {
+          background: url("../img/team3.jpg") no-repeat top/cover; }
+        .aboutUs > .inner .aboutBox .member .sns {
+          width: 40px;
+          height: 100%;
+          background: #00df70;
+          position: absolute;
+          right: -40px;
+          text-align: center; }
+          .aboutUs > .inner .aboutBox .member .sns ul {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column; }
+            .aboutUs > .inner .aboutBox .member .sns ul li a i {
+              color: #fffffe; }
+
 .project {
   width: 100%; }
   .project article {
@@ -681,5 +747,53 @@ footer {
     align-items: center; }
     .project article section {
       font: 12px/1 "Open Sans"; }
+
+.conInner {
+  width: 1180px;
+  margin: 0 auto; }
+  .conInner .galleryTab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 80px; }
+    .conInner .galleryTab li {
+      display: inline-block;
+      width: 200px;
+      padding: 5px 0;
+      border-bottom: 1px solid #f3f3f3;
+      position: relative;
+      text-align: center; }
+      .conInner .galleryTab li.on::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 5px;
+        background: #00df70;
+        position: absolute;
+        bottom: -5px; }
+      .conInner .galleryTab li.on a {
+        font: bold 12px/20px 'Open Sans';
+        color: #6b6b6b;
+        text-align: center; }
+      .conInner .galleryTab li a {
+        font: 12px/20px 'Open Sans';
+        color: #6b6b6b;
+        text-align: center; }
+  .conInner .listBox {
+    position: relative; }
+    .conInner .listBox ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .conInner .listBox ul li {
+        width: 20%;
+        height: 200px; }
+        .conInner .listBox ul li .pic {
+          width: 100%;
+          height: 100%; }
+          .conInner .listBox ul li .pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,63 @@
+
+.conInner{
+    width: 1180px;
+    margin :0 auto;
+    .galleryTab{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 80px;
+        li{
+            display: inline-block;
+            width: 200px;
+            padding: 5px 0;
+            border-bottom: 1px solid #f3f3f3;
+            position: relative;
+            text-align: center;
+            &.on::after{
+                content: '';
+                display: block;
+                width: 100%;
+                height: 5px;
+                background: #00df70;    
+                position: absolute;
+                bottom: -5px;
+            }
+            &.on{
+                a{
+                    font:bold 12px/20px 'Open Sans';
+                    color: #6b6b6b;
+                    text-align: center;
+                }
+            }
+            a{
+                font: 12px/20px 'Open Sans';
+                color: #6b6b6b;
+                text-align: center;
+            }
+        }
+    }
+    .listBox{
+        position: relative;
+        ul{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            li{
+                width: 20%;
+                height: 200px;
+
+                .pic{
+                    width: 100%;
+                    height: 100%;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+    
+            }
+        }
+    }
+}
