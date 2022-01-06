@@ -471,7 +471,7 @@ footer {
         padding: 40px 60px;
         vertical-align: middle; }
         .about .inner .floatingBox .txtBox h1 {
-          font: bold 30px/1.4 'Open Sans';
+          font: bold 30px/1.4 "Open Sans";
           margin-bottom: 10px;
           color: #272343;
           background: linear-gradient(to top, rgba(0, 223, 112, 0.3) 15px, transparent 10px);
@@ -479,11 +479,11 @@ footer {
           font: bold 22px/1.7 "Open Sans";
           color: #666; }
         .about .inner .floatingBox .txtBox h2 {
-          font: bold 14px/1.2 'Open Sans';
+          font: bold 14px/1.2 "Open Sans";
           color: #ccc;
           margin: 10px 0; }
         .about .inner .floatingBox .txtBox p {
-          font: 14px/1.4 'Open Sans';
+          font: 14px/1.4 "Open Sans";
           color: #ccc;
           flex-wrap: wrap;
           margin-bottom: 20px; }
