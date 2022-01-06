@@ -1,28 +1,31 @@
 {
     "data": [
         {
-            "number" : "01",
-            "img" : "./img/project1.jpg",
-            "title" : "Project One",
-            "content" : "dolor sit amet consectetur adipisicing elit. Impedit voluptatum cumque dolores ex architecto doloremque fugit culpa illo voluptates delectus.",
+            "number": "01",
+            "img": "./img/project1.jpg",
+            "title": "Project One",
+            "content": "dolor sit amet consectetur adipisicing elit. Impedit voluptatum cumque dolores ex architecto doloremque fugit culpa illo voluptates delectus.",
             "directory": "websites/project/go"
-        },{
-            "number" : "02",
-            "img" : "./img/project2.jpg",
-            "title" : "Project One",
-            "content" : "dolor sit amet consectetur adipisicing elit. Impedit voluptatum cumque dolores ex architecto doloremque fugit culpa illo voluptates delectus.",
+        },
+        {
+            "number": "02",
+            "img": "./img/project2.jpg",
+            "title": "Project One",
+            "content": "dolor sit amet consectetur adipisicing elit. Impedit voluptatum cumque dolores ex architecto doloremque fugit culpa illo voluptates delectus.",
             "directory": "websites/project/go"
-        },{
-            "number" : "03",
-            "img" : "./img/project3.jpg",
-            "title" : "Project One",
-            "content" : "dolor sit amet consectetur adipisicing elit. Impedit voluptatum cumque dolores ex architecto doloremque fugit culpa illo voluptates delectus.",
+        },
+        {
+            "number": "03",
+            "img": "./img/project3.jpg",
+            "title": "Project One",
+            "content": "dolor sit amet consectetur adipisicing elit. Impedit voluptatum cumque dolores ex architecto doloremque fugit culpa illo voluptates delectus.",
             "directory": "websites/project/go"
-        },{
-            "number" : "04",
-            "img" : "./img/project4.jpg",
-            "title" : "Project One",
-            "content" : "dolor sit amet consectetur adipisicing elit. Impedit voluptatum cumque dolores ex architecto doloremque fugit culpa illo voluptates delectus.",
+        },
+        {
+            "number": "04",
+            "img": "./img/project4.jpg",
+            "title": "Project One",
+            "content": "dolor sit amet consectetur adipisicing elit. Impedit voluptatum cumque dolores ex architecto doloremque fugit culpa illo voluptates delectus.",
             "directory": "websites/project/go"
         }
     ]
