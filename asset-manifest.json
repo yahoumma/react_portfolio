@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/yahoumma/react_portfolio.git/static/css/main.348c69e3.css",
-    "main.js": "/yahoumma/react_portfolio.git/static/js/main.93b3d954.js",
-    "static/media/visual1.jpg": "/yahoumma/react_portfolio.git/static/media/visual1.0d62819d1d8aa178f099.jpg",
-    "static/media/aboutBg.jpg": "/yahoumma/react_portfolio.git/static/media/aboutBg.51f663a14e35c490c943.jpg",
-    "static/media/subBg.jpeg": "/yahoumma/react_portfolio.git/static/media/subBg.8f0b9d9d64a42b50ed72.jpeg",
-    "index.html": "/yahoumma/react_portfolio.git/index.html",
-    "main.348c69e3.css.map": "/yahoumma/react_portfolio.git/static/css/main.348c69e3.css.map",
-    "main.93b3d954.js.map": "/yahoumma/react_portfolio.git/static/js/main.93b3d954.js.map"
+    "main.css": "/yahoumma/react_portfolio/static/css/main.095be35b.css",
+    "main.js": "/yahoumma/react_portfolio/static/js/main.93b3d954.js",
+    "static/media/visual1.jpg": "/yahoumma/react_portfolio/static/media/visual1.0d62819d1d8aa178f099.jpg",
+    "static/media/aboutBg.jpg": "/yahoumma/react_portfolio/static/media/aboutBg.51f663a14e35c490c943.jpg",
+    "static/media/subBg.jpeg": "/yahoumma/react_portfolio/static/media/subBg.8f0b9d9d64a42b50ed72.jpeg",
+    "index.html": "/yahoumma/react_portfolio/index.html",
+    "main.095be35b.css.map": "/yahoumma/react_portfolio/static/css/main.095be35b.css.map",
+    "main.93b3d954.js.map": "/yahoumma/react_portfolio/static/js/main.93b3d954.js.map"
   },
   "entrypoints": [
-    "static/css/main.348c69e3.css",
+    "static/css/main.095be35b.css",
     "static/js/main.93b3d954.js"
   ]
 }
