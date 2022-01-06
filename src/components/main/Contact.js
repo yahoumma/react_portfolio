@@ -1,5 +1,5 @@
-function Contact(){
-    return(
+function Contact() {
+    return (
         <section className="content contact">
             <div class="inner">
                 <h1>CONTACT US</h1>
@@ -40,15 +40,15 @@ function Contact(){
                     </article>
                     <article>
                         <span>ADDRESS</span>
-                        <address>suinro3312-16,Gangnam-Gu,Seoul-Si</address>  
+                        <address>suinro3312-16,Gangnam-Gu,Seoul-Si</address>
                         <div class="btns">
                             <a href="#" class="btnMore">Live Chat More <i class="fas fa-long-arrow-alt-right"></i></a>
                             <a href="#" class="btnUp"><i class="fas fas fa-long-arrow-alt-up"></i></a>
                         </div>
                     </article>
-        
-            </div>        
-        </div>
+
+                </div>
+            </div>
         </section>
     )
 }

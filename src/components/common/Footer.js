@@ -1,11 +1,11 @@
-import {NavLink} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-function Footer(){
+function Footer() {
   return (
     <footer>
-        <div class="inner">
-            <p>Copyright &copy; Techoners All Right reserved.</p>
-        </div>
+      <div class="inner">
+        <p>Copyright &copy; Techoners All Right reserved.</p>
+      </div>
     </footer>
   )
 }

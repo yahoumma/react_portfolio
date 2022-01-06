@@ -1,5 +1,5 @@
 import './css/style.css';
-import {NavLink, Link, Route} from 'react-router-dom';
+import { NavLink, Link, Route } from 'react-router-dom';
 
 //import common component
 import Header from './components/common/Header.js';
@@ -23,7 +23,7 @@ import Login from './components/sub/Login.js';
 
 function App() {
   return (
-    <div className="App">    
+    <div className="App">
       <Header />
 
       <Route exact path="/">
@@ -32,16 +32,16 @@ function App() {
         <About />
         <Count />
         <Contact />
-      </Route>      
+      </Route>
 
       <Route path="/aboutUs" component={AboutUs}></Route>
       <Route path="/project" component={Project}></Route>
       <Route path="/gallery" component={Gallery}></Route>
       <Route path="/youtube" component={Youtube}></Route>
       <Route path="/location" component={Location}></Route>
-      <Route path="/join" component={Join}></Route>      
+      <Route path="/join" component={Join}></Route>
 
-      <Footer />  
+      <Footer />
     </div>
   );
 }

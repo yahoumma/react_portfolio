@@ -1,20 +1,20 @@
-function Visual(){
-    return(
+function Visual() {
+    return (
         <section className="content visual">
             <div class="imgBox">
             </div>
             <div class="imgBtns">
                 <a href="#" class="btns btnMinus">
                     <i class="fas fa-minus"></i>
-                </a> 
+                </a>
                 <a href="#" class="btns btnPlus">
                     <i class="fas fa-plus"></i>
                 </a>
-            </div> 
+            </div>
             <div class="floatingBox">
                 <div class="txtBox">
                     <div class="txt">
-                        <h1>Stay<br/>With Techoners</h1>
+                        <h1>Stay<br />With Techoners</h1>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, placeat dolore? </p>
                     </div>
                 </div>

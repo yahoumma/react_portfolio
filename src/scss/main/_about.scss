@@ -1,64 +1,59 @@
-.about{
-    width:100%; 
-    height: 80vh;
-    position: relative;
-    .imgBox{
-       width: 60vw;
-       height: 100%;
-       background:url(../img/aboutBg.jpg) no-repeat center/cover;
-       filter: grayscale(100%);
-       position: absolute;
-       top: 0;
-       left :0;
-    }
-    .inner{
-       width: 1180px;
-       margin: 0 auto;
-       position: relative;
-       .floatingBox{
-          @include floatingBox();
+.about {
+	width: 100%;
+	height: 80vh;
+	position: relative;
+	.imgBox {
+		width: 60vw;
+		height: 100%;
+		background: url(../img/aboutBg.jpg) no-repeat center/cover;
+		filter: grayscale(100%);
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.inner {
+		width: 1180px;
+		margin: 0 auto;
+		position: relative;
+		.floatingBox {
+			@include floatingBox();
 
-          top: 20vh;
-          right: 0;
-          width: 30vw;
-          height: 40vh;
-         
-          .txtBox{
-             position: absolute;
-             top: 0;
-             right: 0;
-             width: 80%;
-             height: 100%;
-             background: #fffffe;
-             padding: 40px 60px;
-             vertical-align: middle;
-             
-             h1{
-                font:bold 30px/1.4 'Open Sans';
-                margin-bottom: 10px;
-                color:#272343;
-                @include txtBg();   
-                         
-             }
-             h2{
-                font:bold 14px/1.2 'Open Sans';
-                color:#ccc;
-                margin: 10px 0;
-             }
-             p{
-                font: 14px/1.4 'Open Sans';
-                color:#ccc;
-                flex-wrap: wrap;
-                margin-bottom: 20px;
-                
-             }
-             .btnMore{
-                @include btnMore();
-    
-             }
-          }
-    
-       }
-    }
-    
- }
+			top: 20vh;
+			right: 0;
+			width: 30vw;
+			height: 40vh;
+
+			.txtBox {
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 80%;
+				height: 100%;
+				background: #fffffe;
+				padding: 40px 60px;
+				vertical-align: middle;
+
+				h1 {
+					font: bold 30px/1.4 "Open Sans";
+					margin-bottom: 10px;
+					color: #272343;
+					@include txtBg();
+				}
+				h2 {
+					font: bold 14px/1.2 "Open Sans";
+					color: #ccc;
+					margin: 10px 0;
+				}
+				p {
+					font: 14px/1.4 "Open Sans";
+					color: #ccc;
+					flex-wrap: wrap;
+					margin-bottom: 20px;
+				}
+				.btnMore {
+					@include btnMore();
+				}
+			}
+		}
+	}
+}

@@ -1,5 +1,5 @@
-function Count(){
-    return(
+function Count() {
+    return (
         <section className="content count">
             <div class="inner">
                 <article>
