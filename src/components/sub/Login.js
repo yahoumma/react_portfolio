@@ -1,12 +1,17 @@
+import { NavLink } from "react-router-dom";
+
 function Login(){
     return(
-        <main>
+        <section className="content login">
+        <div className="subTitle">
             <div className="inner">
-                <h1>
-                    <a href="/login">Login</a>
-                </h1>
+              <h1><NavLink to="/login">Login</NavLink></h1>
             </div>
-        </main>
+        </div>
+        <div className="inner">
+       
+        </div>
+        </section>
     )
 }
 
