@@ -36,25 +36,19 @@ function Header() {
           <span></span>
         </a>
         <nav className="menuMo">
-          <h1>
-            <a href="index.html">DESiGN</a>
-            <span>Premium Interior Design</span>
-          </h1>
+        <h1><NavLink activeStyle={active} exact to="/">PF</NavLink></h1>
           <div className="moMenuList">
-            <div className="login">
               <a href="#"><i className="fas fa-robot"></i></a>
               <ul className="utilMo">
-                <li><a href="#">Login</a></li>
-                <li><a href="join.html">Join</a></li>
+                <li><NavLink activeStyle={active} to="/join">JOIN</NavLink></li>
+              <li><NavLink activeStyle={active} to="/login">LOGIN</NavLink></li>
               </ul>
-
-            </div>
             <ul id="gnbMo">
-              <li><a href="about.html">ABOUT</a></li>
-              <li><a href="youtube.html">YOUTUBE</a></li>
-              <li><a href="community.html">COMMUNITY</a></li>
-              <li><a href="gallery.html">GALLERY</a></li>
-              <li><a href="Contact.html">Contact</a></li>
+              <li><NavLink activeStyle={active} to="/aboutUs">ABOUT</NavLink></li>
+              <li><NavLink activeStyle={active} to="/project">PROJECT</NavLink></li>
+              <li><NavLink activeStyle={active} to="/gallery">GALLERY</NavLink></li>
+              <li><NavLink activeStyle={active} to="/youtube">YOUTUBE</NavLink></li>
+              <li><NavLink activeStyle={active} to="/location">LOCATION</NavLink></li>
             </ul>
             <ul className="csMo">
               <li><a href="#"><i className="far fa-envelope"></i>Contact</a></li>

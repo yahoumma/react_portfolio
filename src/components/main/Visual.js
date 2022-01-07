@@ -1,4 +1,14 @@
+import { useEffect, useRef } from 'react';
 function Visual() {
+    const visual = document.querySelector(".visual");
+
+    useEffect(()=>{
+        window.addEventListener("load",e=>{
+            console.log("새로고침");
+            visual.classList.add("on");
+        });
+    },[]);
+    
     return (
         <section className="content visual">
             <div className="imgBox">
@@ -11,6 +21,7 @@ function Visual() {
                     <i className="fas fa-plus"></i>
                 </a>
             </div>
+
             <div className="floatingBox">
                 <div className="txtBox">
                     <div className="txt">

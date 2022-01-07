@@ -20,6 +20,7 @@ import Youtube from './components/sub/Youtube.js';
 import Location from './components/sub/Location.js';
 import Join from './components/sub/Join.js';
 import Login from './components/sub/Login.js';
+import { useRef } from 'react';
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
       <Header />
 
       <Route exact path="/">
-        <Visual />
+        <Visual />        
         <Our />
         <About />
         <Count />
