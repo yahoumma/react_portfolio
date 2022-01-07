@@ -29,36 +29,36 @@ function AboutUs() {
                     </div>
                 </atrticle>
                 <div className="aboutBox">
-                    <div class="box">
-                        <i class="fas fa-medal"></i>
+                    <div className="box">
+                        <i className="fas fa-medal"></i>
                         <h3>TOP QUALITY<br />SERVICE</h3>
                     </div>
-                    <div class="box">
-                        <i class="fas fa-users-cog"></i>
+                    <div className="box">
+                        <i className="fas fa-users-cog"></i>
                         <h3>EXPERT<br />TEAM</h3>
                     </div>
-                    <div class="box">
-                        <i class="fas fa-calculator"></i>
+                    <div className="box">
+                        <i className="fas fa-calculator"></i>
                         <h3>MARKET BEST<br />PRICING</h3>
                     </div>
-                    <div class="box">
-                        <i class="fas fa-truck"></i>
+                    <div className="box">
+                        <i className="fas fa-truck"></i>
                         <h3>ONTIME<br />DELVERY</h3>
                     </div>
                 </div>
                 <h1>PROCESS</h1>
                 <h2>Three steps solution</h2>
                 <article className="aboutBox">
-                    <div class="box">
-                        <i class="fas fa-medal"></i>
+                    <div className="box">
+                        <i className="fas fa-medal"></i>
                         <h3>Order Your Service </h3>
                     </div>
-                    <div class="box">
-                        <i class="fas fa-users-cog"></i>
+                    <div className="box">
+                        <i className="fas fa-users-cog"></i>
                         <h3>Our Team Start Work</h3>
                     </div>
-                    <div class="box">
-                        <i class="fas fa-calculator"></i>
+                    <div className="box">
+                        <i className="fas fa-calculator"></i>
                         <h3>Deliver Your Project</h3>
                     </div>
                 </article>
@@ -71,22 +71,22 @@ function AboutUs() {
                                 <ul>
                                     <li>
                                         <a href="#">
-                                            <i class="fab fa-instagram"></i>
+                                            <i className="fab fa-instagram"></i>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <i class="fab fa-twitter"></i>
+                                            <i className="fab fa-twitter"></i>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <i class="fab fab fa-facebook-f"></i>
+                                            <i className="fab fab fa-facebook-f"></i>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <i class="fas fa-globe-americas"></i>
+                                            <i className="fas fa-globe-americas"></i>
                                         </a>
                                     </li>
                                 </ul>
@@ -101,22 +101,22 @@ function AboutUs() {
                                 <ul>
                                     <li>
                                         <a href="#">
-                                            <i class="fab fa-instagram"></i>
+                                            <i className="fab fa-instagram"></i>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <i class="fab fa-twitter"></i>
+                                            <i className="fab fa-twitter"></i>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <i class="fab fab fa-facebook-f"></i>
+                                            <i className="fab fab fa-facebook-f"></i>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <i class="fas fa-globe-americas"></i>
+                                            <i className="fas fa-globe-americas"></i>
                                         </a>
                                     </li>
                                 </ul>
@@ -131,22 +131,22 @@ function AboutUs() {
                                 <ul>
                                     <li>
                                         <a href="#">
-                                            <i class="fab fa-instagram"></i>
+                                            <i className="fab fa-instagram"></i>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <i class="fab fa-twitter"></i>
+                                            <i className="fab fa-twitter"></i>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <i class="fab fab fa-facebook-f"></i>
+                                            <i className="fab fab fa-facebook-f"></i>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <i class="fas fa-globe-americas"></i>
+                                            <i className="fas fa-globe-americas"></i>
                                         </a>
                                     </li>
                                 </ul>

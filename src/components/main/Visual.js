@@ -1,45 +1,45 @@
 function Visual() {
     return (
         <section className="content visual">
-            <div class="imgBox">
+            <div className="imgBox">
             </div>
-            <div class="imgBtns">
-                <a href="#" class="btns btnMinus">
-                    <i class="fas fa-minus"></i>
+            <div className="imgBtns">
+                <a href="#" className="btns btnMinus">
+                    <i className="fas fa-minus"></i>
                 </a>
-                <a href="#" class="btns btnPlus">
-                    <i class="fas fa-plus"></i>
+                <a href="#" className="btns btnPlus">
+                    <i className="fas fa-plus"></i>
                 </a>
             </div>
-            <div class="floatingBox">
-                <div class="txtBox">
-                    <div class="txt">
+            <div className="floatingBox">
+                <div className="txtBox">
+                    <div className="txt">
                         <h1>Stay<br />With Techoners</h1>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, placeat dolore? </p>
                     </div>
                 </div>
-                <a href="#" class="btnMore">Learn More <i class="fas fa-long-arrow-alt-right"></i></a>
+                <a href="#" className="btnMore">Learn More <i className="fas fa-long-arrow-alt-right"></i></a>
             </div>
-            <div class="sns">
+            <div className="sns">
                 <ul>
                     <li>
                         <a href="#">
-                            <i class="fab fa-instagram"></i>
+                            <i className="fab fa-instagram"></i>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <i class="fab fa-twitter"></i>
+                            <i className="fab fa-twitter"></i>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <i class="fab fab fa-facebook-f"></i>
+                            <i className="fab fab fa-facebook-f"></i>
                         </a>
                     </li>
                 </ul>
             </div>
-        </section>
+        </section>        
     )
 }
 

@@ -9,8 +9,8 @@ function Header() {
         <div className="inner">
           <ul className="sns">
             <li><a href="#"><i className="fab fa-github"></i></a></li>
-            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="#"><i className="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i className="fab fa-facebook"></i></a></li>
           </ul>
           <ul className="util">
             <li><NavLink activeStyle={active} to="/join">JOIN</NavLink></li>
@@ -32,18 +32,18 @@ function Header() {
         </nav>
 
         {/* Mobile Menu */}
-        <a href="#" class="btnCall">
+        <a href="#" className="btnCall">
           <span></span>
         </a>
-        <nav class="menuMo">
+        <nav className="menuMo">
           <h1>
             <a href="index.html">DESiGN</a>
             <span>Premium Interior Design</span>
           </h1>
-          <div class="moMenuList">
-            <div class="login">
-              <a href="#"><i class="fas fa-robot"></i></a>
-              <ul class="utilMo">
+          <div className="moMenuList">
+            <div className="login">
+              <a href="#"><i className="fas fa-robot"></i></a>
+              <ul className="utilMo">
                 <li><a href="#">Login</a></li>
                 <li><a href="join.html">Join</a></li>
               </ul>
@@ -56,28 +56,28 @@ function Header() {
               <li><a href="gallery.html">GALLERY</a></li>
               <li><a href="Contact.html">Contact</a></li>
             </ul>
-            <ul class="csMo">
-              <li><a href="#"><i class="far fa-envelope"></i>Contact</a></li>
-              <li><a href="#"><i class="fas fa-info"></i>Help</a></li>
-              <li><a href="#"><i class="fas fa-map-marker-alt"></i>Sitemap</a></li>
+            <ul className="csMo">
+              <li><a href="#"><i className="far fa-envelope"></i>Contact</a></li>
+              <li><a href="#"><i className="fas fa-info"></i>Help</a></li>
+              <li><a href="#"><i className="fas fa-map-marker-alt"></i>Sitemap</a></li>
             </ul>
           </div>
-          <div class="follow">
+          <div className="follow">
             <h3>Follow Us</h3>
-            <ul class="snsMo">
+            <ul className="snsMo">
               <li>
                 <a href="#">
-                  <i class="fab fa-facebook"></i>
+                  <i className="fab fa-facebook"></i>
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <i class="fab fa-twitter"></i>
+                  <i className="fab fa-twitter"></i>
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <i class="fab fa-instagram"></i>
+                  <i className="fab fa-instagram"></i>
                 </a>
               </li>
             </ul>

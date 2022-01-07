@@ -247,12 +247,6 @@ header {
             text-align: center;
             background: rgba(0, 0, 0, 0.3); }
 
-@media screen and (min-width: 1179px) {
-  header .inner {
-    padding-right: 20%; }
-
-  .visual .imgBox {
-    margin-left: -20%; } }
 footer {
   width: 100%;
   padding: 20px 0; }
@@ -282,12 +276,31 @@ footer {
         font: bold 22px/1.7 "Open Sans";
         color: #666; }
 
+@media screen and (min-width: 1179px) {
+  header .inner {
+    padding-right: 340px; }
+
+  .visual .imgBox {
+    margin-left: -340px; } }
+@media screen and (max-width: 1179px) {
+  header .inner {
+    padding-right: 340px; }
+
+  .visual .imgBox {
+    margin-left: -340px; } }
 .visual {
   width: 100%;
   height: calc(100vh - 100px);
   position: relative;
   overflow: hidden;
-  background: #00df70; }
+  background: #00df70;
+  transition: 1s; }
+  .visual .on.imgBox {
+    transform: translateX(0%); }
+  .visual .on.imgBtns {
+    opacity: 1; }
+  .visual .on.floatingBox {
+    transform: scaleY(100%); }
   .visual .imgBox {
     width: 100%;
     height: 100%;
@@ -295,32 +308,38 @@ footer {
     position: absolute;
     left: 0;
     z-index: 1;
-    filter: grayscale(100%); }
-  .visual .imgBtns .btns {
-    position: absolute;
-    display: block;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    top: 50%;
-    left: 5%;
-    background: #00df70;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    color: #fffffe;
-    line-height: 30px;
-    cursor: pointer;
-    z-index: 5; }
-    .visual .imgBtns .btns.btnMinus {
-      top: calc(50% - 60px); }
+    filter: grayscale(100%);
+    transition: 2s;
+    transform: translateX(-100%); }
+  .visual .imgBtns {
+    transition: 2s;
+    opacity: 0; }
+    .visual .imgBtns .btns {
+      position: absolute;
+      display: block;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      top: 50%;
+      left: 5%;
+      background: #00df70;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      color: #fffffe;
+      line-height: 30px;
+      cursor: pointer;
+      z-index: 5; }
+      .visual .imgBtns .btns.btnMinus {
+        top: calc(50% - 60px); }
   .visual .floatingBox {
     position: absolute;
     background-color: rgba(0, 223, 112, 0.3);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     z-index: 3;
     top: 50%;
-    right: 100px;
-    transform: translateY(-50%);
+    right: 30px;
+    transition: 2s;
+    transform: translateX(-10%) translateY(-50%) scaleX(0);
     width: 500px;
     height: 280px; }
     .visual .floatingBox .btnMore {
