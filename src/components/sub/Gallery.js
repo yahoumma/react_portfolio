@@ -3,10 +3,12 @@ import { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 function Gallery() {
+
+
   const baseURL = "https://www.flickr.com/services/rest/?";
   const method1 = "flickr.interestingness.getList";
   const key = "a7b1037e058bdadbabc8162a4faf09d7";
-  const count = 5;
+  const count = 13;
   const url = `${baseURL}method=${method1}&api_key=${key}&per_page=${count}&format=json&nojsoncallback=1`;
 
   let [items, setItems] = useState([]);
@@ -26,13 +28,12 @@ function Gallery() {
 
   return (
     <section className="content gallery">
-      <div className="inner">
         <div className="subTitle">
           <div className="inner">
             <h1><NavLink to="/gallery">Gallery</NavLink></h1>
           </div>
         </div>
-        <div className="conInner">
+        <div className="inner">
           <ul className="galleryTab">
             <li className="on"><a href="#">ALL ITEMS</a></li>
             <li><a href="#">WEB DESIGN</a></li>
@@ -49,17 +50,17 @@ function Gallery() {
                     <li key={index}>
                       <div className="pic">
                         <img src={imgSrc} />
+                        <a href="#"><i class="fas fa-plus"></i></a>
+                        <a href="#"><i class="fas fa-share-square"></i></a>
                       </div>
-            
-                      <p>{item.title}</p>
                     </li>
                   )
                 })
               }
             </ul>
+            <a className="btnMore">READ MORE</a>
           </div>
         </div>
-      </div>
     </section>
   )
 }
