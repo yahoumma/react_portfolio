@@ -11,3 +11,17 @@ li {
 a {
 	text-decoration: none;
 }
+table{
+	border-collapse: collapse;
+	border:none;
+	th, td{
+		border:none;
+	}
+}
+
+
+.h{
+	position: absolute;
+	top: -9999px;
+	opacity: 0;
+}

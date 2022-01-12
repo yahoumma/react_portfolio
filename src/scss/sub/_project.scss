@@ -1,15 +1,27 @@
 .project {
 	width: 100%;
 	article {
-		width: 100%;
+		padding: 40px;
+		position: relative;
+		width: 70%;
 		height: 200px;
-		border-top: 1px solid #333;
-		border-bottom: 1px solid #333;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		section {
-			font: 12px/1 "Open Sans";
+		text-align: center;
+		padding: 10px;
+		transition: 1s;
+
+		i {
+			@include icon();
+			display: block;
+		}
+		p {
+			display: block;
+			
+		}
+		h1 {
+			font:bold 14px/1 "Open Sans";
+			color: #777;
+			margin-top: 10px;
+			@include txtBg();
 		}
 	}
 }

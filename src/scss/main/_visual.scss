@@ -3,44 +3,69 @@
 	height: calc(100vh - 100px);
 	position: relative;
 	overflow: hidden;
-	background: #00df70;
-	transition:1s;
-	/*
-	&.on{
-		&.imgBox{
-			transform: translateX(0%);
-		}
-		&.imgBtns{
-			opacity: 1;
-		}
-		&.floatingBox{
-			transform: scaleY(100%);
-		}
-	}
-	*/
+	transition: 1s;
 	.imgBox {
-		width: 100%;
+		width: calc(100% - 340px);
 		height: 100%;
 		background: url(../img/visual1.jpg) no-repeat center/cover;
 		position: absolute;
-		left: -100%;
+		left: 0;
 		z-index: 1;
-		filter: grayscale(100%);
-		transition:2s;
-		transform: translateX(100%);
-		padding-right: 340px;
+		//filter: grayscale(100%);
+		transition: 1s;
+		animation: visualImg 1.5s ease-in-out;
+	}
+	.bgBox {
+		width: 340px;
+		height: 100%;
+		background: #00df70;
+		position: absolute;
+		right: 0;
+		transition: 1s;
+		animation: visualBg 1.5s ease-in-out;
+	}
+
+	@keyframes visualImg {
+		0% {
+			left: -100%;
+		}
+		50%{
+			left: 0;
+		}
+		70%{
+			left: -5%;
+		}
+		80%{
+			left: 0;
+		}
+		90% {
+			left: -3%;
+		}
+		100% {
+			left: 0;
+		}
+	}
+	@keyframes visualBg {
+		0% {
+			right: -340px;
+		}
+		50% {
+			right: 0px;
+		}
+		70% {
+			right: -5%;
+		}
+		80% {
+			right: 0px;
+		}
+		90% {
+			right: -3%;
+		}
+		100% {
+			right: 0px;
+		}
 	}
 	.imgBtns {
-		#box{
-			position: absolute;
-			width: 100px;
-			height: 100px;
-			top: 0;
-			left: 0;
-			border: 1px solid #000;
-		}
-		transition:2s;
-		opacity: 1;
 		.btns {
 			position: absolute;
 			display: block;
@@ -64,12 +89,12 @@
 	.floatingBox {
 		@include floatingBox();
 		top: 50%;
-		right:30px;
-		transition:2s;
-		transform:translateX(-10%) translateY(-50%) scaleX(100%);
+		left: calc(100% - 540px);
+		transform: translateX(-10%) translateY(-50%);
 		width: 500px;
 		height: 280px;
-
+		animation: visualBox 0.9s linear 1s;
+		transform-origin: 50%;
 		.btnMore {
 			@include btnMore();
 			position: absolute;
@@ -89,7 +114,6 @@
 				position: absolute;
 				top: 45%;
 				left: 50%;
-
 				transform: translateY(-50%) translateX(-50%);
 				h1 {
 					@include txtBg();
@@ -121,26 +145,11 @@
 	}
 }
 
-
-
-
 @media screen and (min-width: $tablet) {
-	.visual{
-		padding-right: 340px;
-	}
 }
 
-@media screen and (max-width:$tablet){
-
-	.visual{
-			padding-right: 340px;
-		}
-
+@media screen and (max-width: $tablet) {
 }
 
-
-
-
-@media screen and (max-width:$mobile){
-	
+@media screen and (max-width: $mobile) {
 }

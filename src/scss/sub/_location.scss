@@ -1,0 +1,36 @@
+.location{
+    >.inner {
+		width: 1180px;
+		margin: 0 auto;
+		text-align: center;
+		h1 {
+			font: bold 26px/1 "Open Sans";
+			color: #6b6b6b;
+			margin-bottom: 20px;
+		}
+		h2 {
+			font: 14px/1.7 "Open Sans";
+			color: #6b6b6b;
+			margin-bottom: 40px;
+		}
+		h3 {
+			font: 18px/1.4 "Open Sans";
+			color: #6b6b6b;
+			letter-spacing: -1px;
+		}
+		h4 {
+			font: 16px/1.4 "Open Sans";
+			color: #6b6b6b;
+			margin-bottom: 10px;
+		}
+		p {
+			font: 12px/1.7 "Open Sans";
+			color: #6b6b6b;
+		}
+		span {
+			font: 10px/1.7 "Open Sans";
+			color: #6b6b6b;
+		}
+		
+	}
+}

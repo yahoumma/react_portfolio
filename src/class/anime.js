@@ -1,13 +1,15 @@
 export default class Anime {
   constructor(selector, option){    
     this.selector = selector;
-    this.option = option
+    //전개 연산자로 디폴트 객체를 합쳐서 새로운 객체를 반환
+    this.option = {duration: 5000, ...option} 
     this.startTime = performance.now(); 
-    this.currentValue = null;   
+    this.currentValue = null;  
+
 
     if(this.option.prop==="scroll"){
       this.currentValue = this.selector.scrollY || this.selector.pageYOffset;
-    }else{
+    }else{      
       this.currentValue = parseFloat(getComputedStyle(this.selector)[this.option.prop]); 
     }      
   
@@ -29,21 +31,23 @@ export default class Anime {
     } 
   
     if(this.option.value === this.currentValue) return;
-    requestAnimationFrame(this.run);
+    //프로토타입 메서드에 인수를 전달할때는 익명함수로 감싸서 전달
+    requestAnimationFrame(time=>this.run(time));   
   }
 
-  run(time){  
-    console.log(time);
-    console.log(this.startTime); 
+  run(time){    
     let timeLast = time - this.startTime;      
     let progress = timeLast/this.option.duration;  
 
     if(progress < 0) progress = 0;
     if(progress > 1) progress = 1;
     if(progress < 1){
-      requestAnimationFrame(this.run); 
+      //프로토타입 메서드에 인수를 전달할때는 익명함수로 감싸서 전달
+      requestAnimationFrame(time=>this.run(time)); 
     }else{
-      if(this.option.callback) this.option.callback();
+      setTimeout(()=>{
+        if(this.option.callback) this.option.callback();
+      },0)
     } 
     let result = this.currentValue + ((this.option.value - this.currentValue)*progress);    
    

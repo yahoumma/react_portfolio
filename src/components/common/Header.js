@@ -35,7 +35,8 @@ function Header() {
         <a href="#" className="btnCall">
           <span></span>
         </a>
-        <nav className="menuMo">
+      </div>
+      <nav className="menuMo">
         <h1><NavLink activeStyle={active} exact to="/">PF</NavLink></h1>
           <div className="moMenuList">
               <a href="#"><i className="fas fa-robot"></i></a>
@@ -78,8 +79,6 @@ function Header() {
           </div>
 
         </nav>
-
-      </div>
     </header>
   )
 }
