@@ -1090,7 +1090,7 @@ footer {
           position: absolute;
           width: 100%;
           height: 30px;
-          background: rgba(0, 223, 112, 0.3);
+          background: rgba(0, 223, 112, 0.7);
           bottom: 0; }
           .youtube > .inner .list > article .pic .share ul {
             display: flex;
@@ -1128,13 +1128,24 @@ footer {
             color: #6b6b6b; }
   .youtube > .inner .category {
     width: 300px; }
-    .youtube > .inner .category form {
-      width: 100%; }
-      .youtube > .inner .category form input[type="text"] {
-        width: 100%;
+    .youtube > .inner .category .searchBox {
+      position: relative;
+      width: 100%;
+      height: 40px;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); }
+      .youtube > .inner .category .searchBox input[type="search"] {
+        width: calc(100% - 40px);
         height: 40px;
+        border: none; }
+      .youtube > .inner .category .searchBox button {
         border: none;
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); }
+        background: none;
+        position: absolute;
+        right: 10px; }
+      .youtube > .inner .category .searchBox i {
+        font-size: 18px;
+        line-height: 40px;
+        color: #00df70; }
     .youtube > .inner .category article {
       width: 100%;
       border-top: 20px solid #00df70;
@@ -1150,6 +1161,7 @@ footer {
       .youtube > .inner .category article.cate ul li {
         position: relative;
         margin-left: 20px;
+        margin-bottom: 5px;
         vertical-align: middle; }
         .youtube > .inner .category article.cate ul li::before {
           content: "";
@@ -1159,31 +1171,50 @@ footer {
           background: #00df70;
           position: absolute;
           top: 50%;
-          transform: translateX(-15px) translateY(-50%);
+          transform: translateX(-15px);
           left: 0; }
         .youtube > .inner .category article.cate ul li a {
           font: 12px/1 "Open Sans";
           color: #6b6b6b; }
+      .youtube > .inner .category article.recentPosts .post {
+        display: flex;
+        margin-bottom: 20px; }
+        .youtube > .inner .category article.recentPosts .post img {
+          width: 50px;
+          height: 50px;
+          object-fit: cover;
+          overflow: hidden;
+          margin-right: 20px; }
+        .youtube > .inner .category article.recentPosts .post p {
+          width: 100%;
+          font: 12px/1.7 "Open Sans";
+          color: #6b6b6b; }
+        .youtube > .inner .category article.recentPosts .post i {
+          font-size: 12px;
+          color: #00df70; }
       .youtube > .inner .category article.tags span {
         display: inline-block;
-        height: 20px;
+        height: 30px;
+        margin-bottom: 10px;
         background: #00df70;
         color: #fffffe;
         margin-right: 5px;
-        font: 11px/20px "Open Sans";
+        font: 11px/30px "Open Sans";
         color: #fffffe;
         padding: 0 10px; }
-      .youtube > .inner .category article.recentPosts .post img {
-        width: 50px;
-        height: 50px;
-        object-fit: cover;
-        overflow: hidden; }
-      .youtube > .inner .category article.recentPosts .post p {
-        font: 12px/1.7 "Open Sans";
-        color: #6b6b6b; }
-      .youtube > .inner .category article.recentPosts .post i {
-        font-size: 12px;
-        color: #00df70; }
+  .youtube > .inner .pop {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    padding: 200px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px); }
+    .youtube > .inner .pop span {
+      color: #fffffe;
+      cursor: pointer; }
 
 .location > .inner {
   width: 1180px;

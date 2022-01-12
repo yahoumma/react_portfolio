@@ -9,7 +9,7 @@ function Youtube() {
 
     const api_key = "AIzaSyAxkR2Pz3WQ25QD6VfmBHDsmMfj_KjtkGY";
     //const playListId = "PLYOPkdUKSFgX5CgKf68RJzJHec0XEdBNd";
-    const playListId = "PLKRZTF1Q1uwZdB1swkVbj9cNV9JcZFpy_";
+    const playListId = "PLeSAW16iBEVMdmtUwNqDh46P5lK-GqrQB";
     const num = 3;
     const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${api_key}&playlistId=${playListId}&maxResults=${num}`;
 
@@ -98,19 +98,24 @@ function Youtube() {
                 </section>
                 {isPop ? <Pop /> : null}
                 <section class="category">
-                    <form>
-                        <input type="text" name="" id="" />
-                        <i class="fas fa-search"></i>
+                    <form name="searchBox" className='searchBox'>
+                        <input type="search" name="" id="s" />
+                        <button type="submit" id="searchBtn"><i class="fas fa-search"></i><span className='h'>검색</span></button>
                     </form>
                     <article className='cate'>
                         <h3>Categoties</h3>
                         <ul>
-                            <li><a href="">list</a></li>
-                            <li><a href="">list</a></li>
-                            <li><a href="">list</a></li>
-                            <li><a href="">list</a></li>
-                            <li><a href="">list</a></li>
-                            <li><a href="">list</a></li>
+                            {
+                            data.map((item, index)=>{
+                                let tit = item.snippet.title;
+                                let tit_len = tit.length;
+                                return(
+                                    <li key={index}>
+                                        <a href="">{(tit_len > 25) ? tit = tit.substr(0, 25) + "..." : tit}</a>
+                                    </li>
+                                )
+                            })
+                        }
                         </ul>
                     </article>
                     <article className='recentPosts' key={index}>
@@ -122,9 +127,11 @@ function Youtube() {
                                 return (
                                     <div className='post' key={index}>
                                         <img src={item.snippet.thumbnails.medium.url} />
-                                        <p>{(tit_len > 20) ? tit = tit.substr(0, 20) + "..." : tit}</p>
-                                        <span>{item.snippet.commentCount} <i class="fas fa-comment-dots"></i></span>
-                                        <span>{item.likeCount} <i class="fas fa-heart"></i></span>
+                                        <div>
+                                            <p>{(tit_len > 25) ? tit = tit.substr(0, 25) + "..." : tit}</p>
+                                            <span>{item.snippet.commentCount} <i class="fas fa-comment-dots"></i></span>
+                                            <span>{item.likeCount} <i class="fas fa-heart"></i></span>
+                                        </div>
                                     </div>
                                 )
 
