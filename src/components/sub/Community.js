@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
-function Project() {
+function Community() {
     let [posts, setPosts] = useState([]);
 
     const path = process.env.PUBLIC_URL;
@@ -17,10 +17,10 @@ function Project() {
     },[])
 
     return (
-        <section className="content project">
+        <section className="content community">
             <div className="subTitle">
                 <div className="inner">
-                    <h1><NavLink to="/project">Project</NavLink></h1>
+                    <h1><NavLink to="/community">Community</NavLink></h1>
                 </div>
             </div>
             <div className="inner">
@@ -28,6 +28,7 @@ function Project() {
                     posts.map((data,index)=>{
                         return (
                             <article key={index}>
+                                <img src={data.img} />
                                 <h1>{data.title}</h1>
                                 <p>{data.content}</p>
                             </article>
@@ -40,4 +41,4 @@ function Project() {
     )
 }
 
-export default Project;
+export default Community;

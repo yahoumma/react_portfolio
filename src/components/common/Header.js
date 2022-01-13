@@ -24,7 +24,7 @@ function Header() {
         <nav className="menuWeb">
           <ul id="gnb">
             <li><NavLink activeStyle={active} to="/aboutUs">ABOUT</NavLink></li>
-            <li><NavLink activeStyle={active} to="/project">PROJECT</NavLink></li>
+            <li><NavLink activeStyle={active} to="/community">COMMUNITY</NavLink></li>
             <li><NavLink activeStyle={active} to="/gallery">GALLERY</NavLink></li>
             <li><NavLink activeStyle={active} to="/youtube">YOUTUBE</NavLink></li>
             <li><NavLink activeStyle={active} to="/location">LOCATION</NavLink></li>
@@ -46,7 +46,7 @@ function Header() {
               </ul>
             <ul id="gnbMo">
               <li><NavLink activeStyle={active} to="/aboutUs">ABOUT</NavLink></li>
-              <li><NavLink activeStyle={active} to="/project">PROJECT</NavLink></li>
+              <li><NavLink activeStyle={active} to="/community">COMMUNITY</NavLink></li>
               <li><NavLink activeStyle={active} to="/gallery">GALLERY</NavLink></li>
               <li><NavLink activeStyle={active} to="/youtube">YOUTUBE</NavLink></li>
               <li><NavLink activeStyle={active} to="/location">LOCATION</NavLink></li>

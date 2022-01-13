@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 
 function AboutUs() {
+    
     return (
         <section className="content aboutUs">
             <div className="subTitle">
