@@ -6,7 +6,7 @@ function Community() {
     let [posts, setPosts] = useState([]);
 
     const path = process.env.PUBLIC_URL;
-    const url = `${path}/dbs/project.json`;
+    const url = `${path}/dbs/qna.json`;
 
     useEffect(()=>{
         axios
@@ -24,18 +24,20 @@ function Community() {
                 </div>
             </div>
             <div className="inner">
+            <h2>Answers to your questions</h2>
+            <ul>
                 {
                     posts.map((data,index)=>{
                         return (
-                            <article key={index}>
-                                <img src={data.img} />
-                                <h1>{data.title}</h1>
-                                <p>{data.content}</p>
-                            </article>
+                            <li key={index}>
+                                
+                                {data.title}
+                                <span>{data.views}</span>
+                            </li>
                         )
                     })
                 }
-
+            </ul>
             </div>
         </section>
     )

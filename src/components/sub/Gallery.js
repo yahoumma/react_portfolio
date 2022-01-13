@@ -1,68 +1,101 @@
 import axios from "axios";
-import { useEffect, useRef, useState } from "react";
+import {useEffect, useState} from "react";
 import { NavLink } from "react-router-dom";
 
-function Gallery() {
+const body = document.querySelector("body");
 
-
-  const baseURL = "https://www.flickr.com/services/rest/?";
-  const method1 = "flickr.interestingness.getList";
-  const key = "a7b1037e058bdadbabc8162a4faf09d7";
-  const count = 13;
-  const url = `${baseURL}method=${method1}&api_key=${key}&per_page=${count}&format=json&nojsoncallback=1`;
-
+function Gallery(){
   let [items, setItems] = useState([]);
-  let list = useRef(null);
+  let [isPop, setIsPop] = useState(false);
+  //썸네일 클릭 이벤트 발생시 해당 순번값을 관리하는 state생성
+  let [index, setIndex] = useState(0);
 
-  useEffect(getFlickr, []);
 
+  const api_key = "e7ed3b39fe112d7e93d03c19325305e0";
+  const url = `https://www.flickr.com/services/rest/?method=flickr.interestingness.getList&api_key=${api_key}&per_page=100&format=json&nojsoncallback=1`;
 
-  async function getFlickr() {
-    await axios
+  useEffect(()=>{
+    axios
       .get(url)
-      .then(json => setItems(json.data.photos.photo))
-
-    list.current.classList.add("on");
-    console.log("test");
-  }
+      .then(json=>{
+        console.log(json);
+        setItems(json.data.photos.photo);
+      })
+  },[]);
 
   return (
-    <section className="content gallery">
-        <div className="subTitle">
-          <div className="inner">
-            <h1><NavLink to="/gallery">Gallery</NavLink></h1>
-          </div>
+    <main className="content gallery">
+       <div className="subTitle">
+            <div className="inner">
+                <h1><NavLink to="/gallery">Gallery</NavLink></h1>
+            </div>
         </div>
-        <div className="inner">
-          <ul className="galleryTab">
-            <li className="on"><a href="#">ALL ITEMS</a></li>
-            <li><a href="#">WEB DESIGN</a></li>
-            <li><a href="#">UI/UX</a></li>
-            <li><a href="#">BRANDING</a></li>
-          </ul>
-
-          <div className="listBox">
-            <ul className="list" ref={list}>
-              {
-                items.map((item, index) => {
-                  const imgSrc = `https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_m.jpg`;
-                  return (
-                    <li key={index}>
-                      <div className="pic">
-                        <img src={imgSrc} />
-                        <a href="#"><i class="fas fa-plus"></i></a>
-                        <a href="#"><i class="fas fa-share-square"></i></a>
-                      </div>
-                    </li>
-                  )
-                })
-              }
+      <div className="inner">
+        {/* 
+           <ul className="galleryTab">
+              <li className="on"><a href="#">ALL ITEMS</a></li>
+              <li><a >WEB DESIGN</a></li>
+              <li><a href="#">UI/UX</a></li>
+              <li><a href="#">BRANDING</a></li>
             </ul>
-            <a className="btnMore">READ MORE</a>
-          </div>
-        </div>
-    </section>
+         */}
+        <section className="">
+          {            
+            items.map((item,index)=>{
+              const imgSrc = `https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_m.jpg`;
+
+              return (
+                <article key={index}>
+                  <div className="inner">
+                    <div className="pic">
+                      <img src={imgSrc} />
+                      <a onClick={()=>{
+                      setIsPop(true);
+                      //버튼 클릭시 index state변경
+                      setIndex(index);
+
+                    }}><i class="fas fa-plus"></i></a>
+                    </div>
+                  </div>
+                </article>
+              )              
+            })
+          }
+        </section>
+        
+      </div>
+      { isPop ? <Pop /> : null }
+      
+    </main>    
   )
+
+  function Pop(){
+    //컴포넌트 상단에 있는 items, index스테이트값을 활용해서
+    //items라는 배열에서 index번째의 객체값의 키값을 사용해서 이미지 url생성
+    const imgSrc = `https://live.staticflickr.com/${items[index].server}/${items[index].id}_${items[index].secret}_b.jpg`;
+
+    useEffect(()=>{
+      console.log("pop 생성")
+      body.style.overflow = "hidden";
+
+      return ()=>{
+        console.log("pop 제거");
+        body.style.overflow = "auto";
+      }
+    },[]);
+
+    return (
+      <aside className="pop">
+        {/* 해당 이미지 url적용 */}
+        <img src={imgSrc} />
+        {/* items의 index번째 객체 안에 있는 텍스트 */}
+        <p>{items[index].title}</p>
+        <span onClick={()=>{
+          setIsPop(false);
+        }}>Close</span>
+      </aside>
+    )
+  }
 }
 
 export default Gallery;

@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+$web : 1199px;
+$tablet : 739px;
+$mobile : 539px;
+
 //common style
 @import "common/reset";
 @import "common/header";

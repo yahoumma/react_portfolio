@@ -14,7 +14,7 @@ import Contact from './components/main/Contact.js';
 
 //import sub component
 import AboutUs from './components/sub/AboutUs.js';
-import Project from './components/sub/Community.js';
+import Community from './components/sub/Community.js';
 import Gallery from './components/sub/Gallery.js';
 import Youtube from './components/sub/Youtube.js';
 import Location from './components/sub/Location.js';
@@ -36,7 +36,7 @@ function App() {
       </Route>
 
       <Route path="/aboutUs" component={AboutUs}></Route>
-      <Route path="/project" component={Project}></Route>
+      <Route path="/community" component={Community}></Route>
       <Route path="/gallery" component={Gallery}></Route>
       <Route path="/youtube" component={Youtube}></Route>
       <Route path="/location" component={Location}></Route>
