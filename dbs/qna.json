@@ -1,30 +1,19 @@
 {
-    
-    "team": [
+    "data": [
         {
-            "name": "Lesley Kim",
-            "position": "",
-            "img": "./img/project1.jpg",
             "title": "What is Graphic Design",
             "content": "dolor sit amet consectetur adipisicing elit. Impedit voluptatum cumque dolores ex architecto doloremque fugit culpa illo voluptates delectus.",
-            "directory": "websites/project/go"
+            "views": "265 view"
         },
         {
-            "day": "10",
-            "mmyy": "Aug 2017",
-            "img": "./img/project1.jpg",
             "title": "What is Graphic Design",
             "content": "dolor sit amet consectetur adipisicing elit. Impedit voluptatum cumque dolores ex architecto doloremque fugit culpa illo voluptates delectus.",
-            "directory": "websites/project/go"
+            "views": "105 view"
         },
         {
-            "day": "10",
-            "mmyy": "Aug 2017",
-            "img": "./img/project1.jpg",
             "title": "What is Graphic Design",
             "content": "dolor sit amet consectetur adipisicing elit. Impedit voluptatum cumque dolores ex architecto doloremque fugit culpa illo voluptates delectus.",
-            "directory": "websites/project/go"
-        }
-        
+            "views": "300 view"
+        },
     ]
 }
