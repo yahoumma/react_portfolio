@@ -41,6 +41,7 @@ function App() {
       <Route path="/youtube" component={Youtube}></Route>
       <Route path="/location" component={Location}></Route>
       <Route path="/join" component={Join}></Route>
+      <Route path="/Login" component={Login}></Route>
 
       <Footer />
     </div>
