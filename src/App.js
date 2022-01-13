@@ -14,7 +14,7 @@ import Contact from './components/main/Contact.js';
 
 //import sub component
 import AboutUs from './components/sub/AboutUs.js';
-import Project from './components/sub/Project.js';
+import Project from './components/sub/Community.js';
 import Gallery from './components/sub/Gallery.js';
 import Youtube from './components/sub/Youtube.js';
 import Location from './components/sub/Location.js';
