@@ -1,7 +1,23 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 function AboutUs() {
+
+    let [posts, setPosts] = useState([]);
+
+    const path = process.env.PUBLIC_URL;
+    const url = `${path}/dbs/team.json`;
+
     
+
+    useEffect(()=>{
+        axios
+        .get(url)
+        .then(json=>{
+            setPosts(json.data.data)
+        })
+    },[])
     return (
         <section className="content aboutUs">
             <div className="subTitle">
@@ -66,96 +82,42 @@ function AboutUs() {
                 <h1>OUR TEAM</h1>
                 <h2>The Leadership Team</h2>
                 <article className="aboutBox">
-                    <div className="member">
-                        <div className="photo">
-                            <div className="sns">
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            <i className="fab fa-instagram"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i className="fab fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i className="fab fab fa-facebook-f"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i className="fas fa-globe-americas"></i>
-                                        </a>
-                                    </li>
-                                </ul>
+                    {
+                        posts.map((data, index)=>{
+                            return(
+                            <div className="member" key={index}>
+                                <div className="photo">
+                                    <div className="sns">
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <i className="fab fa-instagram"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i className="fab fa-twitter"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i className="fab fab fa-facebook-f"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i className="fas fa-globe-americas"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <h4>{data.name}</h4>
+                                <span>{data.position}</span>
                             </div>
-                        </div>
-                        <h4>Lesley Kim</h4>
-                        <span>CEO & Web Designer</span>
-                    </div>
-                    <div className="member">
-                        <div className="photo">
-                            <div className="sns">
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            <i className="fab fa-instagram"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i className="fab fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i className="fab fab fa-facebook-f"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i className="fas fa-globe-americas"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <h4>Ben Affleck</h4>
-                        <span>CEO &amp; UI Designer</span>
-                    </div>
-                    <div className="member">
-                        <div className="photo">
-                            <div className="sns">
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            <i className="fab fa-instagram"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i className="fab fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i className="fab fab fa-facebook-f"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i className="fas fa-globe-americas"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <h4>Jessica Chastain</h4>
-                        <span>CEO & Graphic Designer</span>
-                    </div>
+                            )
+                        })
+                    }
                 </article>
 
 

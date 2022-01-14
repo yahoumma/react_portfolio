@@ -81,7 +81,7 @@ function Join(){
     <section className='content join'>
         <div className="subTitle">
           <div className="inner">
-            <h1><NavLink to="/gallery">Gallery</NavLink></h1>
+            <h1><NavLink to="/gallery">Join</NavLink></h1>
           </div>
         </div>
       <div className="inner">
@@ -206,7 +206,7 @@ function Join(){
 
                 {/* btn set */}
                 <tr>
-                  <th colSpan='2'>
+                  <th className="btnSet" colSpan='2'>
                     <input type="reset" value='CANCEL' />
                     <input type="submit" value='SEND' />
                   </th>

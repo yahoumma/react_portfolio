@@ -5,6 +5,7 @@ function Header() {
 
   return (
     <header>
+      {/*
       <div className="top">
         <div className="inner">
           <ul className="sns">
@@ -12,12 +13,10 @@ function Header() {
             <li><a href="#"><i className="fab fa-instagram"></i></a></li>
             <li><a href="#"><i className="fab fa-facebook"></i></a></li>
           </ul>
-          <ul className="util">
-            <li><NavLink activeStyle={active} to="/join">JOIN</NavLink></li>
-            <li><NavLink activeStyle={active} to="/login">LOGIN</NavLink></li>
-          </ul>
+         
         </div>
       </div>
+      */}
       <div className="inner">
         <h1><NavLink activeStyle={active} exact to="/">PF</NavLink></h1>
 
@@ -28,6 +27,10 @@ function Header() {
             <li><NavLink activeStyle={active} to="/gallery">GALLERY</NavLink></li>
             <li><NavLink activeStyle={active} to="/youtube">YOUTUBE</NavLink></li>
             <li><NavLink activeStyle={active} to="/location">LOCATION</NavLink></li>
+          </ul>
+          <ul className="util">
+            <li><NavLink activeStyle={active} to="/join">JOIN</NavLink></li>
+            <li><NavLink activeStyle={active} to="/login">LOGIN</NavLink></li>
           </ul>
         </nav>
 

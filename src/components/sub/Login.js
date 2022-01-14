@@ -103,9 +103,8 @@ function Login(){
                 </tr>
             {/* btn set */}
                 <tr>
-                  <th colSpan='2'>
-                    <input type="reset" value='CANCEL' />
-                    <input type="submit" value='SEND' />
+                  <th className="btnSet" colSpan='2'>
+                    <input type="submit" value='LOGIN' />
                   </th>
                 </tr> 
               </tbody>       
