@@ -27,8 +27,6 @@ function Header() {
             <li><NavLink activeStyle={active} to="/gallery">GALLERY</NavLink></li>
             <li><NavLink activeStyle={active} to="/youtube">YOUTUBE</NavLink></li>
             <li><NavLink activeStyle={active} to="/location">LOCATION</NavLink></li>
-          </ul>
-          <ul className="util">
             <li><NavLink activeStyle={active} to="/join">JOIN</NavLink></li>
             <li><NavLink activeStyle={active} to="/login">LOGIN</NavLink></li>
           </ul>

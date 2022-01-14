@@ -1,8 +1,11 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 function Community() {
+    const [toggle, setToggle] = useState(false);
+    const qna = useRef(null);
+    const answer = document.querySelector(".answer");
     let [posts, setPosts] = useState([]);
 
     const path = process.env.PUBLIC_URL;
@@ -14,6 +17,11 @@ function Community() {
         .then(json=>{
             setPosts(json.data.data)
         })
+
+       
+       
+
+
     },[])
 
     return (
@@ -25,19 +33,32 @@ function Community() {
             </div>
             <div className="inner">
             <h2>Answers to your questions</h2>
-            <ul>
+            <div className="qna">
                 {
                     posts.map((data,index)=>{
                         return (
-                            <li key={index}>
-                                
-                                {data.title}
-                                <span>{data.views}</span>
-                            </li>
+                            <div className="qnaMenu" key={index} ref={qna}>
+                                <div className="title">
+                                    {data.title}
+                                    {
+                                        toggle ?
+                                        <span onClick={() => {setToggle(!toggle);
+                                            answer.classList.add("on");
+                                        }}><i class="fas fa-chevron-down"></i></span>
+                                        :
+                                        <span onClick={() => {setToggle(!toggle);
+                                            answer.classList.remove("on");
+                                        }}><i class="fas fa-chevron-up"></i></span>
+                                    }
+                                </div>
+                                <div className="answer" >
+                                {data.content}
+                                </div>
+                            </div>
                         )
                     })
                 }
-            </ul>
+            </div>
             </div>
         </section>
     )

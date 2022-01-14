@@ -8,19 +8,46 @@
 			color: #6b6b6b;
 			margin-bottom: 40px;
 		}
-		ul{
+		.qna{
 			width: 100%;
-			li{
+			.qnaMenu{
 				width: 100%;
-				border: 1px solid #6b6b6b;
 				margin-bottom: 10px;
-				font: 16px/50px "Open Sans";
-					color: #6b6b6b;
-
-				span{
-					font: 10px/1 "Open Sans";
-					color: #6b6b6b;
+				position: relative;
+				.title{
+					color: #fffffe;
+					font: 14px/40px "Open Sans";
+					width: 100%;
+					height: 40px;
+					padding:0 10px;
+					background: #00df70;
+					position: relative;
+					span{
+						position: absolute;
+						right: 20px;
+						cursor: pointer;
+					}
 				}
+				
+				.answer{
+					width: 100%;
+					overflow: hidden;
+					transition : height 0.35s ease;
+					background: #fffffe;
+					color: #333;
+					font: 14px/1.7 "Open Sans";
+					padding: 0;
+					box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+					transition: 1s;
+					display: none;
+					&.on{
+						height: 100%;
+						padding: 20px;
+						transition: 1s;
+						display: block;
+					}
+				}
+				
 			}
 		}
 
