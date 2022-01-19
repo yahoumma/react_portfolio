@@ -1,6 +1,6 @@
 function Contact() {
     return (
-        <section className="content contact">
+        <figure id="contact" className="content contact myScroll">
             <div className="inner">
                 <h1>CONTACT US</h1>
                 <div className="wrap">
@@ -49,7 +49,7 @@ function Contact() {
 
                 </div>
             </div>
-        </section>
+        </figure>
     )
 }
 

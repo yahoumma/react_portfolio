@@ -1,0 +1,24 @@
+#btns{
+    z-index: 30;
+    position: fixed;
+    top: 50%;
+    right: 50px;
+    transform: translateY(-50%);
+    li{
+        width: 10px;
+        height: 10px;
+        border-radius: 5px;
+        background: #999;
+        margin-bottom: 20px;
+        cursor: pointer;
+        background: #333;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        color: #fffffe;
+        line-height: 30px;
+        &.on{
+            height: 80px;
+            background: #00df70;
+        }
+    }
+}

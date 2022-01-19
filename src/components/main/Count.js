@@ -1,6 +1,6 @@
 function Count() {
     return (
-        <section className="content count">
+        <figure id="count" className="content count myScroll">
             <div className="inner">
                 <article>
                     <i className="fas fa-desktop"></i>
@@ -18,7 +18,7 @@ function Count() {
                     <h2>Satisfied Customers</h2>
                 </article>
             </div>
-        </section>
+        </figure>
     )
 }
 

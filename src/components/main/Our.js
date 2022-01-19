@@ -1,6 +1,6 @@
 function Our() {
     return (
-        <section className="content our">
+        <figure id="our" className="content our myScroll">
             <div className="inner">
                 <article>
                     <h2>OUR SERVICE</h2>
@@ -18,7 +18,7 @@ function Our() {
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing.Lorem ipsum, dolor sit amet consectetur adipisicing.Lorem ipsum, dolor sit amet consectetur adipisicing</p>
                 </article>
             </div>
-        </section>
+        </figure>
     )
 }
 

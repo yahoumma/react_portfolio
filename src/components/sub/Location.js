@@ -100,17 +100,11 @@ function Location() {
 
                         </ul>
                         <ul className="branch" ref={btnBranch}>
-                            <li onClick={() => {
-                                setIndex(0);
-                            }}>본점</li>
-
-                            <li onClick={() => {
-                                setIndex(1)
-                            }}>지점1</li>
-
-                            <li onClick={() => {
-                                setIndex(2)
-                            }}>지점2</li>
+                            {  
+                            mapInfo.map((data,index)=>{
+                                return  <li key={index} onClick={()=>setIndex(index)}>{data.title}</li>
+                            })          
+                        }  
                         </ul>
                     </div>
                     <div className="connect">

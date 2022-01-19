@@ -1,8 +1,7 @@
 function About() {
     return (
-        <section className="content about">
+        <figure id="about" className="content about myScroll">
             <div className="imgBox"></div>
-            <div className="inner">
                 <div className="floatingBox">
                     <div className="txtBox">
                         <h1>ABOUT US</h1>
@@ -12,8 +11,7 @@ function About() {
                     </div>
 
                 </div>
-            </div>
-        </section>
+        </figure>
     )
 }
 

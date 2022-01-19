@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 function Visual() {
     return (
-        <section className="content visual">
+        <figure id="visual" className="content visual myScroll">
             <div className="imgBox">
             </div>
             <div className="bgBox">
@@ -43,7 +43,7 @@ function Visual() {
                     </li>
                 </ul>
             </div>
-        </section>        
+        </figure>        
     )
 }
 

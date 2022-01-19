@@ -78,6 +78,15 @@ header {
 						font: bold 14px/80px "Open Sans";
 						color: #fffffe;
 					}
+					&.join{
+						border: 1px solid #fffffe;
+						padding:5px 10px;
+						a{
+							font: 10px/10px "Open Sans";
+						color: #fffffe;
+						}
+						
+					}
 				}
 			}
 			.util {

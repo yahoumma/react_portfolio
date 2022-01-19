@@ -52,27 +52,5 @@
 		}
 	}
 }
-$tablet : 1179px; 
-$mobile : 539px; 
 
-@media screen and (max-width:$tablet){
-	.our{
-		.inner {
-			width: 100%;
-			article {
-				width: 30%;
-			}
-		}
-	}
-	
-}
 
-@media screen and (max-width:$mobile){
-	.our{
-		.inner {
-			article {
-				width: 100%;
-			}
-		}
-	}
-}

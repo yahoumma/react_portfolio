@@ -24,6 +24,12 @@ table, fieldset {
   top: -9999px;
   opacity: 0; }
 
+@media screen and (max-width: 1179px) {
+  .content .inner {
+    width: 100%; } }
+@media screen and (max-width: 539px) {
+  .content .inner {
+    width: 90%; } }
 header {
   width: 100%;
   background: #00df70;
@@ -100,6 +106,12 @@ header {
           display: block;
           font: bold 14px/80px "Open Sans";
           color: #fffffe; }
+        header .inner .menuWeb #gnb li.join {
+          border: 1px solid #fffffe;
+          padding: 5px 10px; }
+          header .inner .menuWeb #gnb li.join a {
+            font: 10px/10px "Open Sans";
+            color: #fffffe; }
       header .inner .menuWeb .util li {
         border: 1px solid #fffffe;
         width: 60px;
@@ -486,6 +498,31 @@ footer {
       display: inline;
       font: bold 22px/1.7 "Open Sans";
       color: #666; }
+.content > .inner {
+  width: 1180px;
+  margin: 0 auto; }
+
+#btns {
+  z-index: 30;
+  position: fixed;
+  top: 50%;
+  right: 50px;
+  transform: translateY(-50%); }
+  #btns li {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background: #999;
+    margin-bottom: 20px;
+    cursor: pointer;
+    background: #333;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: #fffffe;
+    line-height: 30px; }
+    #btns li.on {
+      height: 80px;
+      background: #00df70; }
 
 .visual {
   width: 100%;
@@ -680,80 +717,68 @@ footer {
           transition: 1s;
           box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); }
 
-@media screen and (max-width: 1179px) {
-  .our .inner {
-    width: 100%; }
-    .our .inner article {
-      width: 30%; } }
-@media screen and (max-width: 539px) {
-  .our .inner article {
-    width: 100%; } }
 .about {
   width: 100%;
   height: 80vh;
   position: relative; }
   .about .imgBox {
-    width: 60vw;
+    width: calc(100% - 540px);
     height: 100%;
     background: url(../img/aboutBg.jpg) no-repeat center/cover;
     filter: grayscale(70%);
     position: absolute;
     top: 0;
     left: 0; }
-  .about .inner {
-    width: 1180px;
-    margin: 0 auto;
-    position: relative; }
-    .about .inner .floatingBox {
+  .about .floatingBox {
+    position: absolute;
+    top: 20vh;
+    left: calc(100% - 640px);
+    width: 500px;
+    height: 280px;
+    background-color: rgba(0, 223, 112, 0.3);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    z-index: 3; }
+    .about .floatingBox .txtBox {
       position: absolute;
-      top: 20vh;
+      top: 0;
       right: 0;
-      width: 30vw;
-      height: 40vh;
-      background-color: rgba(0, 223, 112, 0.3);
-      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-      z-index: 3; }
-      .about .inner .floatingBox .txtBox {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 80%;
-        height: 100%;
-        background: #fffffe;
-        padding: 40px 60px;
-        vertical-align: middle; }
-        .about .inner .floatingBox .txtBox h1 {
-          font: bold 30px/1.4 "Open Sans";
-          margin-bottom: 10px;
-          color: #272343;
-          background: linear-gradient(to top, rgba(0, 223, 112, 0.3) 15px, transparent 10px);
-          display: inline;
-          font: bold 22px/1.7 "Open Sans";
-          color: #666; }
-        .about .inner .floatingBox .txtBox h2 {
-          font: bold 14px/1.2 "Open Sans";
-          color: #ccc;
-          margin: 10px 0; }
-        .about .inner .floatingBox .txtBox p {
-          font: 14px/1.4 "Open Sans";
-          color: #ccc;
-          flex-wrap: wrap;
-          margin-bottom: 20px; }
-        .about .inner .floatingBox .txtBox .btnMore {
-          display: block;
-          width: 180px;
-          height: 60px;
-          text-align: center;
-          font-size: 14px;
-          line-height: 60px;
-          font-family: "Open Sans";
-          color: #fffffe;
-          background: #00df70;
+      width: 400px;
+      height: 100%;
+      background: #fffffe;
+      padding: 40px 60px;
+      vertical-align: middle; }
+      .about .floatingBox .txtBox h1 {
+        font: bold 30px/1.4 "Open Sans";
+        margin-bottom: 10px;
+        color: #272343;
+        background: linear-gradient(to top, rgba(0, 223, 112, 0.3) 15px, transparent 10px);
+        display: inline;
+        font: bold 22px/1.7 "Open Sans";
+        color: #666; }
+      .about .floatingBox .txtBox h2 {
+        font: bold 14px/1.2 "Open Sans";
+        color: #ccc;
+        margin: 10px 0; }
+      .about .floatingBox .txtBox p {
+        font: 14px/1.4 "Open Sans";
+        color: #ccc;
+        flex-wrap: wrap;
+        margin-bottom: 20px; }
+      .about .floatingBox .txtBox .btnMore {
+        display: block;
+        width: 180px;
+        height: 60px;
+        text-align: center;
+        font-size: 14px;
+        line-height: 60px;
+        font-family: "Open Sans";
+        color: #fffffe;
+        background: #00df70;
+        transition: 1s;
+        cursor: pointer; }
+        .about .floatingBox .txtBox .btnMore:hover {
           transition: 1s;
-          cursor: pointer; }
-          .about .inner .floatingBox .txtBox .btnMore:hover {
-            transition: 1s;
-            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); }
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); }
 
 .contact {
   width: 100%;
@@ -992,145 +1017,213 @@ footer {
 
 .community {
   width: 100%; }
-  .community > .inner {
-    width: 1180px;
-    margin: 0 auto; }
-    .community > .inner h2 {
-      font: bold 24px/50px "Open Sans";
-      color: #6b6b6b;
-      margin-bottom: 40px; }
-    .community > .inner .qna {
-      width: 100%; }
-      .community > .inner .qna .qnaMenu {
-        width: 100%;
-        margin-bottom: 10px;
-        position: relative; }
-        .community > .inner .qna .qnaMenu .title {
-          color: #fffffe;
-          font: 14px/40px "Open Sans";
-          width: 100%;
-          height: 40px;
-          padding: 0 10px;
-          background: #00df70;
-          position: relative; }
-          .community > .inner .qna .qnaMenu .title span {
-            position: absolute;
-            right: 20px;
-            cursor: pointer; }
-        .community > .inner .qna .qnaMenu .answer {
-          width: 100%;
-          overflow: hidden;
-          transition: height 0.35s ease;
-          background: #fffffe;
-          color: #333;
-          font: 14px/1.7 "Open Sans";
-          padding: 0;
-          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-          transition: 1s;
-          display: none; }
-          .community > .inner .qna .qnaMenu .answer.on {
-            height: 100%;
-            padding: 20px;
-            transition: 1s;
-            display: block; }
-
-.gallery .inner {
-  width: 1180px;
-  margin: 0 auto; }
-  .gallery .inner .galleryTab {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 80px; }
-    .gallery .inner .galleryTab li {
-      display: inline-block;
-      width: 200px;
-      padding: 5px 0;
-      border-bottom: 1px solid #f3f3f3;
-      position: relative;
-      text-align: center; }
-      .gallery .inner .galleryTab li.on::after {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 5px;
-        background: #00df70;
-        position: absolute;
-        bottom: -5px; }
-      .gallery .inner .galleryTab li.on a {
-        font: bold 12px/20px "Open Sans";
-        color: #6b6b6b;
-        text-align: center; }
-      .gallery .inner .galleryTab li a {
-        font: 12px/20px "Open Sans";
-        color: #6b6b6b;
-        text-align: center; }
-  .gallery .inner > section {
+  .community > .inner h1 {
+    font: bold 30px/1 "Open Sans";
+    color: #00df70;
+    margin-bottom: 20px; }
+  .community > .inner .faq {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    align-content: top;
+    margin-bottom: 40px; }
+    .community > .inner .faq article:nth-of-type(1) {
+      width: 30%; }
+      .community > .inner .faq article:nth-of-type(1) p {
+        font: 14px/1.7 "Open Sans";
+        color: #777; }
+    .community > .inner .faq article:nth-of-type(2) {
+      width: 60%; }
+      .community > .inner .faq article:nth-of-type(2)[open] .question::after {
+        content: '-'; }
+      .community > .inner .faq article:nth-of-type(2) .question {
+        width: 100%;
+        margin-bottom: 20px; }
+        .community > .inner .faq article:nth-of-type(2) .question .title {
+          position: relative;
+          color: #fffffe;
+          font: 12px/30px "Open Sans";
+          height: 30px;
+          padding: 0 10px;
+          background: #00df70;
+          cursor: pointer; }
+          .community > .inner .faq article:nth-of-type(2) .question .title::marker {
+            content: '+';
+            position: absolute;
+            top: 0;
+            left: 100px;
+            color: #fffffe;
+            font-weight: bold;
+            font-size: 20px; }
+        .community > .inner .faq article:nth-of-type(2) .question .answer {
+          padding: 20px;
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+          font: 12px/1.4 "Open Sans";
+          color: #777; }
+  .community > .inner .inputBox {
+    position: relative;
+    width: 50%;
+    margin-bottom: 40px; }
+    .community > .inner .inputBox input, .community > .inner .inputBox textarea {
+      background: #fffffe;
+      box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+      border: none;
+      width: 100%;
+      margin-bottom: 10px;
+      font: 12px/1.4 "Open Sans";
+      padding: 10px 20px; }
+    .community > .inner .inputBox textarea {
+      height: 200px; }
+    .community > .inner .inputBox .inputBtns {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .community > .inner .inputBox .inputBtns button {
+        width: 100px;
+        height: 30px;
+        font: 12px/1 "Open Sans";
+        color: #fffffe;
+        background: #00df70;
+        border: none;
+        cursor: pointer; }
+        .community > .inner .inputBox .inputBtns button:nth-of-type(1) {
+          background: #999; }
+        .community > .inner .inputBox .inputBtns button:hover {
+          transition: 1s;
+          box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); }
+  .community > .inner .showBox {
+    width: 100%;
+    position: relative; }
+    .community > .inner .showBox article {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-content: center;
+      background: #fffffe;
+      box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      margin-bottom: 10px;
+      border-left: 20px solid #00df70; }
+      .community > .inner .showBox article .post {
+        width: 70%; }
+        .community > .inner .showBox article .post h2 {
+          font: bold 16px/1 "Open Sans";
+          margin-bottom: 10px; }
+        .community > .inner .showBox article .post p {
+          font: 14px/1.4 "Open Sans";
+          color: #777; }
+        .community > .inner .showBox article .post input {
+          margin-bottom: 5px; }
+        .community > .inner .showBox article .post input, .community > .inner .showBox article .post textarea {
+          display: block;
+          width: 50%;
+          background: rgba(0, 223, 112, 0.3);
+          border: 1px solid #00df70;
+          padding: 5px 20px;
+          font: 12px/1 "Open Sans"; }
+      .community > .inner .showBox article .btns {
+        display: flex;
+        align-items: center; }
+        .community > .inner .showBox article .btns li {
+          cursor: pointer;
+          font: 10px/1 "Open Sans";
+          color: pink;
+          margin-left: 10px; }
+
+.gallery .inner .galleryTab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 80px; }
+  .gallery .inner .galleryTab li {
+    display: inline-block;
+    width: 200px;
+    padding: 5px 0;
+    border-bottom: 1px solid #f3f3f3;
+    position: relative;
+    text-align: center; }
+    .gallery .inner .galleryTab li.on::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 5px;
+      background: #00df70;
+      position: absolute;
+      bottom: -5px; }
+    .gallery .inner .galleryTab li.on a {
+      font: bold 12px/20px "Open Sans";
+      color: #6b6b6b;
+      text-align: center; }
+    .gallery .inner .galleryTab li a {
+      font: 12px/20px "Open Sans";
+      color: #6b6b6b;
+      text-align: center; }
+.gallery .inner > section {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  transition: 1s; }
+  .gallery .inner > section article {
+    margin-bottom: 20px;
+    position: relative;
+    width: 300px;
+    height: 300px;
     transition: 1s; }
-    .gallery .inner > section article {
-      margin-bottom: 20px;
-      position: relative;
-      width: 300px;
-      height: 300px;
-      transition: 1s; }
-      .gallery .inner > section article:nth-of-type(even) {
-        margin-left: 20px;
-        margin-right: 20px; }
-      .gallery .inner > section article > .inner {
+    .gallery .inner > section article:nth-of-type(even) {
+      margin-left: 20px;
+      margin-right: 20px; }
+    .gallery .inner > section article > .inner {
+      width: 100%;
+      height: 100%;
+      background: #fff; }
+      .gallery .inner > section article > .inner .pic {
         width: 100%;
         height: 100%;
-        background: #fff; }
-        .gallery .inner > section article > .inner .pic {
+        transition: 1s;
+        position: relative;
+        transition: 1s; }
+        .gallery .inner > section article > .inner .pic img {
           width: 100%;
           height: 100%;
-          transition: 1s;
-          position: relative;
+          object-fit: cover;
           transition: 1s; }
-          .gallery .inner > section article > .inner .pic img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: 1s; }
-          .gallery .inner > section article > .inner .pic a {
-            color: #00df70;
+        .gallery .inner > section article > .inner .pic a {
+          color: #00df70;
+          display: block;
+          width: 30px;
+          height: 30px;
+          font-size: 10px;
+          line-height: 20px;
+          text-align: center;
+          background: #fffffe;
+          border-radius: 50%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%);
+          font-size: 16px;
+          line-height: 30px;
+          opacity: 0;
+          cursor: pointer; }
+        .gallery .inner > section article > .inner .pic:hover {
+          transition: 1s; }
+          .gallery .inner > section article > .inner .pic:hover::before {
+            content: attr(data-split);
             display: block;
-            width: 30px;
-            height: 30px;
-            font-size: 10px;
-            line-height: 20px;
-            text-align: center;
-            background: #fffffe;
-            border-radius: 50%;
+            width: 50%;
+            height: 100%;
+            background: rgba(0, 223, 112, 0.3);
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 16px;
-            line-height: 30px;
-            opacity: 0;
-            cursor: pointer; }
-          .gallery .inner > section article > .inner .pic:hover {
+            top: 0;
+            left: 0;
             transition: 1s; }
-            .gallery .inner > section article > .inner .pic:hover::before {
-              content: attr(data-split);
-              display: block;
-              width: 50%;
-              height: 100%;
-              background: rgba(0, 223, 112, 0.3);
-              position: absolute;
-              top: 0;
-              left: 0;
-              transition: 1s; }
-            .gallery .inner > section article > .inner .pic:hover a {
-              display: block;
-              transform: scale(1.3) translateX(-10px) translateY(0);
-              transition: 1s;
-              opacity: 1; }
+          .gallery .inner > section article > .inner .pic:hover a {
+            display: block;
+            transform: scale(1.3) translateX(-10px) translateY(0);
+            transition: 1s;
+            opacity: 1; }
 .gallery .pop {
   width: 100%;
   height: 100vh;
