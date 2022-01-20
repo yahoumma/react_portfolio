@@ -5,6 +5,7 @@ import Contact from './Contact.js';
 import Count from './Count.js';
 import Our from './Our.js';
 import Btns from './Btns.js';
+import News from './News.js';
 import Anime from '../../class/anime.js';
 import { useEffect, useState, useRef } from 'react';
 
@@ -63,6 +64,7 @@ function Main(){
       <Our />
       <About />
       <Count />
+      <News />
       <Contact />
       <Btns getIndex={getIndex} />
     </div>

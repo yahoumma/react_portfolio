@@ -2,7 +2,7 @@
     z-index: 30;
     position: fixed;
     top: 50%;
-    right: 50px;
+    left: 50px;
     transform: translateY(-50%);
     li{
         width: 10px;
@@ -11,7 +11,7 @@
         background: #999;
         margin-bottom: 20px;
         cursor: pointer;
-        background: #333;
+        background: #777;
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
         text-align: center;
         color: #fffffe;

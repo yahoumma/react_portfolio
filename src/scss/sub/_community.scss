@@ -1,37 +1,55 @@
 .community {
 	width: 100%;
 	>.inner{
-		h1{
-			font:bold 30px/1 "Open Sans";
-			color: #00df70;
+
+		h1 {
+			font: bold 26px/1 "Open Sans";
+			color: #6b6b6b;
 			margin-bottom: 20px;
+		}
+		h2 {
+			font: 14px/1.7 "Open Sans";
+			color: #6b6b6b;
+			margin-bottom: 40px;
 		}
 		.faq{
 			width: 100%;
 			display: flex;
 			justify-content: space-between;
 			align-content: top;
-			margin-bottom: 40px;
+			margin-bottom: 80px;
+			border: 1px solid #eee;
+			padding: 40px;
 			article{
 				&:nth-of-type(1){
 					width: 30%;
 					
 					p{
 						font: 14px/1.7 "Open Sans";
-						color: #777;
+						color: #6b6b6b;
 						
 					}
 				}
 				&:nth-of-type(2){
 					width: 60%;
-					&[open]{
-						.question::after{
-							content : '-';
-						}
-					}
+
 					.question{
 						width: 100%;
 						margin-bottom: 20px;
+						&[open]{
+							.title::after{
+								content : '--';
+								position: absolute;
+								top: 0;
+								right: 20px;
+								color: #fffffe;
+								font-weight: bold;
+								font-size: 20px;
+								letter-spacing: -2px;
+								
+							}
+						}
+				
 						.title{
 							position: relative;
 							color: #fffffe;
@@ -40,20 +58,21 @@
 							padding:0 10px;
 							background: #00df70;
 							cursor: pointer;
+							padding-left: 20px;
+							list-style: none;
 
-							&::marker{
+							&::after{
 								content : '+';
-
 								position: absolute;
 								top: 0;
-								left: 100px;
+								right: 17px;
 								color: #fffffe;
 								font-weight: bold;
 								font-size: 20px;
 							}
-
 						
 						}
+						
 						.answer{
 							padding: 20px;
 							box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
@@ -71,6 +90,8 @@
 			position: relative;
 			width: 50%;
 			margin-bottom: 40px;
+			border: 1px solid #eee;
+			padding: 40px;
 
 			input, textarea{
 				background: #fffffe;
@@ -112,6 +133,8 @@
 		.showBox{
 			width: 100%;
 			position: relative;
+			border: 1px solid #eee;
+			padding: 40px;
 			article{
 				display: flex;
 				flex-wrap: wrap;
@@ -137,9 +160,9 @@
 					}
 					input, textarea{
 						display: block;
-						width: 50%;
-						background: rgba(0, 223, 112, 0.3);
-						border: 1px solid #00df70;
+						width: 70%;
+						background: rgba(0, 223, 112, 0.1);
+						border: 1px solid #eee;
 						padding: 5px 20px;
 						font: 12px/1 "Open Sans";
 

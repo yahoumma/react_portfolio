@@ -6,6 +6,7 @@ function Visual() {
             </div>
             <div className="bgBox">
             </div>
+            {/*
             <div className="imgBtns">
                 <a href="#" className="btns btnMinus">
                     <i className="fas fa-minus"></i>
@@ -14,7 +15,7 @@ function Visual() {
                     <i className="fas fa-plus"></i>
                 </a>
             </div>
-
+            */}
             <div className="floatingBox">
                 <div className="txtBox">
                     <div className="txt">

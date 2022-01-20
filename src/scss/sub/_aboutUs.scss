@@ -32,6 +32,11 @@
 			font: 10px/1.7 "Open Sans";
 			color: #6b6b6b;
 		}
+		.btnMore{
+			@include btnMore();
+			margin: 0 auto 100px ;
+
+		}
 		.aboutBox {
 			width: 100%;
 			position: relative;

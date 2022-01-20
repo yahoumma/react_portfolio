@@ -25,12 +25,22 @@ function Community() {
     const updateTextarea = useRef(null);
     const showBox = useRef(null);
 
-    const [posts, setPosts] = useState([
-        { title: 'Hello0', content: 'Here comes description in detail.' },
-        { title: 'Hello1', content: 'Here comes description in detail.' },
-        { title: 'Hello2', content: 'Here comes description in detail.' },
-        { title: 'Hello3', content: 'Here comes description in detail.' }
-    ]);
+    const getLocalItems = () => {
+        let data = localStorage.getItem('posts');
+
+        if (data) {
+            return JSON.parse(data);
+        } else {
+            return [
+                { title: 'Hello0', content: 'Here comes description in detail.' },
+                { title: 'Hello1', content: 'Here comes description in detail.' },
+                { title: 'Hello2', content: 'Here comes description in detail.' },
+                { title: 'Hello3', content: 'Here comes description in detail.' }
+            ];
+        }
+    }
+    const [posts, setPosts] = useState(getLocalItems);
+
 
     const createPost = () => {
         if (!input.current.value || !textarea.current.value) {
@@ -62,7 +72,6 @@ function Community() {
                 return post;
             })
         )
-        console.log(posts);
     }
 
     const disableUpdate = index => {
@@ -72,7 +81,6 @@ function Community() {
                 return post;
             })
         )
-        console.log(posts);
     }
 
     const updatePost = index => {
@@ -92,10 +100,11 @@ function Community() {
         )
     }
 
-
     useEffect(() => {
-        frame.current.classList.add("on");
-    }, []);
+        localStorage.setItem('posts', JSON.stringify(posts));
+        frame.current.classList.add('on');
+    }, [posts]);
+
     return (
         <main className="content community" ref={frame}>
             <div className="subTitle">
@@ -105,9 +114,10 @@ function Community() {
             </div>
             <div className="inner">
                 <h1>FAQ</h1>
+                <h2>Frequently Asked Qusetions</h2>
                 <section className='faq' ref={faqBox}>
                     <article>
-                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum aliquam modi, rerum maxime doloribus sunt hic ab reprehenderit unde neque itaque, rem sed culpa debitis, quidem saepe quasi ratione quis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum iusto dolor beatae, nemo eveniet impedit ad ipsam exercitationem facilis ipsum nostrum vitae consectetur illo eum odio, sapiente quam ipsa molestiae!</p>
+                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum iusto dolor beatae, nemo eveniet impedit ad ipsam exercitationem facilis ipsum nostrum vitae consectetur illo eum odio, sapiente quam ipsa molestiae!</p>
                     </article>
                     <article>
                         {
@@ -126,6 +136,7 @@ function Community() {
                 </section>
 
                 <h1>BOARD</h1>
+                <h2>Feel free to ask me questions</h2>
                 <section className='inputBox'>
                     <input type="text"
                         placeholder='제목을 입력하세요' ref={input} />
@@ -146,37 +157,37 @@ function Community() {
                         posts.map((post, index) => {
                             return (
                                 <article key={index}>
-                                  {
-                                    post.enableUpdate
-                                    ?
-                                    // 수정모드
-                                    <>
-                                      <div className="post">
-                                        <input type="text" defaultValue={post.title} ref={updateInput} /><br />
-                                        <textarea defaultValue={post.content} ref={updateTextarea}></textarea>   
-                                      </div>
-                
-                                      <ul className="btns">
-                                        <li onClick={()=>updatePost(index)}>입력</li>
-                                        <li onClick={()=>disableUpdate(index)}>취소</li>
-                                      </ul>
-                                    </>
-                                    :
-                                    // 출력모드
-                                    <>
-                                      <div className="post">
-                                        <h2>{post.title}</h2>
-                                        <p>{post.content}</p> 
-                                      </div>
-                
-                                      <ul className="btns">
-                                        <li onClick={()=>enableUpdate(index)}>수정</li>
-                                        <li onClick={()=>deletePost(index)}>삭제</li>
-                                      </ul>
-                                    </>
-                                  }                  
+                                    {
+                                        post.enableUpdate
+                                            ?
+                                            // 수정모드
+                                            <>
+                                                <div className="post">
+                                                    <input type="text" defaultValue={post.title} ref={updateInput} />
+                                                    <textarea defaultValue={post.content} ref={updateTextarea}></textarea>
+                                                </div>
+
+                                                <ul className="btns">
+                                                    <li onClick={() => updatePost(index)}>입력</li>
+                                                    <li onClick={() => disableUpdate(index)}>취소</li>
+                                                </ul>
+                                            </>
+                                            :
+                                            // 출력모드
+                                            <>
+                                                <div className="post">
+                                                    <h2>{post.title}</h2>
+                                                    <p>{post.content}</p>
+                                                </div>
+
+                                                <ul className="btns">
+                                                    <li onClick={() => enableUpdate(index)}>수정</li>
+                                                    <li onClick={() => deletePost(index)}>삭제</li>
+                                                </ul>
+                                            </>
+                                    }
                                 </article>
-                              )
+                            )
                         })
                     }
                 </section>

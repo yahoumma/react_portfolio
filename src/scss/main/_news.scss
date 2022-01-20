@@ -1,0 +1,41 @@
+.news {
+	width: 100%;
+	padding: 100px 0;
+	.inner {
+		h1 {
+			@include txtBg();
+		}
+		.txtBox{
+			margin-top: 40px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+			article {
+				width: 30%;
+
+				display: flex;
+				flex-direction: column;
+				align-content: center;
+				background: #fffffe;
+				box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+				padding: 40px;
+				margin-bottom: 20px;
+				border-left: 20px solid #00df70;
+				word-wrap: break-word;
+				h3{
+					font:bold 16px/1 "Open Sans";
+					color: #777;
+					margin-bottom: 10px;
+				}
+				p{
+					font:14px/1.4 "Open Sans";
+					color: #777;
+				}
+	
+			}		
+		}
+		
+			
+	}
+}

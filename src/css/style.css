@@ -506,7 +506,7 @@ footer {
   z-index: 30;
   position: fixed;
   top: 50%;
-  right: 50px;
+  left: 50px;
   transform: translateY(-50%); }
   #btns li {
     width: 10px;
@@ -515,7 +515,7 @@ footer {
     background: #999;
     margin-bottom: 20px;
     cursor: pointer;
-    background: #333;
+    background: #777;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     text-align: center;
     color: #fffffe;
@@ -529,7 +529,30 @@ footer {
   height: calc(100vh - 100px);
   position: relative;
   overflow: hidden;
-  transition: 1s; }
+  transition: 1s;
+  /*
+  .imgBtns {
+  	.btns {
+  		position: absolute;
+  		display: block;
+  		width: 30px;
+  		height: 30px;
+  		border-radius: 50%;
+  		top: 50%;
+  		left: 5%;
+  		background: #00df70;
+  		box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  		text-align: center;
+  		color: #fffffe;
+  		line-height: 30px;
+  		cursor: pointer;
+  		z-index: 5;
+  		&.btnMinus {
+  			top: calc(50% - 60px);
+  		}
+  	}
+  }
+  */ }
   .visual .imgBox {
     width: calc(100% - 340px);
     height: 100%;
@@ -573,23 +596,6 @@ footer {
     right: -3%; }
   100% {
     right: 0px; } }
-  .visual .imgBtns .btns {
-    position: absolute;
-    display: block;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    top: 50%;
-    left: 5%;
-    background: #00df70;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    color: #fffffe;
-    line-height: 30px;
-    cursor: pointer;
-    z-index: 5; }
-    .visual .imgBtns .btns.btnMinus {
-      top: calc(50% - 60px); }
   .visual .floatingBox {
     position: absolute;
     background-color: rgba(0, 223, 112, 0.3);
@@ -783,102 +789,99 @@ footer {
 .contact {
   width: 100%;
   padding: 100px 0; }
-  .contact .inner {
-    width: 1180px;
-    margin: 0 auto; }
-    .contact .inner h1 {
-      background: linear-gradient(to top, rgba(0, 223, 112, 0.3) 15px, transparent 10px);
-      display: inline;
-      font: bold 22px/1.7 "Open Sans";
-      color: #666; }
-    .contact .inner .wrap {
-      width: 100%;
-      display: flex;
-      align-items: top;
-      justify-content: space-between;
-      margin-top: 40px; }
-      .contact .inner .wrap article {
-        width: 20vw;
-        transition: 1s; }
-        .contact .inner .wrap article ul li {
+  .contact .inner h1 {
+    background: linear-gradient(to top, rgba(0, 223, 112, 0.3) 15px, transparent 10px);
+    display: inline;
+    font: bold 22px/1.7 "Open Sans";
+    color: #666; }
+  .contact .inner .wrap {
+    width: 100%;
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+    margin-top: 40px; }
+    .contact .inner .wrap article {
+      width: 20vw;
+      transition: 1s; }
+      .contact .inner .wrap article ul li {
+        margin-bottom: 40px;
+        line-height: 0; }
+        .contact .inner .wrap article ul li a {
+          font: 14px/1 "Open Sans";
+          color: #777; }
+      .contact .inner .wrap article:nth-of-type(1) ul {
+        width: 100%; }
+        .contact .inner .wrap article:nth-of-type(1) ul li {
           margin-bottom: 40px;
-          line-height: 0; }
-          .contact .inner .wrap article ul li a {
-            font: 14px/1 "Open Sans";
-            color: #777; }
-        .contact .inner .wrap article:nth-of-type(1) ul {
-          width: 100%; }
-          .contact .inner .wrap article:nth-of-type(1) ul li {
-            margin-bottom: 40px;
-            font: 14px/1 "Open Sans";
-            color: #777; }
-            .contact .inner .wrap article:nth-of-type(1) ul li:last-child {
-              margin-bottom: 0; }
-              .contact .inner .wrap article:nth-of-type(1) ul li:last-child .sns {
-                width: 100%; }
-                .contact .inner .wrap article:nth-of-type(1) ul li:last-child .sns ul {
-                  display: flex;
-                  justify-content: left; }
-                  .contact .inner .wrap article:nth-of-type(1) ul li:last-child .sns ul li {
-                    margin-right: 20px;
-                    margin-bottom: 0; }
-                    .contact .inner .wrap article:nth-of-type(1) ul li:last-child .sns ul li a {
-                      display: block;
-                      width: 30px;
-                      height: 30px;
-                      border-radius: 50%;
-                      background: #00df70;
-                      text-align: center; }
-                      .contact .inner .wrap article:nth-of-type(1) ul li:last-child .sns ul li a i {
-                        font-size: 16px;
-                        line-height: 30px;
-                        color: #fff; }
-        .contact .inner .wrap article:last-child span {
+          font: 14px/1 "Open Sans";
+          color: #777; }
+          .contact .inner .wrap article:nth-of-type(1) ul li:last-child {
+            margin-bottom: 0; }
+            .contact .inner .wrap article:nth-of-type(1) ul li:last-child .sns {
+              width: 100%; }
+              .contact .inner .wrap article:nth-of-type(1) ul li:last-child .sns ul {
+                display: flex;
+                justify-content: left; }
+                .contact .inner .wrap article:nth-of-type(1) ul li:last-child .sns ul li {
+                  margin-right: 20px;
+                  margin-bottom: 0; }
+                  .contact .inner .wrap article:nth-of-type(1) ul li:last-child .sns ul li a {
+                    display: block;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background: #00df70;
+                    text-align: center; }
+                    .contact .inner .wrap article:nth-of-type(1) ul li:last-child .sns ul li a i {
+                      font-size: 16px;
+                      line-height: 30px;
+                      color: #fff; }
+      .contact .inner .wrap article:last-child span {
+        display: block;
+        margin-bottom: 20px;
+        font: 14px/1 "Open Sans";
+        color: #777;
+        text-align: right; }
+      .contact .inner .wrap article:last-child address {
+        margin-bottom: 40px;
+        font: 14px/1 "Open Sans";
+        color: #777;
+        text-align: right; }
+      .contact .inner .wrap article:last-child .btns {
+        display: flex;
+        justify-content: right;
+        align-items: center; }
+        .contact .inner .wrap article:last-child .btns .btnMore {
           display: block;
-          margin-bottom: 20px;
-          font: 14px/1 "Open Sans";
-          color: #777;
-          text-align: right; }
-        .contact .inner .wrap article:last-child address {
-          margin-bottom: 40px;
-          font: 14px/1 "Open Sans";
-          color: #777;
-          text-align: right; }
-        .contact .inner .wrap article:last-child .btns {
-          display: flex;
-          justify-content: right;
-          align-items: center; }
-          .contact .inner .wrap article:last-child .btns .btnMore {
-            display: block;
-            width: 180px;
-            height: 60px;
-            text-align: center;
-            font-size: 14px;
-            line-height: 60px;
-            font-family: "Open Sans";
-            color: #fffffe;
-            background: #00df70;
+          width: 180px;
+          height: 60px;
+          text-align: center;
+          font-size: 14px;
+          line-height: 60px;
+          font-family: "Open Sans";
+          color: #fffffe;
+          background: #00df70;
+          transition: 1s;
+          cursor: pointer; }
+          .contact .inner .wrap article:last-child .btns .btnMore:hover {
             transition: 1s;
-            cursor: pointer; }
-            .contact .inner .wrap article:last-child .btns .btnMore:hover {
-              transition: 1s;
-              box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); }
-          .contact .inner .wrap article:last-child .btns .btnUp {
-            display: block;
-            width: 60px;
-            height: 60px;
-            text-align: center;
-            font-size: 14px;
-            line-height: 60px;
-            font-family: "Open Sans";
-            color: #fffffe;
-            background: #00df70;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); }
+        .contact .inner .wrap article:last-child .btns .btnUp {
+          display: block;
+          width: 60px;
+          height: 60px;
+          text-align: center;
+          font-size: 14px;
+          line-height: 60px;
+          font-family: "Open Sans";
+          color: #fffffe;
+          background: #00df70;
+          transition: 1s;
+          cursor: pointer;
+          margin-left: 20px; }
+          .contact .inner .wrap article:last-child .btns .btnUp:hover {
             transition: 1s;
-            cursor: pointer;
-            margin-left: 20px; }
-            .contact .inner .wrap article:last-child .btns .btnUp:hover {
-              transition: 1s;
-              box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); }
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); }
 
 .count {
   width: 100%;
@@ -915,6 +918,39 @@ footer {
         color: #777;
         margin-top: 10px; }
 
+.news {
+  width: 100%;
+  padding: 100px 0; }
+  .news .inner h1 {
+    background: linear-gradient(to top, rgba(0, 223, 112, 0.3) 15px, transparent 10px);
+    display: inline;
+    font: bold 22px/1.7 "Open Sans";
+    color: #666; }
+  .news .inner .txtBox {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; }
+    .news .inner .txtBox article {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      background: #fffffe;
+      box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+      padding: 40px;
+      margin-bottom: 20px;
+      border-left: 20px solid #00df70;
+      word-wrap: break-word; }
+      .news .inner .txtBox article h3 {
+        font: bold 16px/1 "Open Sans";
+        color: #777;
+        margin-bottom: 10px; }
+      .news .inner .txtBox article p {
+        font: 14px/1.4 "Open Sans";
+        color: #777; }
+
 .aboutUs {
   width: 100%; }
   .aboutUs > .inner {
@@ -943,6 +979,22 @@ footer {
     .aboutUs > .inner span {
       font: 10px/1.7 "Open Sans";
       color: #6b6b6b; }
+    .aboutUs > .inner .btnMore {
+      display: block;
+      width: 180px;
+      height: 60px;
+      text-align: center;
+      font-size: 14px;
+      line-height: 60px;
+      font-family: "Open Sans";
+      color: #fffffe;
+      background: #00df70;
+      transition: 1s;
+      cursor: pointer;
+      margin: 0 auto 100px; }
+      .aboutUs > .inner .btnMore:hover {
+        transition: 1s;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); }
     .aboutUs > .inner .aboutBox {
       width: 100%;
       position: relative;
@@ -1018,27 +1070,40 @@ footer {
 .community {
   width: 100%; }
   .community > .inner h1 {
-    font: bold 30px/1 "Open Sans";
-    color: #00df70;
+    font: bold 26px/1 "Open Sans";
+    color: #6b6b6b;
     margin-bottom: 20px; }
+  .community > .inner h2 {
+    font: 14px/1.7 "Open Sans";
+    color: #6b6b6b;
+    margin-bottom: 40px; }
   .community > .inner .faq {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-content: top;
-    margin-bottom: 40px; }
+    margin-bottom: 80px;
+    border: 1px solid #eee;
+    padding: 40px; }
     .community > .inner .faq article:nth-of-type(1) {
       width: 30%; }
       .community > .inner .faq article:nth-of-type(1) p {
         font: 14px/1.7 "Open Sans";
-        color: #777; }
+        color: #6b6b6b; }
     .community > .inner .faq article:nth-of-type(2) {
       width: 60%; }
-      .community > .inner .faq article:nth-of-type(2)[open] .question::after {
-        content: '-'; }
       .community > .inner .faq article:nth-of-type(2) .question {
         width: 100%;
         margin-bottom: 20px; }
+        .community > .inner .faq article:nth-of-type(2) .question[open] .title::after {
+          content: '--';
+          position: absolute;
+          top: 0;
+          right: 20px;
+          color: #fffffe;
+          font-weight: bold;
+          font-size: 20px;
+          letter-spacing: -2px; }
         .community > .inner .faq article:nth-of-type(2) .question .title {
           position: relative;
           color: #fffffe;
@@ -1046,12 +1111,14 @@ footer {
           height: 30px;
           padding: 0 10px;
           background: #00df70;
-          cursor: pointer; }
-          .community > .inner .faq article:nth-of-type(2) .question .title::marker {
+          cursor: pointer;
+          padding-left: 20px;
+          list-style: none; }
+          .community > .inner .faq article:nth-of-type(2) .question .title::after {
             content: '+';
             position: absolute;
             top: 0;
-            left: 100px;
+            right: 17px;
             color: #fffffe;
             font-weight: bold;
             font-size: 20px; }
@@ -1063,7 +1130,9 @@ footer {
   .community > .inner .inputBox {
     position: relative;
     width: 50%;
-    margin-bottom: 40px; }
+    margin-bottom: 40px;
+    border: 1px solid #eee;
+    padding: 40px; }
     .community > .inner .inputBox input, .community > .inner .inputBox textarea {
       background: #fffffe;
       box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
@@ -1093,7 +1162,9 @@ footer {
           box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); }
   .community > .inner .showBox {
     width: 100%;
-    position: relative; }
+    position: relative;
+    border: 1px solid #eee;
+    padding: 40px; }
     .community > .inner .showBox article {
       display: flex;
       flex-wrap: wrap;
@@ -1116,9 +1187,9 @@ footer {
           margin-bottom: 5px; }
         .community > .inner .showBox article .post input, .community > .inner .showBox article .post textarea {
           display: block;
-          width: 50%;
-          background: rgba(0, 223, 112, 0.3);
-          border: 1px solid #00df70;
+          width: 70%;
+          background: rgba(0, 223, 112, 0.1);
+          border: 1px solid #eee;
           padding: 5px 20px;
           font: 12px/1 "Open Sans"; }
       .community > .inner .showBox article .btns {

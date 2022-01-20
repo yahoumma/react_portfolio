@@ -13,10 +13,17 @@ function Gallery(){
 
   const api_key = "e7ed3b39fe112d7e93d03c19325305e0";
   const url = `https://www.flickr.com/services/rest/?method=flickr.interestingness.getList&api_key=${api_key}&per_page=100&format=json&nojsoncallback=1`;
+  const url2 = `https://www.flickr.com/services/rest/?method=flickr.interestingness.getList&api_key=${api_key}&per_page=100&format=json&nojsoncallback=1`;
 
   useEffect(()=>{
     axios
       .get(url)
+      .then(json=>{
+        console.log(json);
+        setItems(json.data.photos.photo);
+      })
+      axios
+      .get(url2)
       .then(json=>{
         console.log(json);
         setItems(json.data.photos.photo);
@@ -31,15 +38,38 @@ function Gallery(){
             </div>
         </div>
       <div className="inner">
-        {/* 
            <ul className="galleryTab">
               <li className="on"><a href="#">ALL ITEMS</a></li>
-              <li><a >WEB DESIGN</a></li>
+              <li onClick={(e)=>{
+                e.curren.target.classList.add("on");
+              }}><a >WEB DESIGN</a></li>
               <li><a href="#">UI/UX</a></li>
               <li><a href="#">BRANDING</a></li>
             </ul>
-         */}
-        <section className="">
+        <section className="list1">
+          {            
+            items.map((item,index)=>{
+              const imgSrc = `https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_m.jpg`;
+
+              return (
+                <article key={index}>
+                  <div className="inner">
+                    <div className="pic">
+                      <img src={imgSrc} />
+                      <a onClick={()=>{
+                      setIsPop(true);
+                      //버튼 클릭시 index state변경
+                      setIndex(index);
+
+                    }}><i class="fas fa-plus"></i></a>
+                    </div>
+                  </div>
+                </article>
+              )              
+            })
+          }
+        </section>
+        <section className="list2">
           {            
             items.map((item,index)=>{
               const imgSrc = `https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_m.jpg`;

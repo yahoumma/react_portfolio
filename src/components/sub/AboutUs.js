@@ -120,6 +120,10 @@ function AboutUs() {
                     }
                 </article>
 
+                <h1>DO YOU HAVE ANY QUESTION?</h1>
+                <h2>Feel free to request</h2>
+                <a href="#" className="btnMore">Request More <i className="fas fa-long-arrow-alt-right"></i></a>
+
 
             </div>
         </section>
