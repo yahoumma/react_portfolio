@@ -13,21 +13,21 @@ function Location() {
             title: "본점",
             latlng: new kakao.maps.LatLng(37.48771318663092, 126.75344867275281),
             imgSrc: process.env.PUBLIC_URL + "/img/marker1.png",
-            imgSize: new kakao.maps.Size(232, 99),
+            imgSize: new kakao.maps.Size(80, 80),
             imgPos: { offset: new kakao.maps.Point(116, 99) }
         },
         {
             title: "지점1",
             latlng: new kakao.maps.LatLng(37.507099899564444, 126.75639338893572),
             imgSrc: process.env.PUBLIC_URL + "/img/marker2.png",
-            imgSize: new kakao.maps.Size(232, 99),
+            imgSize: new kakao.maps.Size(80, 80),
             imgPos: { offset: new kakao.maps.Point(116, 99) }
         },
         {
             title: "지점2",
             latlng: new kakao.maps.LatLng(35.17422705914147, 129.10766665201712),
             imgSrc: process.env.PUBLIC_URL + "/img/marker3.png",
-            imgSize: new kakao.maps.Size(232, 99),
+            imgSize: new kakao.maps.Size(80, 80),
             imgPos: { offset: new kakao.maps.Point(116, 99) }
         }
     ];
@@ -100,11 +100,11 @@ function Location() {
 
                         </ul>
                         <ul className="branch" ref={btnBranch}>
-                            {  
-                            mapInfo.map((data,index)=>{
-                                return  <li key={index} onClick={()=>setIndex(index)}>{data.title}</li>
-                            })          
-                        }  
+                            {
+                                mapInfo.map((data, index) => {
+                                    return <li key={index} onClick={() => setIndex(index)}>{data.title}</li>
+                                })
+                            }
                         </ul>
                     </div>
                     <div className="connect">

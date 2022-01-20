@@ -1,7 +1,6 @@
 .community {
 	width: 100%;
-	>.inner{
-
+	> .inner {
 		h1 {
 			font: bold 26px/1 "Open Sans";
 			color: #6b6b6b;
@@ -12,7 +11,7 @@
 			color: #6b6b6b;
 			margin-bottom: 40px;
 		}
-		.faq{
+		.faq {
 			width: 100%;
 			display: flex;
 			justify-content: space-between;
@@ -20,25 +19,24 @@
 			margin-bottom: 80px;
 			border: 1px solid #eee;
 			padding: 40px;
-			article{
-				&:nth-of-type(1){
+			article {
+				&:nth-of-type(1) {
 					width: 30%;
-					
-					p{
+
+					p {
 						font: 14px/1.7 "Open Sans";
 						color: #6b6b6b;
-						
 					}
 				}
-				&:nth-of-type(2){
+				&:nth-of-type(2) {
 					width: 60%;
 
-					.question{
+					.question {
 						width: 100%;
 						margin-bottom: 20px;
-						&[open]{
-							.title::after{
-								content : '--';
+						&[open] {
+							.title::after {
+								content: "--";
 								position: absolute;
 								top: 0;
 								right: 20px;
@@ -46,23 +44,22 @@
 								font-weight: bold;
 								font-size: 20px;
 								letter-spacing: -2px;
-								
 							}
 						}
-				
-						.title{
+
+						.title {
 							position: relative;
 							color: #fffffe;
 							font: 12px/30px "Open Sans";
 							height: 30px;
-							padding:0 10px;
+							padding: 0 10px;
 							background: #00df70;
 							cursor: pointer;
 							padding-left: 20px;
 							list-style: none;
 
-							&::after{
-								content : '+';
+							&::after {
+								content: "+";
 								position: absolute;
 								top: 0;
 								right: 17px;
@@ -70,10 +67,9 @@
 								font-weight: bold;
 								font-size: 20px;
 							}
-						
 						}
-						
-						.answer{
+
+						.answer {
 							padding: 20px;
 							box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 							font: 12px/1.4 "Open Sans";
@@ -81,19 +77,17 @@
 						}
 					}
 				}
-				
 			}
-				
-	
 		}
-		.inputBox{
+		.inputBox {
 			position: relative;
 			width: 50%;
 			margin-bottom: 40px;
 			border: 1px solid #eee;
 			padding: 40px;
 
-			input, textarea{
+			input,
+			textarea {
 				background: #fffffe;
 				box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
 				border: none;
@@ -102,14 +96,14 @@
 				font: 12px/1.4 "Open Sans";
 				padding: 10px 20px;
 			}
-			textarea{
+			textarea {
 				height: 200px;
 			}
-			.inputBtns{
+			.inputBtns {
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
-				button{
+				button {
 					width: 100px;
 					height: 30px;
 					font: 12px/1 "Open Sans";
@@ -117,25 +111,22 @@
 					background: #00df70;
 					border: none;
 					cursor: pointer;
-					&:nth-of-type(1){
+					&:nth-of-type(1) {
 						background: #999;
 					}
-					&:hover{
+					&:hover {
 						transition: 1s;
 						box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
 					}
-
 				}
 			}
-			
-
 		}
-		.showBox{
+		.showBox {
 			width: 100%;
 			position: relative;
 			border: 1px solid #eee;
 			padding: 40px;
-			article{
+			article {
 				display: flex;
 				flex-wrap: wrap;
 				justify-content: space-between;
@@ -145,43 +136,40 @@
 				padding: 20px;
 				margin-bottom: 10px;
 				border-left: 20px solid #00df70;
-				.post{
+				.post {
 					width: 70%;
-					h2{
-						font:bold 16px/1 "Open Sans";
+					h2 {
+						font: bold 16px/1 "Open Sans";
 						margin-bottom: 10px;
 					}
-					p{
-						font:14px/1.4 "Open Sans";
+					p {
+						font: 14px/1.4 "Open Sans";
 						color: #777;
 					}
-					input{
+					input {
 						margin-bottom: 5px;
 					}
-					input, textarea{
+					input,
+					textarea {
 						display: block;
 						width: 70%;
 						background: rgba(0, 223, 112, 0.1);
 						border: 1px solid #eee;
 						padding: 5px 20px;
 						font: 12px/1 "Open Sans";
-
 					}
 				}
-				.btns{
+				.btns {
 					display: flex;
 					align-items: center;
-					li{
+					li {
 						cursor: pointer;
 						font: 10px/1 "Open Sans";
 						color: pink;
 						margin-left: 10px;
 					}
 				}
-			}	
-			
+			}
 		}
 	}
 }
-	
-

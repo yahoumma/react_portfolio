@@ -1096,7 +1096,7 @@ footer {
         width: 100%;
         margin-bottom: 20px; }
         .community > .inner .faq article:nth-of-type(2) .question[open] .title::after {
-          content: '--';
+          content: "--";
           position: absolute;
           top: 0;
           right: 20px;
@@ -1115,7 +1115,7 @@ footer {
           padding-left: 20px;
           list-style: none; }
           .community > .inner .faq article:nth-of-type(2) .question .title::after {
-            content: '+';
+            content: "+";
             position: absolute;
             top: 0;
             right: 17px;
@@ -1133,7 +1133,8 @@ footer {
     margin-bottom: 40px;
     border: 1px solid #eee;
     padding: 40px; }
-    .community > .inner .inputBox input, .community > .inner .inputBox textarea {
+    .community > .inner .inputBox input,
+    .community > .inner .inputBox textarea {
       background: #fffffe;
       box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
       border: none;
@@ -1185,7 +1186,8 @@ footer {
           color: #777; }
         .community > .inner .showBox article .post input {
           margin-bottom: 5px; }
-        .community > .inner .showBox article .post input, .community > .inner .showBox article .post textarea {
+        .community > .inner .showBox article .post input,
+        .community > .inner .showBox article .post textarea {
           display: block;
           width: 70%;
           background: rgba(0, 223, 112, 0.1);
