@@ -1,10 +1,19 @@
 import axios from "axios";
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+
+import { EffectCoverflow, Navigation, Pagination } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
 
 const body = document.querySelector("body");
 
-function Gallery(){
+function Gallery() {
+  let [lists, setLists] = useState([]);
   let [items, setItems] = useState([]);
   let [isPop, setIsPop] = useState(false);
   //썸네일 클릭 이벤트 발생시 해당 순번값을 관리하는 state생성
@@ -13,42 +22,73 @@ function Gallery(){
 
   const api_key = "e7ed3b39fe112d7e93d03c19325305e0";
   const url = `https://www.flickr.com/services/rest/?method=flickr.interestingness.getList&api_key=${api_key}&per_page=100&format=json&nojsoncallback=1`;
-  const url2 = `https://www.flickr.com/services/rest/?method=flickr.interestingness.getList&api_key=${api_key}&per_page=100&format=json&nojsoncallback=1`;
+  const url2 = `https://www.flickr.com/services/rest/?method=flickr.interestingness.getList&api_key=${api_key}&per_page=10&format=json&nojsoncallback=1`;
 
-  useEffect(()=>{
+  useEffect(() => {
     axios
       .get(url)
-      .then(json=>{
+      .then(json => {
         console.log(json);
         setItems(json.data.photos.photo);
       })
-      axios
+    axios
       .get(url2)
-      .then(json=>{
+      .then(json => {
         console.log(json);
-        setItems(json.data.photos.photo);
+        setLists(json.data.photos.photo);
       })
-  },[]);
+  }, []);
 
   return (
     <main className="content gallery">
-       <div className="subTitle">
-            <div className="inner">
-                <h1><NavLink to="/gallery">Gallery</NavLink></h1>
-            </div>
+      <div className="subTitle">
+        <div className="inner">
+          <h1><NavLink to="/gallery">Gallery</NavLink></h1>
         </div>
-      <div className="inner">
-           <ul className="galleryTab">
-              <li className="on"><a href="#">ALL ITEMS</a></li>
-              <li onClick={(e)=>{
-                e.curren.target.classList.add("on");
-              }}><a >WEB DESIGN</a></li>
-              <li><a href="#">UI/UX</a></li>
-              <li><a href="#">BRANDING</a></li>
-            </ul>
+      </div>
+      <div className="inner" key={index}>
+        <Swiper
+          modules={[Navigation, Pagination, EffectCoverflow]}
+          effect='coverflow'
+          slidesPerView={3}
+          coverflowEffect={{
+            rotate: 80,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true
+          }}
+          grabCursor
+          loop
+          navigation
+          pagination={{ clickable: true }}
+          onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log('slide change')}
+
+        >
+          {
+            lists.map((item, index) => {
+              const imgSrc2 = `https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_m.jpg`;
+              return (
+                <SwiperSlide> <img src={imgSrc2} /></SwiperSlide>
+              )
+            })
+          }
+
+        </Swiper>
+        {/*
+             <ul className="galleryTab">
+                <li className="on"><a href="#">ALL ITEMS</a></li>
+                <li onClick={(e)=>{
+                  e.curren.target.classList.add("on");
+                }}><a >WEB DESIGN</a></li>
+                <li><a href="#">UI/UX</a></li>
+                <li><a href="#">BRANDING</a></li>
+              </ul>
+           */}
         <section className="list1">
-          {            
-            items.map((item,index)=>{
+          {
+            items.map((item, index) => {
               const imgSrc = `https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_m.jpg`;
 
               return (
@@ -56,22 +96,22 @@ function Gallery(){
                   <div className="inner">
                     <div className="pic">
                       <img src={imgSrc} />
-                      <a onClick={()=>{
-                      setIsPop(true);
-                      //버튼 클릭시 index state변경
-                      setIndex(index);
+                      <a onClick={() => {
+                        setIsPop(true);
+                        //버튼 클릭시 index state변경
+                        setIndex(index);
 
-                    }}><i class="fas fa-plus"></i></a>
+                      }}><i class="fas fa-plus"></i></a>
                     </div>
                   </div>
                 </article>
-              )              
+              )
             })
           }
         </section>
         <section className="list2">
-          {            
-            items.map((item,index)=>{
+          {
+            items.map((item, index) => {
               const imgSrc = `https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_m.jpg`;
 
               return (
@@ -79,40 +119,40 @@ function Gallery(){
                   <div className="inner">
                     <div className="pic">
                       <img src={imgSrc} />
-                      <a onClick={()=>{
-                      setIsPop(true);
-                      //버튼 클릭시 index state변경
-                      setIndex(index);
+                      <a onClick={() => {
+                        setIsPop(true);
+                        //버튼 클릭시 index state변경
+                        setIndex(index);
 
-                    }}><i class="fas fa-plus"></i></a>
+                      }}><i class="fas fa-plus"></i></a>
                     </div>
                   </div>
                 </article>
-              )              
+              )
             })
           }
         </section>
-        
+
       </div>
-      { isPop ? <Pop /> : null }
-      
-    </main>    
+      {isPop ? <Pop /> : null}
+
+    </main>
   )
 
-  function Pop(){
+  function Pop() {
     //컴포넌트 상단에 있는 items, index스테이트값을 활용해서
     //items라는 배열에서 index번째의 객체값의 키값을 사용해서 이미지 url생성
     const imgSrc = `https://live.staticflickr.com/${items[index].server}/${items[index].id}_${items[index].secret}_b.jpg`;
 
-    useEffect(()=>{
+    useEffect(() => {
       console.log("pop 생성")
       body.style.overflow = "hidden";
 
-      return ()=>{
+      return () => {
         console.log("pop 제거");
         body.style.overflow = "auto";
       }
-    },[]);
+    }, []);
 
     return (
       <aside className="pop">
@@ -120,7 +160,7 @@ function Gallery(){
         <img src={imgSrc} />
         {/* items의 index번째 객체 안에 있는 텍스트 */}
         <p>{items[index].title}</p>
-        <span onClick={()=>{
+        <span onClick={() => {
           setIsPop(false);
         }}>Close</span>
       </aside>

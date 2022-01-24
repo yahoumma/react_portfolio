@@ -1,4 +1,11 @@
 import { useEffect, useRef } from 'react';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import 'swiper/css';
+  import 'swiper/css/navigation';
+  import 'swiper/css/pagination';
+
 function Visual() {
     return (
         <figure id="visual" className="content visual myScroll">
@@ -6,16 +13,6 @@ function Visual() {
             </div>
             <div className="bgBox">
             </div>
-            {/*
-            <div className="imgBtns">
-                <a href="#" className="btns btnMinus">
-                    <i className="fas fa-minus"></i>
-                </a>
-                <a href="#" className="btns btnPlus">
-                    <i className="fas fa-plus"></i>
-                </a>
-            </div>
-            */}
             <div className="floatingBox">
                 <div className="txtBox">
                     <div className="txt">

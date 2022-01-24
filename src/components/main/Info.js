@@ -31,14 +31,17 @@ function Info() {
     }, []);
 
     return (
-        <figure id="count" className="content count myScroll">
+        <figure id="info" className="content info myScroll">
             <div className="inner">
-                <h2>Recent YOUTUBE</h2>
+                <h1>Recent YOUTUBE</h1>
                 <div className="vidBox">
                     {
                         vidData.map((vid, index) => {
+                            if(index<4){}
                             return (
-                                <img key={index} src={vid.snippet.thumbnails.medium.url} />
+                                <div className='pic'>
+                                    <img key={index} src={vid.snippet.thumbnails.medium.url} />
+                                </div>
                             )
                         })
                     }
