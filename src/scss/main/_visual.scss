@@ -65,29 +65,7 @@
 			right: 0px;
 		}
 	}
-	/*
-	.imgBtns {
-		.btns {
-			position: absolute;
-			display: block;
-			width: 30px;
-			height: 30px;
-			border-radius: 50%;
-			top: 50%;
-			left: 5%;
-			background: #00df70;
-			box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-			text-align: center;
-			color: #fffffe;
-			line-height: 30px;
-			cursor: pointer;
-			z-index: 5;
-			&.btnMinus {
-				top: calc(50% - 60px);
-			}
-		}
-	}
-	*/
+
 	.floatingBox {
 		@include floatingBox();
 		top: 50%;
@@ -147,10 +125,131 @@
 	}
 }
 
-@media screen and (min-width: $tablet) {
-}
+
 
 @media screen and (max-width: $tablet) {
+	.visual {
+
+		.imgBox {
+			width: calc(100% - 340px);
+			height: 100%;
+			background: url(../img/visual1.jpg) no-repeat center/cover;
+			position: absolute;
+			left: 0;
+			z-index: 1;
+			//filter: grayscale(100%);
+			transition: 1s;
+			animation: visualImg 1.5s ease-in-out;
+		}
+		.bgBox {
+			width: 340px;
+			height: 100%;
+			background: #00df70;
+			position: absolute;
+			right: 0;
+			transition: 1s;
+			animation: visualBg 1.5s ease-in-out;
+		}
+	
+		@keyframes visualImg {
+			0% {
+				left: -100%;
+			}
+			50%{
+				left: 0;
+			}
+			70%{
+				left: -5%;
+			}
+			80%{
+				left: 0;
+			}
+			90% {
+				left: -3%;
+			}
+			100% {
+				left: 0;
+			}
+		}
+		@keyframes visualBg {
+			0% {
+				right: -340px;
+			}
+			50% {
+				right: 0px;
+			}
+			70% {
+				right: -5%;
+			}
+			80% {
+				right: 0px;
+			}
+			90% {
+				right: -3%;
+			}
+			100% {
+				right: 0px;
+			}
+		}
+	
+		.floatingBox {
+			@include floatingBox();
+			top: 50%;
+			left: calc(100% - 540px);
+			transform: translateX(-10%) translateY(-50%);
+			width: 500px;
+			height: 280px;
+			animation: visualBox 0.9s linear 1s;
+			transform-origin: 50%;
+			.btnMore {
+				@include btnMore();
+				position: absolute;
+				bottom: -30px;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			.txtBox {
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 400px;
+				height: 100%;
+				background: #fffffe;
+				.txt {
+					width: 80%;
+					position: absolute;
+					top: 45%;
+					left: 50%;
+					transform: translateY(-50%) translateX(-50%);
+					h1 {
+						@include txtBg();
+					}
+					p {
+						font: 14px/1.4 "Open Sans";
+						color: #ccc;
+						margin-top: 30px;
+					}
+				}
+			}
+		}
+		.sns {
+			position: absolute;
+			bottom: 5%;
+			right: 5%;
+			ul {
+				width: 120px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				li {
+					a {
+						color: #fffffe;
+						font-size: 20px;
+					}
+				}
+			}
+		}
+	}
 }
 
 @media screen and (max-width: $mobile) {

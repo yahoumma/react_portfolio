@@ -19,7 +19,7 @@ function AboutUs() {
         })
     },[])
     return (
-        <section className="content aboutUs">
+        <main className="content aboutUs">
             <div className="subTitle">
                 <div className="inner">
                     <h1><NavLink to="/aboutUs">AboutUs</NavLink></h1>
@@ -126,7 +126,7 @@ function AboutUs() {
 
 
             </div>
-        </section>
+        </main>
     )
 }
 

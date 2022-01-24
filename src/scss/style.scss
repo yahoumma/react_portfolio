@@ -6,9 +6,11 @@ $mobile : 539px;
 
 //common style
 @import "common/reset";
+@import "common/mixin";
 @import "common/header";
 @import "common/footer";
-@import "common/layout";
+
+
 
 //main style
 @import "main/btns";
@@ -30,3 +32,5 @@ $mobile : 539px;
 
 // 'Open Sans'
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&display=swap");
+
+@import "common/layout";

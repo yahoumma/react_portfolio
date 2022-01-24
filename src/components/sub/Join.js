@@ -78,7 +78,7 @@ function Join(){
   },[err]);
 
   return (
-    <section className='content join'>
+    <main className='content join'>
         <div className="subTitle">
           <div className="inner">
             <h1><NavLink to="/gallery">Join</NavLink></h1>
@@ -216,7 +216,7 @@ function Join(){
           </fieldset>
         </form>
       </div>
-    </section>
+    </main>
   )
 }
 

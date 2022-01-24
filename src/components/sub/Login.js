@@ -53,7 +53,7 @@ function Login(){
   },[err]);
 
   return (
-    <section className='content login'>
+    <main className='content login'>
         <div className="subTitle">
           <div className="inner">
             <h1><NavLink to="/login">Login</NavLink></h1>
@@ -112,7 +112,7 @@ function Login(){
           </fieldset>
         </form>
       </div>
-    </section>
+    </main>
   )
 }
 

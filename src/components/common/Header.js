@@ -5,34 +5,26 @@ function Header(props) {
 
   return (
     <header className={props.type+'myScroll'}>
-      {/*
-      <div className="top">
-        <div className="inner">
-          <ul className="sns">
-            <li><a href="#"><i className="fab fa-github"></i></a></li>
-            <li><a href="#"><i className="fab fa-instagram"></i></a></li>
-            <li><a href="#"><i className="fab fa-facebook"></i></a></li>
-          </ul>
-         
-        </div>
-      </div>
-      */}
+      <ul className="util">
+        <li className='join'><NavLink activeStyle={active} to="/join">JOIN</NavLink></li>
+        <li className='join'><NavLink activeStyle={active} to="/login">LOGIN</NavLink></li>
+      </ul>
       <div className="inner">
-        <h1><NavLink activeStyle={active} exact to="/">PF</NavLink></h1>
-
         <nav className="menuWeb">
+        <h1><NavLink activeStyle={active} exact to="/">PF</NavLink></h1>
           <ul id="gnb">
             <li><NavLink activeStyle={active} to="/aboutUs">ABOUT</NavLink></li>
             <li><NavLink activeStyle={active} to="/community">COMMUNITY</NavLink></li>
             <li><NavLink activeStyle={active} to="/gallery">GALLERY</NavLink></li>
             <li><NavLink activeStyle={active} to="/youtube">YOUTUBE</NavLink></li>
             <li><NavLink activeStyle={active} to="/location">LOCATION</NavLink></li>
-            <li className='join'><NavLink activeStyle={active} to="/join">JOIN</NavLink></li>
-            <li className='join'><NavLink activeStyle={active} to="/login">LOGIN</NavLink></li>
           </ul>
+          
+
         </nav>
 
         {/* Mobile Menu */}
+        <h1 className="logoMo"><NavLink activeStyle={active} exact to="/">PF</NavLink></h1>
         <a href="#" className="btnCall">
           <span></span>
         </a>

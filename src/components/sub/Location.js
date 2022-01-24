@@ -71,7 +71,7 @@ function Location() {
 
     return (
 
-        <section className="content location">
+        <main className="content location">
             <div className="subTitle">
                 <div className="inner">
                     <h1><NavLink to="/location">Location</NavLink></h1>
@@ -168,7 +168,7 @@ function Location() {
                     </div>
                 </div>
             </div>
-        </section>
+        </main>
     )
 }
 

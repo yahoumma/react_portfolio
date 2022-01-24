@@ -1,29 +1,14 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import {useSelector} from 'react-redux';
 
 function Youtube() {
-    let [data, setData] = useState([]);
     let [isPop, setIsPop] = useState(false);
     let [index, setIndex] = useState(0);
 
-    const api_key = "AIzaSyAxkR2Pz3WQ25QD6VfmBHDsmMfj_KjtkGY";
-    //const playListId = "PLYOPkdUKSFgX5CgKf68RJzJHec0XEdBNd";
-    const playListId = "PLeSAW16iBEVMdmtUwNqDh46P5lK-GqrQB";
-    const num = 3;
-    const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${api_key}&playlistId=${playListId}&maxResults=${num}`;
-
-
-
-
-    useEffect(() => {
-        axios
-            .get(url)
-            .then(json => {
-                setData(json.data.items);
-                console.log(json.data);
-            })
-    }, []);
+    const youtube = useSelector(state=>state);
+    const vidData = youtube.youtubeReducer.youtube;  
 
     return (
         <main className="content youtube">
@@ -35,7 +20,7 @@ function Youtube() {
             <div className="inner">
                 <section class="list">
                     {
-                        data.map((item, index) => {
+                        vidData.map((item, index)=>{
                             let tit = item.snippet.title;
                             let tit_len = tit.length;
                             let desc = item.snippet.description;
@@ -106,7 +91,7 @@ function Youtube() {
                         <h3>Categoties</h3>
                         <ul>
                             {
-                            data.map((item, index)=>{
+                            vidData.map((item, index)=>{
                                 let tit = item.snippet.title;
                                 let tit_len = tit.length;
                                 return(
@@ -121,7 +106,7 @@ function Youtube() {
                     <article className='recentPosts' key={index}>
                         <h3>Recent Posts</h3>
                         {
-                            data.map((item, index) => {
+                            vidData.map((item, index) => {
                                 let tit = item.snippet.title;
                                 let tit_len = tit.length;
                                 return (
@@ -158,7 +143,7 @@ function Youtube() {
         return (
             <aside className="pop">
                 <iframe
-                    src={"https://www.youtube.com/embed/" + data[index].snippet.resourceId.videoId} width='100%' height='100%' allowFullScreen
+                    src={"https://www.youtube.com/embed/"+vidData[index].snippet.resourceId.videoId}  width='100%' height='100%' allowFullScreen
                 ></iframe>
                 <span onClick={() => {
                     setIsPop(false);

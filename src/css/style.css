@@ -24,103 +24,57 @@ table, fieldset {
   top: -9999px;
   opacity: 0; }
 
-@media screen and (max-width: 1179px) {
-  .content .inner {
-    width: 100%; } }
-@media screen and (max-width: 539px) {
-  .content .inner {
-    width: 90%; } }
 header {
   width: 100%;
   background: #00df70;
-  /*
-  .top {
-  	position: relative;
-  	top: 0;
-  	width: 100%;
-  	height: 28px;
-  	margin: 0 auto;
-  	background: #fefefc;
-  	display: flex;
-  	align-items: center;
-  	> .inner {
-  		width: 100%;
-  		padding: 5%;
-  	}
-  	.sns {
-  		margin-right: auto;
-  		display: flex;
-  		justify-content: right;
-  		align-items: center;
-  		li {
-  			margin-right: 12px;
-  			a {
-  				font: 12px/28px "Open Sans";
-  				color: #393834;
-  			}
-  		}
-  	}
-  	.util {
-  		margin-left: auto;
-  		display: flex;
-  		justify-content: right;
-  		align-items: center;
-  		li {
-  			margin-left: 20px;
-  			a {
-  				font: 10px/38px "Open Sans";
-  				color: #203850;
-  			}
-  		}
-  	}
-  }*/ }
+  position: relative; }
+  header .util {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center; }
+    header .util li {
+      border: 1px solid #fffffe;
+      width: 60px;
+      text-align: center; }
+      header .util li > a {
+        font: 10px/20px "Open Sans";
+        color: #fffffe; }
   header .inner {
     width: calc(100% - 340px);
     height: 80px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: left; }
-    header .inner > h1 {
-      width: 20vw;
-      font-size: 0;
-      background: #fffffe;
-      margin-right: 100px; }
-      header .inner > h1 a {
-        display: block;
-        text-align: center;
-        font: bold 30px/80px "Open Sans";
-        color: #00df70; }
+    position: relative; }
     header .inner .menuWeb {
-      width: 80vw;
       display: flex;
-      align-items: center;
-      justify-content: left; }
+      align-items: center; }
+      header .inner .menuWeb > h1 {
+        width: 200px;
+        background: #fffffe; }
+        header .inner .menuWeb > h1 a {
+          display: block;
+          text-align: center;
+          font: bold 30px/80px "Open Sans";
+          color: #00df70; }
       header .inner .menuWeb #gnb {
-        width: 100%;
         height: 80px;
+        margin-left: 100px;
         display: flex;
         align-items: center;
         justify-content: space-between; }
-        header .inner .menuWeb #gnb li > a {
-          display: block;
-          font: bold 14px/80px "Open Sans";
-          color: #fffffe; }
-        header .inner .menuWeb #gnb li.join {
-          border: 1px solid #fffffe;
-          padding: 5px 10px; }
-          header .inner .menuWeb #gnb li.join a {
-            font: 10px/10px "Open Sans";
+        header .inner .menuWeb #gnb li {
+          margin-left: 80px; }
+          header .inner .menuWeb #gnb li > a {
+            display: block;
+            font: bold 14px/80px "Open Sans";
             color: #fffffe; }
-      header .inner .menuWeb .util li {
-        border: 1px solid #fffffe;
-        width: 60px;
-        height: 20px;
-        margin-left: 20px;
-        text-align: center; }
-        header .inner .menuWeb .util li > a {
-          font: 10px/1 "Open Sans";
-          color: #fffffe; }
+          header .inner .menuWeb #gnb li.join {
+            border: 1px solid #fffffe;
+            padding: 5px 10px; }
+            header .inner .menuWeb #gnb li.join a {
+              font: 10px/10px "Open Sans";
+              color: #fffffe; }
     header .inner .btnCall {
       display: none;
       width: 20px;
@@ -292,186 +246,6 @@ header {
           text-align: center;
           background: rgba(0, 0, 0, 0.3); }
 
-@media screen and (max-width: 1179px) {
-  header .inner {
-    width: 100%; }
-    header .inner > h1 {
-      width: 20vw; }
-    header .inner .menuWeb {
-      display: none; }
-    header .inner .btnCall {
-      display: block;
-      width: 20px;
-      height: 20px;
-      position: absolute;
-      right: 30px;
-      top: 50%;
-      transform: translateY(-50%); }
-      header .inner .btnCall::before {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 2px;
-        background: #393834;
-        position: absolute;
-        top: 0;
-        left: 0;
-        transition: top 0.5s 0s, transform 0.5s 0.5s; }
-      header .inner .btnCall::after {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 2px;
-        background: #393834;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        transition: bottom 0.5s 0s, transform 0.5s 0.5s; }
-      header .inner .btnCall span {
-        display: block;
-        width: 100%;
-        height: 2px;
-        background: #393834;
-        position: absolute;
-        top: 50%;
-        margin-top: -1px;
-        left: 0;
-        text-indent: -9999px;
-        transition: 0.5s; }
-      header .inner .btnCall.on::before {
-        top: 50%;
-        margin-top: -1px;
-        transform: rotate(45deg); }
-      header .inner .btnCall.on::after {
-        bottom: 50%;
-        margin-bottom: -1px;
-        transform: rotate(-45deg); }
-      header .inner .btnCall.on span {
-        transform: translateX(100%);
-        opacity: 0; }
-  header .menuMo {
-    position: fixed;
-    top: 0;
-    left: -270px;
-    width: 270px;
-    height: 100vh;
-    background: #fafafa;
-    transition: 0.5s;
-    z-index: 10;
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3); }
-    header .menuMo h1 {
-      padding: 25px 20px 26px 20px; }
-      header .menuMo h1 a {
-        display: block;
-        font: bold 24px/1 "Open Sans";
-        color: #393834; }
-      header .menuMo h1 span {
-        display: block;
-        font-size: 12px;
-        color: #aaa; }
-    header .menuMo .moMenuList {
-      position: relative; }
-      header .menuMo .moMenuList .login {
-        width: 100%;
-        background: rgba(0, 0, 0, 0.07);
-        display: flex;
-        align-items: center;
-        border-top: 1px solid #bbb;
-        padding: 25px 20px; }
-        header .menuMo .moMenuList .login > a {
-          display: block;
-          width: 50px;
-          height: 50px;
-          background: #c6aa92;
-          color: #fafafa;
-          text-align: center;
-          border-radius: 50%;
-          font: 25px/50px "Open Sans";
-          margin-right: 20px; }
-        header .menuMo .moMenuList .login .utilMo {
-          display: flex;
-          align-items: center;
-          justify-content: space-between; }
-          header .menuMo .moMenuList .login .utilMo li {
-            display: inline-block; }
-            header .menuMo .moMenuList .login .utilMo li a {
-              display: block;
-              font: 16px/1 "Open Sans";
-              color: #aaa; }
-            header .menuMo .moMenuList .login .utilMo li:nth-of-type(1) {
-              position: relative;
-              width: 70px; }
-              header .menuMo .moMenuList .login .utilMo li:nth-of-type(1)::after {
-                content: "|";
-                display: block;
-                font: 16px/1 "Open Sans";
-                color: #aaa;
-                position: absolute;
-                top: 0;
-                right: 12px; }
-      header .menuMo .moMenuList #gnbMo li:last-child a {
-        border-bottom: 1px solid #bbb; }
-      header .menuMo .moMenuList #gnbMo li a {
-        display: block;
-        width: 100%;
-        padding: 16px 0px;
-        border-top: 1px solid #bbb;
-        font: 14px/1 "Open Sans";
-        color: #aaa;
-        text-align: center; }
-      header .menuMo .moMenuList #gnbMo li:hover a {
-        color: #c6aa92;
-        background: rgba(0, 0, 0, 0.03); }
-      header .menuMo .moMenuList .csMo {
-        display: flex;
-        align-items: center; }
-        header .menuMo .moMenuList .csMo li:last-child a {
-          border-right: none; }
-        header .menuMo .moMenuList .csMo li a {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          width: 90px;
-          height: 80px;
-          font: 14px/1 "Open Sans";
-          color: #aaa;
-          text-align: center;
-          border-right: 1px solid #bbb;
-          border-bottom: 1px solid #bbb; }
-          header .menuMo .moMenuList .csMo li a i {
-            font-size: 25px;
-            margin-bottom: 8px; }
-        header .menuMo .moMenuList .csMo li:hover a {
-          color: #c6aa92;
-          background: rgba(0, 0, 0, 0.03); }
-    header .menuMo.on {
-      left: 0px; }
-    header .menuMo .follow {
-      width: 270px;
-      margin-top: 40px; }
-      header .menuMo .follow h3 {
-        font: bold 14px/1 "Open Sans";
-        color: #888;
-        text-align: center;
-        margin-bottom: 20px; }
-      header .menuMo .follow .snsMo {
-        bottom: 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-around; }
-        header .menuMo .follow .snsMo li a {
-          display: block;
-          width: 50px;
-          height: 50px;
-          border-radius: 50%;
-          font: bold 20px/50px "Open Sans";
-          color: #fafafa;
-          text-align: center;
-          background: rgba(0, 0, 0, 0.3); } }
-@media screen and (max-width: 539px) {
-  header .inner > h1 {
-    width: 30vw; } }
 footer {
   width: 100%;
   padding: 20px 0; }
@@ -482,25 +256,6 @@ footer {
     footer .inner p {
       font: 14px/1 "Open Sans";
       color: #777; }
-
-.content .subTitle {
-  width: 100%;
-  height: 200px;
-  background: url("../img/subBg.jpeg") no-repeat top/cover;
-  padding: 100px 0;
-  position: relative;
-  margin-bottom: 80px; }
-  .content .subTitle .inner {
-    width: 1180px;
-    margin: 0 auto; }
-    .content .subTitle .inner h1 a {
-      background: linear-gradient(to top, rgba(0, 223, 112, 0.3) 15px, transparent 10px);
-      display: inline;
-      font: bold 22px/1.7 "Open Sans";
-      color: #666; }
-.content > .inner {
-  width: 1180px;
-  margin: 0 auto; }
 
 #btns {
   z-index: 30;
@@ -529,30 +284,7 @@ footer {
   height: calc(100vh - 100px);
   position: relative;
   overflow: hidden;
-  transition: 1s;
-  /*
-  .imgBtns {
-  	.btns {
-  		position: absolute;
-  		display: block;
-  		width: 30px;
-  		height: 30px;
-  		border-radius: 50%;
-  		top: 50%;
-  		left: 5%;
-  		background: #00df70;
-  		box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-  		text-align: center;
-  		color: #fffffe;
-  		line-height: 30px;
-  		cursor: pointer;
-  		z-index: 5;
-  		&.btnMinus {
-  			top: calc(50% - 60px);
-  		}
-  	}
-  }
-  */ }
+  transition: 1s; }
   .visual .imgBox {
     width: calc(100% - 340px);
     height: 100%;
@@ -619,7 +351,6 @@ footer {
       color: #fffffe;
       background: #00df70;
       transition: 1s;
-      cursor: pointer;
       position: absolute;
       bottom: -30px;
       left: 50%;
@@ -662,6 +393,114 @@ footer {
         color: #fffffe;
         font-size: 20px; }
 
+@media screen and (max-width: 739px) {
+  .visual .imgBox {
+    width: calc(100% - 340px);
+    height: 100%;
+    background: url(../img/visual1.jpg) no-repeat center/cover;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    transition: 1s;
+    animation: visualImg 1.5s ease-in-out; }
+  .visual .bgBox {
+    width: 340px;
+    height: 100%;
+    background: #00df70;
+    position: absolute;
+    right: 0;
+    transition: 1s;
+    animation: visualBg 1.5s ease-in-out; }
+  @keyframes visualImg {
+    0% {
+      left: -100%; }
+    50% {
+      left: 0; }
+    70% {
+      left: -5%; }
+    80% {
+      left: 0; }
+    90% {
+      left: -3%; }
+    100% {
+      left: 0; } }
+  @keyframes visualBg {
+    0% {
+      right: -340px; }
+    50% {
+      right: 0px; }
+    70% {
+      right: -5%; }
+    80% {
+      right: 0px; }
+    90% {
+      right: -3%; }
+    100% {
+      right: 0px; } }
+  .visual .floatingBox {
+    position: absolute;
+    background-color: rgba(0, 223, 112, 0.3);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    z-index: 3;
+    top: 50%;
+    left: calc(100% - 540px);
+    transform: translateX(-10%) translateY(-50%);
+    width: 500px;
+    height: 280px;
+    animation: visualBox 0.9s linear 1s;
+    transform-origin: 50%; }
+    .visual .floatingBox .btnMore {
+      display: block;
+      width: 180px;
+      height: 60px;
+      text-align: center;
+      font-size: 14px;
+      line-height: 60px;
+      font-family: "Open Sans";
+      color: #fffffe;
+      background: #00df70;
+      transition: 1s;
+      position: absolute;
+      bottom: -30px;
+      left: 50%;
+      transform: translateX(-50%); }
+      .visual .floatingBox .btnMore:hover {
+        transition: 1s;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); }
+    .visual .floatingBox .txtBox {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 400px;
+      height: 100%;
+      background: #fffffe; }
+      .visual .floatingBox .txtBox .txt {
+        width: 80%;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%); }
+        .visual .floatingBox .txtBox .txt h1 {
+          background: linear-gradient(to top, rgba(0, 223, 112, 0.3) 15px, transparent 10px);
+          display: inline;
+          font: bold 22px/1.7 "Open Sans";
+          color: #666; }
+        .visual .floatingBox .txtBox .txt p {
+          font: 14px/1.4 "Open Sans";
+          color: #ccc;
+          margin-top: 30px; }
+  .visual .sns {
+    position: absolute;
+    bottom: 5%;
+    right: 5%; }
+    .visual .sns ul {
+      width: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      .visual .sns ul li a {
+        color: #fffffe;
+        font-size: 20px; } }
 .our {
   width: 100%;
   padding: 100px 0; }
@@ -717,12 +556,46 @@ footer {
         font-family: "Open Sans";
         color: #fffffe;
         background: #00df70;
-        transition: 1s;
-        cursor: pointer; }
+        transition: 1s; }
         .our .inner article .btnMore:hover {
           transition: 1s;
           box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); }
 
+@media screen and (max-width: 739px) {
+  .our {
+    width: 100%;
+    padding: 100px 0; }
+    .our .inner {
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .our .inner article {
+        position: relative;
+        width: 300px;
+        text-align: center;
+        padding: 10px;
+        transition: 1s; }
+        .our .inner article:nth-of-type(1) {
+          box-shadow: none;
+          text-align: left;
+          padding: none;
+          width: 100%; }
+        .our .inner article .btnMore {
+          display: block;
+          width: 180px;
+          height: 60px;
+          text-align: center;
+          font-size: 14px;
+          line-height: 60px;
+          font-family: "Open Sans";
+          color: #fffffe;
+          background: #00df70;
+          transition: 1s; }
+          .our .inner article .btnMore:hover {
+            transition: 1s;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); } }
 .about {
   width: 100%;
   height: 80vh;
@@ -780,8 +653,7 @@ footer {
         font-family: "Open Sans";
         color: #fffffe;
         background: #00df70;
-        transition: 1s;
-        cursor: pointer; }
+        transition: 1s; }
         .about .floatingBox .txtBox .btnMore:hover {
           transition: 1s;
           box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); }
@@ -861,8 +733,7 @@ footer {
           font-family: "Open Sans";
           color: #fffffe;
           background: #00df70;
-          transition: 1s;
-          cursor: pointer; }
+          transition: 1s; }
           .contact .inner .wrap article:last-child .btns .btnMore:hover {
             transition: 1s;
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); }
@@ -877,7 +748,6 @@ footer {
           color: #fffffe;
           background: #00df70;
           transition: 1s;
-          cursor: pointer;
           margin-left: 20px; }
           .contact .inner .wrap article:last-child .btns .btnUp:hover {
             transition: 1s;
@@ -990,7 +860,6 @@ footer {
       color: #fffffe;
       background: #00df70;
       transition: 1s;
-      cursor: pointer;
       margin: 0 auto 100px; }
       .aboutUs > .inner .btnMore:hover {
         transition: 1s;
@@ -1345,8 +1214,7 @@ footer {
       font-family: "Open Sans";
       color: #fffffe;
       background: #00df70;
-      transition: 1s;
-      cursor: pointer; }
+      transition: 1s; }
       .youtube > .inner .list .btnMore:hover {
         transition: 1s;
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); }
@@ -1633,7 +1501,6 @@ footer {
           color: #fffffe;
           background: #00df70;
           transition: 1s;
-          cursor: pointer;
           border: none; }
           .location > .inner .contactBox .connect .emailForm table td .btnSend:hover {
             transition: 1s;
@@ -1695,7 +1562,7 @@ footer {
     width: 90%; }
   .join .inner table td textarea {
     width: 90%; } }
-@media screen and (max-width: 1179px) {
+@media screen and (max-width: 739px) {
   .join .inner table th {
     position: absolute;
     top: -99999px;
@@ -1765,7 +1632,7 @@ footer {
     width: 90%; }
   .join .inner table td textarea {
     width: 90%; } }
-@media screen and (max-width: 1179px) {
+@media screen and (max-width: 739px) {
   .join .inner table th {
     position: absolute;
     top: -99999px;
@@ -1779,5 +1646,218 @@ footer {
     width: 100%; }
   .join .inner table td textarea {
     width: 100%; } }
+@media screen and (max-width: 1199px) {
+  main .inner {
+    width: 100%; }
+    main .inner .content .subTitle {
+      width: 100%;
+      height: 200px;
+      background: url("../img/subBg.jpeg") no-repeat top/cover;
+      padding: 100px 0;
+      position: relative;
+      margin-bottom: 80px; }
+      main .inner .content .subTitle .inner {
+        width: 1180px;
+        margin: 0 auto; }
+        main .inner .content .subTitle .inner h1 a {
+          background: linear-gradient(to top, rgba(0, 223, 112, 0.3) 15px, transparent 10px);
+          display: inline;
+          font: bold 22px/1.7 "Open Sans";
+          color: #666; }
+    main .inner .content > .inner {
+      width: 1180px;
+      margin: 0 auto; }
+
+  footer .inner {
+    width: 100%; } }
+@media screen and (max-width: 739px) {
+  header .util {
+    display: none; }
+  header .inner {
+    width: 100%; }
+    header .inner .menuWeb {
+      display: none; }
+    header .inner .logoMo {
+      display: block;
+      width: 100px;
+      height: 100%;
+      background: #fffffe;
+      text-align: center; }
+    header .inner .btnCall {
+      display: block;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      right: 30px;
+      top: 50%;
+      transform: translateY(-50%); }
+      header .inner .btnCall::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #393834;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: top 0.5s 0s, transform 0.5s 0.5s; }
+      header .inner .btnCall::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #393834;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: bottom 0.5s 0s, transform 0.5s 0.5s; }
+      header .inner .btnCall span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #393834;
+        position: absolute;
+        top: 50%;
+        margin-top: -1px;
+        left: 0;
+        text-indent: -9999px;
+        transition: 0.5s; }
+      header .inner .btnCall.on::before {
+        top: 50%;
+        margin-top: -1px;
+        transform: rotate(45deg); }
+      header .inner .btnCall.on::after {
+        bottom: 50%;
+        margin-bottom: -1px;
+        transform: rotate(-45deg); }
+      header .inner .btnCall.on span {
+        transform: translateX(100%);
+        opacity: 0; }
+  header .menuMo {
+    position: fixed;
+    top: 0;
+    left: -270px;
+    width: 270px;
+    height: 100vh;
+    background: #fafafa;
+    transition: 0.5s;
+    z-index: 10;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3); }
+    header .menuMo h1 {
+      padding: 25px 20px 26px 20px; }
+      header .menuMo h1 a {
+        display: block;
+        font: bold 24px/1 "Open Sans";
+        color: #393834; }
+      header .menuMo h1 span {
+        display: block;
+        font-size: 12px;
+        color: #aaa; }
+    header .menuMo .moMenuList {
+      position: relative; }
+      header .menuMo .moMenuList .login {
+        width: 100%;
+        background: rgba(0, 0, 0, 0.07);
+        display: flex;
+        align-items: center;
+        border-top: 1px solid #bbb;
+        padding: 25px 20px; }
+        header .menuMo .moMenuList .login > a {
+          display: block;
+          width: 50px;
+          height: 50px;
+          background: #c6aa92;
+          color: #fafafa;
+          text-align: center;
+          border-radius: 50%;
+          font: 25px/50px "Open Sans";
+          margin-right: 20px; }
+        header .menuMo .moMenuList .login .utilMo {
+          display: flex;
+          align-items: center;
+          justify-content: space-between; }
+          header .menuMo .moMenuList .login .utilMo li {
+            display: inline-block; }
+            header .menuMo .moMenuList .login .utilMo li a {
+              display: block;
+              font: 16px/1 "Open Sans";
+              color: #aaa; }
+            header .menuMo .moMenuList .login .utilMo li:nth-of-type(1) {
+              position: relative;
+              width: 70px; }
+              header .menuMo .moMenuList .login .utilMo li:nth-of-type(1)::after {
+                content: "|";
+                display: block;
+                font: 16px/1 "Open Sans";
+                color: #aaa;
+                position: absolute;
+                top: 0;
+                right: 12px; }
+      header .menuMo .moMenuList #gnbMo li:last-child a {
+        border-bottom: 1px solid #bbb; }
+      header .menuMo .moMenuList #gnbMo li a {
+        display: block;
+        width: 100%;
+        padding: 16px 0px;
+        border-top: 1px solid #bbb;
+        font: 14px/1 "Open Sans";
+        color: #aaa;
+        text-align: center; }
+      header .menuMo .moMenuList #gnbMo li:hover a {
+        color: #c6aa92;
+        background: rgba(0, 0, 0, 0.03); }
+      header .menuMo .moMenuList .csMo {
+        display: flex;
+        align-items: center; }
+        header .menuMo .moMenuList .csMo li:last-child a {
+          border-right: none; }
+        header .menuMo .moMenuList .csMo li a {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 90px;
+          height: 80px;
+          font: 14px/1 "Open Sans";
+          color: #aaa;
+          text-align: center;
+          border-right: 1px solid #bbb;
+          border-bottom: 1px solid #bbb; }
+          header .menuMo .moMenuList .csMo li a i {
+            font-size: 25px;
+            margin-bottom: 8px; }
+        header .menuMo .moMenuList .csMo li:hover a {
+          color: #c6aa92;
+          background: rgba(0, 0, 0, 0.03); }
+    header .menuMo.on {
+      left: 0px; }
+    header .menuMo .follow {
+      width: 270px;
+      margin-top: 40px; }
+      header .menuMo .follow h3 {
+        font: bold 14px/1 "Open Sans";
+        color: #888;
+        text-align: center;
+        margin-bottom: 20px; }
+      header .menuMo .follow .snsMo {
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around; }
+        header .menuMo .follow .snsMo li a {
+          display: block;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          font: bold 20px/50px "Open Sans";
+          color: #fafafa;
+          text-align: center;
+          background: rgba(0, 0, 0, 0.3); }
+
+  .content .inner {
+    width: 100%; } }
+@media screen and (max-width: 539px) {
+  .content .inner {
+    width: 90%; } }
 
 /*# sourceMappingURL=style.css.map */

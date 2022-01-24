@@ -26,22 +26,3 @@ table, fieldset{
 	opacity: 0;
 }
 
-
-$tablet : 1179px; 
-$mobile : 539px; 
-
-@media screen and (max-width: $tablet) {
-	.content {
-		.inner {
-		width: 100%;
-			}
-		}
-	}
-@media screen and (max-width: $mobile) {
-	.content {
-		.inner {
-		width: 90%;
-			}
-		}
-	}
-
