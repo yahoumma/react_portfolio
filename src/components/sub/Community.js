@@ -32,10 +32,10 @@ function Community() {
             return JSON.parse(data);
         } else {
             return [
-                { title: 'Hello0', content: 'Here comes description in detail.' },
-                { title: 'Hello1', content: 'Here comes description in detail.' },
-                { title: 'Hello2', content: 'Here comes description in detail.' },
-                { title: 'Hello3', content: 'Here comes description in detail.' }
+                { title: 'we caught up with the new mom to chat about why she started on Unsplash' ,content: 'We caught up with contributor Toa Heftiba on how it feels to have reached 2 billion views on Unsplash.'},
+                { title: 'Tell us a little about why and how you started submitting to Unsplash?', content: 'My image got used within the Swiss Covid app' },
+                { title: 'How do you feel your photography has grown since you started out on Unsplash?', content: 'We caught up with contributor Toa Heftiba on how it feels to have reached 2 billion views on Unsplash.' },
+                { title: 'What has been your most memorable experience on Unsplash?', content: 'n the third installment of our “Behind 1 Billion” mini series' }
             ];
         }
     }
@@ -168,8 +168,8 @@ function Community() {
                                                 </div>
 
                                                 <ul className="btns">
-                                                    <li onClick={() => updatePost(index)}>입력</li>
-                                                    <li onClick={() => disableUpdate(index)}>취소</li>
+                                                    <li onClick={() => updatePost(index)}>WRITE</li>
+                                                    <li onClick={() => disableUpdate(index)}>CANCEL</li>
                                                 </ul>
                                             </>
                                             :
@@ -181,8 +181,8 @@ function Community() {
                                                 </div>
 
                                                 <ul className="btns">
-                                                    <li onClick={() => enableUpdate(index)}>수정</li>
-                                                    <li onClick={() => deletePost(index)}>삭제</li>
+                                                    <li onClick={() => enableUpdate(index)}>MODIFY</li>
+                                                    <li onClick={() => deletePost(index)}>DELETE</li>
                                                 </ul>
                                             </>
                                     }

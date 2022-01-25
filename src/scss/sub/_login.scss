@@ -1,101 +1,176 @@
-.login{
-    .inner{
-        width: 1180px;
-        margin: 0 auto;
-        table {
-            width: 80%;
-            margin : 0 auto;
+.login {
+	height: calc(100vh - 100px);
 
-      
-            th, td {
-              border-bottom: 1px solid #ddd; padding: 10px 30px;
-            }
-      
-            th {
-              width: 20%; border-right: 1px solid #ddd; text-align: left;
-              font: bold 14px/1 'Open Sans'; color: #fffffe;
-              background: #00df70;
+	.inner {
+		width: 1180px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.loginImg {
+			width: 50%;
+		}
+		.loginBox {
+			width: 50%;
+			background: #fffffe;
+			margin-top: 100px;
+			h2 {
+				font: bold 34px/1 "Open Sans";
+				color: #333;
+				margin-bottom: 20px;
+			}
+			p {
+				font: 16px/1.7 "Open Sans";
+				color: #6e6e6e;
+				margin-bottom: 40px;
+			}
 
-      
-              &.btnSet {
-                text-align: center;  border:none;
-                background: #fffffe;
-      
-                input[type=reset], input[type=submit] {
-                  width: 150px; height: 32px; border: none;
-                  text-align: center; margin: 10px; cursor: pointer; transition: 0.5s;
-                 
-      
-                  &:hover {
-                    background: #555; color: #fff;
-                  }
-                }
-              }
-            }
-            td {
-              input[type=text], input[type=password], select {
-                width: 100%; padding: 10px 20px; 
-                border: none;
-              }
-              textarea {
-                width: 100%; height: 150px; padding: 10px 20px; 
-                resize: none;
-                border: none;
-              }
-              label {
-                font: 12px/1 'Open Sans'; color: #777; margin-right: 5px;
-              }
-              input[type=radio], input[type=checkbox] {
-                margin-right: 20px;
-               
-              }
-            }
-          }
-      
-      
-          .err {
-            font: 11px/1 '맑은 고딕'; color: hotpink;
-          }
-        }
-      }
-      
-      @media screen and (max-width: $web){
-        .join .inner table td {
-          input[type=text], input[type=password], select {
-            width: 90%;  
-          }
-          textarea {
-            width: 90%; 
-          }
-         
-        }
-      
-      }
-      
-      @media screen and (max-width: $tablet){
-        .join .inner table th {
-          position: absolute; top: -99999px; opacity: 0;
-      
-          &.btnSet {
-            position: relative;
-            top: 0px;
-            opacity: 1;
-          }
-        }
-      
-        .join .inner table td {
-          input[type=text], input[type=password], select {
-            width: 100%;  
-          }
-          textarea {
-            width: 100%; 
-          }
-         
-        }
-        
-      }
-      
-      @media screen and (max-width: $mobile){
-      
-        
-      }
+			.loginForm {
+				padding: 30px;
+				border: 1px solid #eee;
+				border-radius: 20px;
+				width: 90%;
+				background: #eee;
+				table {
+					margin-top: 40px;
+					th,
+					td {
+						border: 1px solid #ddd;
+					}
+
+					th {
+						width: 20%;
+						border: none;
+						text-align: center;
+
+						&.btnSet {
+							text-align: center;
+							border: none;
+							input[type="submit"] {
+								cursor: pointer;
+								border: none;
+								margin-right: 20px;
+								width: 30%;
+								height: 40px;
+								border-radius: 20px;
+								font: 14px/40px "Open Sans";
+								background: #00df70;
+								color: #fffffe;
+							}
+							.joinBtn {
+								cursor: pointer;
+								margin: 40px auto;
+								border: none;
+								display: inline-block;
+								width: 30%;
+								height: 40px;
+								border-radius: 20px;
+								background: #fffffe;
+								color: #777;
+								font: 14px/40px "Open Sans";
+							}
+						}
+						&.joinSet {
+							font: 12px/1 "Open Sans";
+							text-align: left;
+
+							ul {
+								display: flex;
+								margin-top: 20px;
+								li {
+									margin-right: 20px;
+									a {
+										display: block;
+										width: 30px;
+										height: 30px;
+										background: #41d0da;
+										border-radius: 50%;
+										text-align: center;
+										i {
+											font-size: 16px;
+											line-height: 30px;
+											color: #fffffe;
+										}
+									}
+									&:nth-of-type(2) a {
+										background: #074db6;
+									}
+								}
+							}
+						}
+					}
+					th {
+						input[type="text"],
+						input[type="password"],
+						select {
+							width: 80%;
+							padding: 20px 20px;
+							border: 1px solid #eee;
+							border-radius: 10px;
+							font: 12px/1 "Open Sans";
+							color: #6e6e6e;
+							margin-bottom: 20px;
+						}
+						&.ckBox {
+							text-align: right;
+							position: relative;
+							right: 10%;
+							font: 12px/12px "Open Sans";
+							color: #777;
+							label {
+								position: relative;
+								top: -3px;
+								left: 5px;
+							}
+						}
+					}
+				}
+				.err {
+					font: 11px/1 "맑은 고딕";
+					color: hotpink;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $web) {
+	.join .inner table td {
+		input[type="text"],
+		input[type="password"],
+		select {
+			width: 90%;
+		}
+		textarea {
+			width: 90%;
+		}
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	.join .inner table th {
+		position: absolute;
+		top: -99999px;
+		opacity: 0;
+
+		&.btnSet {
+			position: relative;
+			top: 0px;
+			opacity: 1;
+		}
+	}
+
+	.join .inner table td {
+		input[type="text"],
+		input[type="password"],
+		select {
+			width: 100%;
+		}
+		textarea {
+			width: 100%;
+		}
+	}
+}
+
+@media screen and (max-width: $mobile) {
+}

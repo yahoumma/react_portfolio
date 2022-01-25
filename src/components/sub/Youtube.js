@@ -83,10 +83,12 @@ function Youtube() {
                 </section>
                 {isPop ? <Pop /> : null}
                 <section class="category">
-                    <form name="searchBox" className='searchBox'>
-                        <input type="search" name="" id="s" />
-                        <button type="submit" id="searchBtn"><i class="fas fa-search"></i><span className='h'>검색</span></button>
-                    </form>
+                {/*
+                        <form name="searchBox" className='searchBox'>
+                            <input type="search" name="" id="s" />
+                            <button type="submit" id="searchBtn"><i class="fas fa-search"></i><span className='h'>검색</span></button>
+                        </form>
+                */}
                     <article className='cate'>
                         <h3>Categoties</h3>
                         <ul>

@@ -8,34 +8,7 @@ function Contact() {
                         <ul>
                             <li>Email : tsjsyayh@gmail.com</li>
                             <li>Call : +82 10-5656-5610</li>
-                            <li>
-                                <div className="sns">
-                                    <ul>
-                                        <li>
-                                            <a href="#">
-                                                <i className="fab fa-instagram"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i className="fab fa-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i className="fab fab fa-facebook-f"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </article>
-                    <article>
-                        <ul>
-                            <li><a href="#">Terms of Service</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Site Map</a></li>
+                            <li>                           </li>
                         </ul>
                     </article>
                     <article>

@@ -1,13 +1,42 @@
 footer {
 	width: 100%;
-	padding: 20px 0;
+	padding: 40px 0;
+	border-top: 3px solid #eee;
+	margin-top: 40px;
 	.inner {
 		width: 1180px;
 		margin: 0 auto;
-		text-align: center;
-		p {
-			font: 14px/1 "Open Sans";
-			color: #777;
+		h1{
+			display: block;
+			font:bold 30px/1 "Open Sans";
+			color: #6b6b6b;
+
 		}
-	}
+		article{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-top: 80px;
+			ul{
+				display: flex;
+				align-content: center;
+				justify-content: space-between;
+				li{
+					margin-left: 40px;
+				}
+			}
+			p, li a {
+				font: 14px/1 "Open Sans";
+				color: #6b6b6b;
+			}
+			.sns{
+				ul li a{
+					font-size: 14px;
+					color: #6b6b6b;
+					}
+				
+			}
+		}
+		}
+		
 }

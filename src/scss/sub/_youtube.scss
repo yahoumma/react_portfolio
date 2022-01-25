@@ -97,6 +97,7 @@
 		.category {
 			width: 300px;
 			.searchBox{
+				display:none;
 				position: relative;
 				width: 100%;
 				height: 40px;
@@ -126,7 +127,7 @@
 				border-top: 20px solid #00df70;
 				background: #fffffe;
 				box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-				margin-top: 20px;
+				margin-bottom: 20px;
 				min-height: 300px;
 				padding: 20px;
 				h3 {

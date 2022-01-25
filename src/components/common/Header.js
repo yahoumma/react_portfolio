@@ -4,14 +4,13 @@ function Header(props) {
   const active = { color: "#272343" };
 
   return (
-    <header className={props.type+'myScroll'}>
+    <header className={props.type + 'myScroll'}>
       <ul className="util">
-        <li className='join'><NavLink activeStyle={active} to="/join">JOIN</NavLink></li>
-        <li className='join'><NavLink activeStyle={active} to="/login">LOGIN</NavLink></li>
+        <li className='join'><NavLink activeStyle={active} to="/login"><i class="fas fa-sign-in-alt"></i></NavLink></li>
       </ul>
       <div className="inner">
         <nav className="menuWeb">
-        <h1><NavLink activeStyle={active} exact to="/">PF</NavLink></h1>
+          <h1><NavLink activeStyle={active} exact to="/">PF</NavLink></h1>
           <ul id="gnb">
             <li><NavLink activeStyle={active} to="/aboutUs">ABOUT</NavLink></li>
             <li><NavLink activeStyle={active} to="/community">COMMUNITY</NavLink></li>
@@ -19,12 +18,11 @@ function Header(props) {
             <li><NavLink activeStyle={active} to="/youtube">YOUTUBE</NavLink></li>
             <li><NavLink activeStyle={active} to="/location">LOCATION</NavLink></li>
           </ul>
-          
+
 
         </nav>
 
         {/* Mobile Menu */}
-        <h1 className="logoMo"><NavLink activeStyle={active} exact to="/">PF</NavLink></h1>
         <a href="#" className="btnCall">
           <span></span>
         </a>

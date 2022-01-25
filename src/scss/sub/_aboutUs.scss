@@ -1,6 +1,6 @@
 .aboutUs {
 	width: 100%;
-	>.inner {
+	> .inner {
 		width: 1180px;
 		margin: 0 auto;
 		text-align: center;
@@ -8,6 +8,7 @@
 			font: bold 26px/1 "Open Sans";
 			color: #6b6b6b;
 			margin-bottom: 20px;
+			margin-top: 80px;
 		}
 		h2 {
 			font: 14px/1.7 "Open Sans";
@@ -32,25 +33,27 @@
 			font: 10px/1.7 "Open Sans";
 			color: #6b6b6b;
 		}
-		.btnMore{
+		.btnMore {
 			@include btnMore();
-			margin: 0 auto 100px ;
-
+			margin: 0 auto 100px;
 		}
 		.aboutBox {
 			width: 100%;
 			position: relative;
 			display: flex;
 			align-items: center;
-			justify-content: space-around;
-			margin-bottom: 100px;
+			justify-content: space-between;
+			margin: 100px 0 200px 0;
 			.about1 {
-				width: 50%;
-				background: url("../img/project4.jpg") no-repeat center/cover;
-				backdrop-filter: grayscale(100%);
+				width: 48%;
+				background: url("../img/project3.jpg") no-repeat center/cover;
 				height: 400px;
 				position: relative;
 				box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+				&:nth-of-type(2) {
+					background: url("../img/project2.jpg") no-repeat
+						center/cover;
+				}
 				.txtBox {
 					background: #fffffe;
 					width: 70%;
@@ -83,6 +86,25 @@
 					font-size: 40px;
 					color: #00df70;
 					margin-bottom: 20px;
+				}
+			}
+			.box2 {
+				background: #fffffe;
+				width: 240px;
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				i {
+					font-size: 40px;
+					color: #00df70;
+					margin-bottom: 20px;
+				}
+				p {
+					margin-top: 40px;
+					padding-top: 40px;
+					border-top: 1px solid #eee;
+					font: 14px/1.7 "Open Sans";
+					color: #6b6b6b;
 				}
 			}
 			.member {

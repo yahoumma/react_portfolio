@@ -30,17 +30,14 @@ header {
   position: relative; }
   header .util {
     position: absolute;
-    right: 40px;
+    right: 80px;
     top: 50%;
     transform: translateY(-52%);
     display: flex;
     align-items: center; }
-    header .util li {
-      text-align: center;
-      margin-left: 20px; }
-      header .util li > a {
-        font: 10px/20px "Open Sans";
-        color: #fffffe; }
+    header .util li i {
+      font-size: 24px;
+      color: #fffffe; }
   header .inner {
     width: calc(100% - 340px);
     height: 80px;
@@ -247,14 +244,33 @@ header {
 
 footer {
   width: 100%;
-  padding: 20px 0; }
+  padding: 40px 0;
+  border-top: 3px solid #eee;
+  margin-top: 40px; }
   footer .inner {
     width: 1180px;
-    margin: 0 auto;
-    text-align: center; }
-    footer .inner p {
-      font: 14px/1 "Open Sans";
-      color: #777; }
+    margin: 0 auto; }
+    footer .inner h1 {
+      display: block;
+      font: bold 30px/1 "Open Sans";
+      color: #6b6b6b; }
+    footer .inner article {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 80px; }
+      footer .inner article ul {
+        display: flex;
+        align-content: center;
+        justify-content: space-between; }
+        footer .inner article ul li {
+          margin-left: 40px; }
+      footer .inner article p, footer .inner article li a {
+        font: 14px/1 "Open Sans";
+        color: #6b6b6b; }
+      footer .inner article .sns ul li a {
+        font-size: 14px;
+        color: #6b6b6b; }
 
 #btns {
   z-index: 30;
@@ -866,7 +882,8 @@ footer {
     .aboutUs > .inner h1 {
       font: bold 26px/1 "Open Sans";
       color: #6b6b6b;
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      margin-top: 80px; }
     .aboutUs > .inner h2 {
       font: 14px/1.7 "Open Sans";
       color: #6b6b6b;
@@ -905,15 +922,16 @@ footer {
       position: relative;
       display: flex;
       align-items: center;
-      justify-content: space-around;
-      margin-bottom: 100px; }
+      justify-content: space-between;
+      margin: 100px 0 200px 0; }
       .aboutUs > .inner .aboutBox .about1 {
-        width: 50%;
-        background: url("../img/project4.jpg") no-repeat center/cover;
-        backdrop-filter: grayscale(100%);
+        width: 48%;
+        background: url("../img/project3.jpg") no-repeat center/cover;
         height: 400px;
         position: relative;
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); }
+        .aboutUs > .inner .aboutBox .about1:nth-of-type(2) {
+          background: url("../img/project2.jpg") no-repeat center/cover; }
         .aboutUs > .inner .aboutBox .about1 .txtBox {
           background: #fffffe;
           width: 70%;
@@ -943,6 +961,22 @@ footer {
           font-size: 40px;
           color: #00df70;
           margin-bottom: 20px; }
+      .aboutUs > .inner .aboutBox .box2 {
+        background: #fffffe;
+        width: 240px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column; }
+        .aboutUs > .inner .aboutBox .box2 i {
+          font-size: 40px;
+          color: #00df70;
+          margin-bottom: 20px; }
+        .aboutUs > .inner .aboutBox .box2 p {
+          margin-top: 40px;
+          padding-top: 40px;
+          border-top: 1px solid #eee;
+          font: 14px/1.7 "Open Sans";
+          color: #6b6b6b; }
       .aboutUs > .inner .aboutBox .member {
         text-align: left; }
         .aboutUs > .inner .aboutBox .member .photo {
@@ -1041,8 +1075,7 @@ footer {
     .community > .inner .inputBox input,
     .community > .inner .inputBox textarea {
       background: #fffffe;
-      box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
-      border: none;
+      border: 1px solid #ccc;
       width: 100%;
       margin-bottom: 10px;
       font: 12px/1.4 "Open Sans";
@@ -1070,6 +1103,7 @@ footer {
     width: 100%;
     position: relative;
     border: 1px solid #eee;
+    background: #eee;
     padding: 40px; }
     .community > .inner .showBox article {
       display: flex;
@@ -1077,7 +1111,7 @@ footer {
       justify-content: space-between;
       align-content: center;
       background: #fffffe;
-      box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+      border: 1px solid #eee;
       padding: 20px;
       margin-bottom: 10px;
       border-left: 20px solid #00df70; }
@@ -1141,7 +1175,10 @@ footer {
   padding: 100px 0px; }
   .gallery .inner .swiper .swiper-slide img {
     height: 100%; }
-  .gallery .inner .swiper .swiper-button-prev {
+  .gallery .inner .swiper .swiper-slide .swiper-slide-shadow {
+    display: none; }
+  .gallery .inner .swiper .swiper-button-prev,
+  .gallery .inner .swiper .swiper-button-next {
     color: #6b6b6b; }
   .gallery .inner .swiper .swiper-pagination-bullet-active {
     background-color: #00df70; }
@@ -1222,7 +1259,8 @@ footer {
           line-height: 30px;
           opacity: 0;
           cursor: pointer; }
-.gallery .pop {
+
+.pop {
   width: 100%;
   height: 100vh;
   position: fixed;
@@ -1230,16 +1268,16 @@ footer {
   left: 0px;
   background: rgba(0, 0, 0, 0.9);
   padding: 5vw; }
-  .gallery .pop img {
+  .pop img {
     width: 100%;
     height: 95%;
     object-fit: contain;
     margin-bottom: 15px; }
-  .gallery .pop p {
+  .pop p {
     font: 14px/1.2 "arial";
     color: #fff;
     text-align: center; }
-  .gallery .pop span {
+  .pop span {
     font: bold 14px/1 "arial";
     color: #fff;
     position: absolute;
@@ -1339,6 +1377,7 @@ footer {
   .youtube > .inner .category {
     width: 300px; }
     .youtube > .inner .category .searchBox {
+      display: none;
       position: relative;
       width: 100%;
       height: 40px;
@@ -1361,7 +1400,7 @@ footer {
       border-top: 20px solid #00df70;
       background: #fffffe;
       box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-      margin-top: 20px;
+      margin-bottom: 20px;
       min-height: 300px;
       padding: 20px; }
       .youtube > .inner .category article h3 {
@@ -1569,7 +1608,7 @@ footer {
     width: 80%;
     margin: 0 auto; }
     .join .inner table th, .join .inner table td {
-      border-bottom: 1px solid #ddd;
+      border: 1px solid #ddd;
       padding: 10px 30px; }
     .join .inner table th {
       width: 20%;
@@ -1581,18 +1620,28 @@ footer {
       .join .inner table th.btnSet {
         text-align: center;
         border: none;
-        background: #fffffe; }
+        background: #fffffe;
+        text-align: center; }
         .join .inner table th.btnSet input[type=reset], .join .inner table th.btnSet input[type=submit] {
-          width: 150px;
-          height: 32px;
-          border: none;
+          display: block;
+          width: 180px;
+          height: 60px;
           text-align: center;
-          margin: 10px;
+          font-size: 14px;
+          line-height: 60px;
+          font-family: "Open Sans";
+          color: #fffffe;
+          background: #00df70;
+          transition: 1s;
           cursor: pointer;
-          transition: 0.5s; }
+          border: none;
+          display: inline-block;
+          margin: 80px 0; }
           .join .inner table th.btnSet input[type=reset]:hover, .join .inner table th.btnSet input[type=submit]:hover {
-            background: #555;
-            color: #fff; }
+            transition: 1s;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); }
+        .join .inner table th.btnSet input[type=submit] {
+          margin-left: 40px; }
     .join .inner table td input[type=text], .join .inner table td input[type=password], .join .inner table td select {
       width: 100%;
       padding: 10px 20px;
@@ -1632,59 +1681,116 @@ footer {
     width: 100%; }
   .join .inner table td textarea {
     width: 100%; } }
-.login .inner {
-  width: 1180px;
-  margin: 0 auto; }
-  .login .inner table {
-    width: 80%;
-    margin: 0 auto; }
-    .login .inner table th, .login .inner table td {
-      border-bottom: 1px solid #ddd;
-      padding: 10px 30px; }
-    .login .inner table th {
-      width: 20%;
-      border-right: 1px solid #ddd;
-      text-align: left;
-      font: bold 14px/1 'Open Sans';
-      color: #fffffe;
-      background: #00df70; }
-      .login .inner table th.btnSet {
-        text-align: center;
-        border: none;
-        background: #fffffe; }
-        .login .inner table th.btnSet input[type=reset], .login .inner table th.btnSet input[type=submit] {
-          width: 150px;
-          height: 32px;
-          border: none;
-          text-align: center;
-          margin: 10px;
-          cursor: pointer;
-          transition: 0.5s; }
-          .login .inner table th.btnSet input[type=reset]:hover, .login .inner table th.btnSet input[type=submit]:hover {
-            background: #555;
-            color: #fff; }
-    .login .inner table td input[type=text], .login .inner table td input[type=password], .login .inner table td select {
-      width: 100%;
-      padding: 10px 20px;
-      border: none; }
-    .login .inner table td textarea {
-      width: 100%;
-      height: 150px;
-      padding: 10px 20px;
-      resize: none;
-      border: none; }
-    .login .inner table td label {
-      font: 12px/1 'Open Sans';
-      color: #777;
-      margin-right: 5px; }
-    .login .inner table td input[type=radio], .login .inner table td input[type=checkbox] {
-      margin-right: 20px; }
-  .login .inner .err {
-    font: 11px/1 '맑은 고딕';
-    color: hotpink; }
+.login {
+  height: calc(100vh - 100px); }
+  .login .inner {
+    width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .login .inner .loginImg {
+      width: 50%; }
+    .login .inner .loginBox {
+      width: 50%;
+      background: #fffffe;
+      margin-top: 100px; }
+      .login .inner .loginBox h2 {
+        font: bold 34px/1 "Open Sans";
+        color: #333;
+        margin-bottom: 20px; }
+      .login .inner .loginBox p {
+        font: 16px/1.7 "Open Sans";
+        color: #6e6e6e;
+        margin-bottom: 40px; }
+      .login .inner .loginBox .loginForm {
+        padding: 30px;
+        border: 1px solid #eee;
+        border-radius: 20px;
+        width: 90%;
+        background: #eee; }
+        .login .inner .loginBox .loginForm table {
+          margin-top: 40px; }
+          .login .inner .loginBox .loginForm table th,
+          .login .inner .loginBox .loginForm table td {
+            border: 1px solid #ddd; }
+          .login .inner .loginBox .loginForm table th {
+            width: 20%;
+            border: none;
+            text-align: center; }
+            .login .inner .loginBox .loginForm table th.btnSet {
+              text-align: center;
+              border: none; }
+              .login .inner .loginBox .loginForm table th.btnSet input[type="submit"] {
+                cursor: pointer;
+                border: none;
+                margin-right: 20px;
+                width: 30%;
+                height: 40px;
+                border-radius: 20px;
+                font: 14px/40px "Open Sans";
+                background: #00df70;
+                color: #fffffe; }
+              .login .inner .loginBox .loginForm table th.btnSet .joinBtn {
+                cursor: pointer;
+                margin: 40px auto;
+                border: none;
+                display: inline-block;
+                width: 30%;
+                height: 40px;
+                border-radius: 20px;
+                background: #fffffe;
+                color: #777;
+                font: 14px/40px "Open Sans"; }
+            .login .inner .loginBox .loginForm table th.joinSet {
+              font: 12px/1 "Open Sans";
+              text-align: left; }
+              .login .inner .loginBox .loginForm table th.joinSet ul {
+                display: flex;
+                margin-top: 20px; }
+                .login .inner .loginBox .loginForm table th.joinSet ul li {
+                  margin-right: 20px; }
+                  .login .inner .loginBox .loginForm table th.joinSet ul li a {
+                    display: block;
+                    width: 30px;
+                    height: 30px;
+                    background: #41d0da;
+                    border-radius: 50%;
+                    text-align: center; }
+                    .login .inner .loginBox .loginForm table th.joinSet ul li a i {
+                      font-size: 16px;
+                      line-height: 30px;
+                      color: #fffffe; }
+                  .login .inner .loginBox .loginForm table th.joinSet ul li:nth-of-type(2) a {
+                    background: #074db6; }
+          .login .inner .loginBox .loginForm table th input[type="text"],
+          .login .inner .loginBox .loginForm table th input[type="password"],
+          .login .inner .loginBox .loginForm table th select {
+            width: 80%;
+            padding: 20px 20px;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            font: 12px/1 "Open Sans";
+            color: #6e6e6e;
+            margin-bottom: 20px; }
+          .login .inner .loginBox .loginForm table th.ckBox {
+            text-align: right;
+            position: relative;
+            right: 10%;
+            font: 12px/12px "Open Sans";
+            color: #777; }
+            .login .inner .loginBox .loginForm table th.ckBox label {
+              position: relative;
+              top: -3px;
+              left: 5px; }
+        .login .inner .loginBox .loginForm .err {
+          font: 11px/1 "맑은 고딕";
+          color: hotpink; }
 
 @media screen and (max-width: 1199px) {
-  .join .inner table td input[type=text], .join .inner table td input[type=password], .join .inner table td select {
+  .join .inner table td input[type="text"],
+  .join .inner table td input[type="password"],
+  .join .inner table td select {
     width: 90%; }
   .join .inner table td textarea {
     width: 90%; } }
@@ -1698,7 +1804,9 @@ footer {
       top: 0px;
       opacity: 1; }
 
-  .join .inner table td input[type=text], .join .inner table td input[type=password], .join .inner table td select {
+  .join .inner table td input[type="text"],
+  .join .inner table td input[type="password"],
+  .join .inner table td select {
     width: 100%; }
   .join .inner table td textarea {
     width: 100%; } }

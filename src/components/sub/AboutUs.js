@@ -9,15 +9,15 @@ function AboutUs() {
     const path = process.env.PUBLIC_URL;
     const url = `${path}/dbs/team.json`;
 
-    
 
-    useEffect(()=>{
+
+    useEffect(() => {
         axios
-        .get(url)
-        .then(json=>{
-            setPosts(json.data.data)
-        })
-    },[])
+            .get(url)
+            .then(json => {
+                setPosts(json.data.data)
+            })
+    }, [])
     return (
         <main className="content aboutUs">
             <div className="subTitle">
@@ -63,62 +63,66 @@ function AboutUs() {
                         <h3>ONTIME<br />DELVERY</h3>
                     </div>
                 </div>
-                <h1>PROCESS</h1>
-                <h2>Three steps solution</h2>
-                <article className="aboutBox">
-                    <div className="box">
-                        <i className="fas fa-medal"></i>
-                        <h3>Order Your Service </h3>
-                    </div>
-                    <div className="box">
-                        <i className="fas fa-users-cog"></i>
-                        <h3>Our Team Start Work</h3>
-                    </div>
-                    <div className="box">
-                        <i className="fas fa-calculator"></i>
-                        <h3>Deliver Your Project</h3>
-                    </div>
-                </article>
                 <h1>OUR TEAM</h1>
                 <h2>The Leadership Team</h2>
                 <article className="aboutBox">
                     {
-                        posts.map((data, index)=>{
-                            return(
-                            <div className="member" key={index}>
-                                <div className="photo">
-                                    <div className="sns">
-                                        <ul>
-                                            <li>
-                                                <a href="#">
-                                                    <i className="fab fa-instagram"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i className="fab fa-twitter"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i className="fab fab fa-facebook-f"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i className="fas fa-globe-americas"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
+                        posts.map((data, index) => {
+                            return (
+                                <div className="member" key={index}>
+                                    <div className="photo">
+                                        <div className="sns">
+                                            <ul>
+                                                <li>
+                                                    <a href="#">
+                                                        <i className="fab fa-instagram"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <i className="fab fa-twitter"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <i className="fab fab fa-facebook-f"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <i className="fas fa-globe-americas"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
+                                    <h4>{data.name}</h4>
+                                    <span>{data.position}</span>
                                 </div>
-                                <h4>{data.name}</h4>
-                                <span>{data.position}</span>
-                            </div>
                             )
                         })
                     }
                 </article>
+                <h1>PROCESS</h1>
+                <h2>Three steps solution</h2>
+                <article className="aboutBox">
+                    <div className="box2">
+                        <i className="fas fa-medal"></i>
+                        <h3>Order Your Service </h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum eius quae totam dolore blanditiis dolor culpa rem velit, exercitationem reiciendis aut, esse, illum soluta iusto mollitia necessitatibus est.</p>
+                    </div>
+                    <div className="box2">
+                        <i className="fas fa-users-cog"></i>
+                        <h3>Our Team Start Work</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum eius quae totam dolore blanditiis dolor culpa rem velit, exercitationem reiciendis aut, esse, illum soluta iusto mollitia necessitatibus est.</p>
+                    </div>
+                    <div className="box2">
+                        <i className="fas fa-calculator"></i>
+                        <h3>Deliver Your Project</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum eius quae totam dolore blanditiis dolor culpa rem velit, exercitationem reiciendis aut, esse, illum soluta iusto mollitia necessitatibus est.</p>
+                    </div>
+                </article>
+
 
                 <h1>DO YOU HAVE ANY QUESTION?</h1>
                 <h2>Feel free to request</h2>
